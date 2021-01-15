@@ -11,7 +11,7 @@
     $nav_basics_landing = './basics/basics.php';
     $nav_sql = $nav_coming_soon;
     $nav_signup = $nav_coming_soon;
-    $nav_player_manager = $nav_coming_soon;
+    $nav_player_manager = './player_manager/player.php';
     $nav_final = $nav_coming_soon;
 ?>
 <!DOCTYPE html>
