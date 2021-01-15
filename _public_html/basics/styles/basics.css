@@ -1,0 +1,48 @@
+#holder{
+	margin:0 auto;
+	font-family:"comic sans Ms";
+	font-size:1.5em;
+	width:550px;
+	border:3px dashed #090;
+	text-align:center;
+	padding-bottom:.5em;
+}
+/*styles for form processing form */
+#form_process{
+	width:350px;
+	margin:0 auto;
+	padding-left:2em;
+}
+#form_process caption{
+	font-family:sans-serif;
+	font-size:1.6em;
+	color:#900;
+	width:100%;
+}
+#form_process td:first-child{
+	text-align:right;
+}
+.totheleft{
+	text-align:left;
+}
+.smaller{
+	font-size:.6em;
+}
+/*class to output error on form2 project */
+.error{
+	font-size:.7em;
+	color:#900;
+	font-family:sans-serif;
+}
+/*end form processing styles */
+#process_output{
+	width:400px;
+	margin:0 auto;
+}
+#process_output th{
+	text-align:right;
+}
+#process_output td{
+	text-align:left;
+	padding-left:1em;
+}
