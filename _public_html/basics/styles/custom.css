@@ -15,17 +15,13 @@
     --font-family-title: 'JetBrains Mono', monospace;
     --font-family-numbers: 'Space Grotesk', sans-serif;
     --font-family-anchor: 'Nanum Gothic Coding', monospace;
+    --bg-color-body: #4d4d4d;
     --bg-color-div-holder: #F5F5F5;
 }
-#holder {
-    background-color: var(--bg-color-div-holder);
-}
-#random_title {
-    font-family: var(--font-family-title);
-}
-.number {
-    font-family: var(--font-family-numbers);
-}
+body { background-color: var(--bg-color-body); }
+#holder { background-color: var(--bg-color-div-holder); }
+#random_title { font-family: var(--font-family-title); }
+.number { font-family: var(--font-family-numbers); }
 #algorithm_used {
     font-family: monospace;
     font-size: 0.5625em; /* 9px/16=0.5625em */
