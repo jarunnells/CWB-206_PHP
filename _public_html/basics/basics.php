@@ -5,9 +5,9 @@
          FILE: basics.php
 -->
 <?php
-    $title = '<h2>Basics Landing Page -> basics.php</h2>';
-    $nav_random = './random/random.php';
-    $nav_landing = '../index.php';
+    define('TITLE', '<h2>Basics Landing Page -> basics.php</h2>');
+    define('NAV_RANDOM', './random/random.php');
+    define('NAV_LANDING', '../index.php');
 ?>
 <!DOCTYPE html>
 <html lang="en-US">
@@ -17,11 +17,11 @@
         <title>Basics Landing Page</title>
     </head>
     <body>
-        <h2><?php echo $title; ?></h2>
+        <h2><?php echo TITLE; ?></h2>
         <hr/>
         <section class="nav">
-            <p><a href=<?php echo $nav_random; ?> target="_self" title='Go To -> random.php...'>Random Numbers</a></p>
-            <p><a href=<?php echo $nav_landing; ?> target="_self" title='Go To -> index.php...'>Main Landing Page</a></p>
+            <p><a href=<?php echo NAV_RANDOM; ?> target="_self" title='Go To -> random.php...'>Random Numbers</a></p>
+            <p><a href=<?php echo NAV_LANDING; ?> target="_self" title='Go To -> index.php...'>BACK -> Main Landing Page</a></p>
         </section>        
     </body>
 </html>

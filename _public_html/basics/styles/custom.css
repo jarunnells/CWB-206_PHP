@@ -1,0 +1,46 @@
+/*
+    DEVELOPER: J.A. Runnells
+       COURSE: CIS-206-R11
+       BRANCH: main
+         FILE: custom.css
+
+*/
+
+/* FONT IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&display=swap');
+
+:root {
+    --font-family-title: 'JetBrains Mono', monospace;
+    --font-family-numbers: 'Space Grotesk', sans-serif;
+    --font-family-anchor: 'Nanum Gothic Coding', monospace;
+    --bg-color-div-holder: #F5F5F5;
+}
+#holder {
+    background-color: var(--bg-color-div-holder);
+}
+#random_title {
+    font-family: var(--font-family-title);
+}
+.number {
+    font-family: var(--font-family-numbers);
+}
+#algorithm_used {
+    font-family: monospace;
+    font-size: 0.5625em; /* 9px/16=0.5625em */
+}
+.nav_link {
+    font-family: var(--font-family-anchor);
+    text-decoration: none;
+}
+hr.title {
+    border: 1.5px dashed green;
+    border-radius: 25px;
+    width: 450px;
+}
+hr.algorithm {
+    border: 1.25px dashed green;
+    border-radius: 25px;
+    width: 200px;
+}
