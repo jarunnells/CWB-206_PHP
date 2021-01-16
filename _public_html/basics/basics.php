@@ -7,6 +7,7 @@
 <?php
     define('TITLE', '<h2>Basics Landing Page -> basics.php</h2>');
     define('NAV_RANDOM', './random/random.php');
+    define('NAV_FORM', './form_proj/form_process.php');
     define('NAV_LANDING', '../index.php');
 ?>
 <!DOCTYPE html>
@@ -21,7 +22,8 @@
         <hr/>
         <section class="nav">
             <p><a href=<?php echo NAV_RANDOM; ?> target="_self" title='Go To -> random.php...'>Random Numbers</a></p>
+            <p><a href=<?php echo NAV_FORM; ?> target="_self" title='Go To -> form_process.php...'>Form Project</a></p>
             <p><a href=<?php echo NAV_LANDING; ?> target="_self" title='Go To -> index.php...'>BACK -> Main Landing Page</a></p>
-        </section>        
+        </section>
     </body>
 </html>
