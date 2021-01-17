@@ -15,22 +15,15 @@
     define('BACK', '<< FORM >>');
     define('TITLE', 'Player Data');
 
-    // VARS
+    // MISC VARS
     $br = "<br />";
     $hr = "<br /><hr /><br />";
 
     // DATA -> DEBUG
-    // $fname_player = 'Ziggy';
-    // $lname_player = 'Wiggy';
-    // $street = '1234 North Main Street';
-    // $city = 'AnyTown';
-    // $state = 'CA';
-    // $zip = '90210';
-    // $phone = '415.555.1234';
-    // $fname_parent = 'Marley';
-    // $lname_parent = 'McFarley';
     // $debug_url_01 = 'http://localhost:8080/_public_html/basics/form_proj/info_output.php?fname=Ziggy&lname=Wiggy&address=1234+S+Main+St&city=AnyTown&state=CO&zip=12345-6789&phone=303-555-9876';
     // $debug_url_02 = 'http://localhost:8080/_public_html/basics/form_proj/info_output.php?fname=Marley&lname=McFarley&address=4321+SW+Main+St&city=AnyTown&state=CO&zip=12345&phone=303-555-5678';
+    // $fname_parent = 'Marley';
+    // $lname_parent = 'McFarley';
 
     // DATA -> $_GET
     $fname_player = $_GET['fname'];
