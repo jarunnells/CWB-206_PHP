@@ -5,36 +5,117 @@
          FILE: custom.css
 
 */
+/* STYLE IMPORTS */
+@import '../../styles/basics.css';
+@import '../../styles/fonts.css';
+@import '../../styles/vars.css';
 
-/* FONT IMPORTS */
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&display=swap');
-
-:root {
-    --font-family-title: 'JetBrains Mono', monospace;
-    --font-family-numbers: 'Space Grotesk', sans-serif;
-    --font-family-anchor: 'Nanum Gothic Coding', monospace;
-    --bg-color-body: #4d4d4d;
-    --bg-color-div-holder: #F5F5F5;
-}
 body { background-color: var(--bg-color-body); }
+
 #holder { background-color: var(--bg-color-div-holder); }
+
 #random_title { font-family: var(--font-family-title); }
+
+#form_title {
+    font-family: var(--font-family-title);
+    font-size: var(--font-size-title-form);
+    line-height: var(--line-height-title-form);
+}
+
 .number { font-family: var(--font-family-numbers); }
+
+#form_process label {
+    font-family: var(--font-family-label);
+    font-size: var(--font-size-label);
+}
+
+#form_process caption { font-size: var(--font-size-caption-form); }
+
+th#required {
+    font-family: var(--font-family-required);
+    color: var(--color-required);
+    font-size: var(--font-size-required);
+    font-weight: 400; /* 300 400 700*/
+    font-style: italic;
+}
+span.required {
+    font-family: var(--font-family-required);
+    color: var(--color-required);
+    font-size: var(--font-size-required);
+    font-weight: 400; /* 300 400 700*/
+    font-style: italic;
+}
+
+input[type=text] { text-align: center; }
+
+input[type=text]:focus { 
+    background-color: var(--bg-color-input-focus);
+    color: var(--color-input-focus);
+}
+
+#form_process button {
+    margin-top: var(--margin-top-button);
+    font-size: var(--font-size-button-form);
+    padding: var(--padding-button);
+    width: var(--width-button);
+}
+
+#form_process button[type='submit'] {
+    margin-left: 20px;
+}
+
+#form_process button[type='reset'] {
+    margin-left: 50px;
+}
+
+#table_output {
+    width: 80%;
+	margin: 0 auto;
+    padding-left: 1.5em;
+    border-collapse: collapse;
+}
+
+#table_output td {
+    font-family: var(--font-family-data);
+    font-size: 0.85em;
+    padding: 5px;
+    border: 1px solid #DDD;
+}
+
+#table_output tr:nth-child(even){ background-color: #F2F2F2; }
+
+#table_output tr:hover {background-color: #DDD;}
+
+#table_output tr td:first-child{
+    background-color: #3C3C4B;
+    border-color: #3C3C4B;
+    color: #DCDCDC;
+    text-align: right;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+#table_output tr td:last-child{
+	text-align: left;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 #algorithm_used {
     font-family: monospace;
     font-size: 0.5625em; /* 9px/16=0.5625em */
 }
+
 .nav_link {
     font-family: var(--font-family-anchor);
     text-decoration: none;
 }
+
 hr.title {
     border: 1.5px dashed green;
     border-radius: 25px;
     width: 450px;
 }
+
 hr.algorithm {
     border: 1.25px dashed green;
     border-radius: 25px;

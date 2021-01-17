@@ -1,5 +1,12 @@
+# DIRECTORIES
 .DS_Store
 book_apps/
 ex_solutions/
 ex_starts/
 test/
+
+# FILE TYPES
+*.jpg
+*.jpeg
+*.png
+*.mp4

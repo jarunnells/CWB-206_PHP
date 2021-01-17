@@ -13,43 +13,95 @@
     // CONSTANTS
     define('NAV_LINK', './form_process.php');
     define('BACK', '<< FORM >>');
+    define('TITLE', 'Player Data');
 
     // VARS
     $br = "<br />";
     $hr = "<br /><hr /><br />";
-    $title_form = 'Player Data';
 
-    // INSTANTIATE
-    $player = new Player('Ziggy', 'Wiggy');
-    $player->set_address('1234 North Main Street', 'AnyTown', 'CA', '90210');
-    $player->set_phone('415.555.1234');
-    $player_minor = new MinorPlayer('Ziggy', 'Wiggy', '05/26/2016', 'Marley', 'McFarley');
-    $player_minor->set_address('4321 South Main Street', 'AnyTown', 'CO', '80642');
-    $player_minor->set_phone('720.555.4321');
+    // DATA -> DEBUG
+    $fname_player = 'Ziggy';
+    $lname_player = 'Wiggy';
+    $street = '1234 North Main Street';
+    $city = 'AnyTown';
+    $state = 'CA';
+    $zip = '90210';
+    $phone = '415.555.1234';
+    $fname_parent = 'Marley';
+    $lname_parent = 'McFarley';
+
+    // DATA -> $_GET
+    // $fname_player = $_GET['fname'];
+    // $lname_player = $_GET['lname'];
+    // $street = $_GET['address'];
+    // $city = $_GET['city'];
+    // $state = $_GET['state'];
+    // $zip = $_GET['zip'];
+    // $phone = $_GET['phone'];
+
+    // INSTANTIATE PLAYER OBJECT -> SET VALUES
+    $player = new Player($fname_player, $lname_player);
+    $player->set_address($street, $city, $state, $zip);
+    $player->set_phone($phone);
 ?>
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../styles/basics.css" />
         <link rel="stylesheet" href="../styles/custom.css" />
         <title>Info Output | PHP</title>
     </head>
     <?php
-        echo '<body><section id="holder">';
-        echo '<h3 id="form_title">' . $title_form . '</h3>';
+        echo '<body>';
+        echo '<section id="holder">';
+        echo '<h3 id="form_title">' . TITLE . '</h3>';
+        // echo "Player(asString=true): " . $player->get_player_name(true) . $br;
         echo '<hr class="title" />';
-        echo "Player(asString=true): " . $player->get_player_name(true) . $br;
-        echo "Player['first']: " . $player->get_player_name()['first'] . $br;
-        echo "Player['last']: " . $player->get_player_name()['last'] . $br;
-        echo "Address['street']: " . $player->get_address()['street'] . $br;
-        echo "Address['city']: " . $player->get_address()['city'] . $br;
-        echo "Address['state']: " . $player->get_address()['state'] . $br;
-        echo "Address['zip']: " . $player->get_address()['zip'] . $br;
-        echo "Phone: " . $player->get_phone() . $br;
+    ?>
+
+    <table id="table_output">
+        <caption><?php //echo $player->get_player_name(true) ?></caption>
+        <tr>
+            <td>First Name:</td>
+            <td><?php echo $player->get_player_name()['first'] ?></td>
+        </tr>
+        <tr>
+            <td>Last Name:</td>
+            <td><?php echo $player->get_player_name()['last'] ?></td>
+        </tr>
+        <tr>
+            <td>Street:</td>
+            <td><?php echo $player->get_address()['street'] ?></td>
+        </tr>
+        <tr>
+            <td>City:</td>
+            <td><?php echo $player->get_address()['city'] ?></td>
+        </tr>
+        <tr>
+            <td>State:</td>
+            <td><?php echo $player->get_address()['state'] ?></td>
+        </tr>
+        <tr>
+            <td>Zip:</td>
+            <td><?php echo $player->get_address()['zip'] ?></td>
+        </tr>
+        <tr>
+            <td>Phone:</td>
+            <td><?php echo $player->get_phone() ?></td>
+        </tr>
+    </table>
+    <?php
+        // echo "Player['first']: " . $player->get_player_name()['first'] . $br;
+        // echo "Player['last']: " . $player->get_player_name()['last'] . $br;
+        // echo "Address['street']: " . $player->get_address()['street'] . $br;
+        // echo "Address['city']: " . $player->get_address()['city'] . $br;
+        // echo "Address['state']: " . $player->get_address()['state'] . $br;
+        // echo "Address['zip']: " . $player->get_address()['zip'] . $br;
+        // echo "Phone: " . $player->get_phone() . $br;
         echo '<hr class="title" />';
         echo '<a href=' . NAV_LINK . ' class="nav_link" target="_self" title="Go To -> basics.php...">' . BACK . '</a>';
-        echo '</section></body>';
+        echo '</section>';
+        echo '</body>';
     ?>
 </html>

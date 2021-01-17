@@ -1,0 +1,41 @@
+/*
+    DEVELOPER: J.A. Runnells
+       COURSE: CIS-206-R11
+       BRANCH: main
+         FILE: vars.css
+
+*/
+
+:root {
+    /* BACKGROUND COLORS */
+    --bg-color-body: #4d4d4d;
+    --bg-color-div-holder: #F5F5F5;
+    --bg-color-input-focus: #D2E2F9;
+
+    /* FONT COLORS */
+    --color-input-focus: #191970;
+    --color-required: #900;
+
+    /* FONT FAMILIES */
+    --font-family-title: 'JetBrains Mono', monospace;
+    --font-family-numbers: 'Space Grotesk', sans-serif;
+    --font-family-label: var(--font-family-numbers);
+    --font-family-anchor: 'Nanum Gothic Coding', monospace;
+    --font-family-required: var(--font-family-label);
+    --font-family-data: var(--font-family-label);
+
+    /* FONT SIZES */
+    --font-size-title-form: 1.5em;
+    --font-size-label: 0.85em;
+    --font-size-caption-form: 1.15em;
+    --font-size-button-form: 0.60em;
+    --font-size-required: 0.75em;
+
+    /* LINE HEIGHTS */
+    --line-height-title-form: 0.75em;
+
+    /* BUTTON CUSTOMIZATIONS */
+    --margin-top-button: 20px;
+    --padding-button: 8px;
+    --width-button: 100px;
+}

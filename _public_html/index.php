@@ -34,5 +34,9 @@
         <p><a href=<?php echo NAV_PLAYER_MANAGER; ?> target="_self" title='Go To -> player_manager.php...'>Player Manager</a></p>
         <p><a href=<?php echo NAV_FINAL; ?> target="_self" title='Go To -> final.php...'>Final</a></p>
     </section>
+    <video width="384" height="216" autoplay muted loop>
+        <source src="./media/vid/coding_1920x1080.mp4" type="video/mp4">
+        Oops...HTML video tag unsupported...update your browser!
+    </video>
 </body>
 </html>
