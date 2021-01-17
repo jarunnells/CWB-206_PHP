@@ -61,7 +61,6 @@
         // echo "Player(asString=true): " . $player->get_player_name(true) . $br;
         echo '<hr class="title" />';
     ?>
-
     <table id="table_output">
         <caption><?php //echo $player->get_player_name(true) ?></caption>
         <tr>
