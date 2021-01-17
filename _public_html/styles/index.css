@@ -1,0 +1,59 @@
+/*
+    DEVELOPER: J.A. Runnells
+       COURSE: CIS-206-R11
+       BRANCH: main
+         FILE: index.css
+
+*/
+/* RESET */
+@import './normalize.css';
+/* STYLE IMPORTS */
+@import './fonts.css';
+@import './vars.css';
+
+/* ADDITIONAL STYLE RESETS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+	font-size: 1em;
+	font: inherit;
+    vertical-align: baseline;
+}
+ol, ul { list-style: none; }
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+    text-decoration: none;
+}
+
+/* index.php -> MAIN := STYLING */
+html {
+    font-family: var(--font-family-title);
+}
+a {
+    font-family: var(--font-family-anchor);
+}
+
+.text > p {
+    font-family: var(--font-family-text);
+}
+
+.container {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #
+    z-index: 2;
+}
+
+#nav_menu {
+    /* display: none; */
+}

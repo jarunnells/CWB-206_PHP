@@ -19,24 +19,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">    
     <title>CWB-206-R11 | J.A. Runnells</title>
 </head>
 <body>
-    <?php echo TITLE; ?>
-    <hr />
-    <section id='project_nav'>
-        <p><a href=<?php echo NAV_ASHLAND; ?> target="_self" title='Go To -> ashland.php...'>Ashland Website</a></p>
-        <p><a href=<?php echo NAV_BASICS_LANDING; ?> target="_self" title='Go To -> basics.php...'>Basics Landing Page</a></p>
-        <p><a href=<?php echo NAV_SQL; ?> target="_self" title='Go To -> sql.php...'>SQL Queries</a></p>
-        <p><a href=<?php echo NAV_SIGNUP; ?> target="_self" title='Go To -> signup.php...'>Sign-up Phase 1</a></p>
-        <p><a href=<?php echo NAV_SIGNUP; ?> target="_self" title='Go To -> signup.php...'>Sign-up Phase 2</a></p>
-        <p><a href=<?php echo NAV_SIGNUP; ?> target="_self" title='Go To -> signup.php...'>Sign-up Phase 3</a></p>
-        <p><a href=<?php echo NAV_PLAYER_MANAGER; ?> target="_self" title='Go To -> player_manager.php...'>Player Manager</a></p>
-        <p><a href=<?php echo NAV_FINAL; ?> target="_self" title='Go To -> final.php...'>Final</a></p>
+    <section id="header_bar">
+        <?php echo TITLE; ?>
+        <hr />
     </section>
-    <video width="384" height="216" autoplay muted loop>
-        <source src="./media/vid/coding_1920x1080.mp4" type="video/mp4">
-        Oops...HTML video tag unsupported...update your browser!
-    </video>
+    
+    <main class="container">
+        <!-- class="showcase" -->
+        <header>
+            <h2 class="logo">LOGO</h2>
+            <div class="toggle"></div>
+        </header>
+
+        <nav id='nav_menu'>
+            <!-- class="menu" -->
+            <ul>
+                <li><a href=<?php echo NAV_ASHLAND; ?> target="_self" title='Go To -> ashland.php...'>Ashland Website</a></li>
+                <li><a href=<?php echo NAV_BASICS_LANDING; ?> target="_self" title='Go To -> basics.php...'>Basics Landing Page</a></li>
+                <li><a href=<?php echo NAV_SQL; ?> target="_self" title='Go To -> sql.php...'>SQL Queries</a></li>
+                <li><a href=<?php echo NAV_SIGNUP; ?> target="_self" title='Go To -> signup.php...'>Sign-up Phase 1</a></li>
+                <li><a href=<?php echo NAV_SIGNUP; ?> target="_self" title='Go To -> signup.php...'>Sign-up Phase 2</a></li>
+                <li><a href=<?php echo NAV_SIGNUP; ?> target="_self" title='Go To -> signup.php...'>Sign-up Phase 3</a></li>
+                <li><a href=<?php echo NAV_PLAYER_MANAGER; ?> target="_self" title='Go To -> player_manager.php...'>Player Manager</a></li>
+                <li><a href=<?php echo NAV_FINAL; ?> target="_self" title='Go To -> final.php...'>Final</a></li>
+            </ul>
+        </nav>
+
+        <video src="./media/vid/coding_1920x1080.mp4" type="video/mp4" autoplay muted loop>
+            <!-- <source src="./media/vid/coding_1920x1080.mp4" type="video/mp4"> -->
+            Oops...HTML video tag unsupported...update your browser!
+        </video>
+
+        <div class="overlay">
+            <!-- class="overlay" -->
+        </div>
+
+        <div class="text">
+            <!-- class="text" -->
+            <h2>J.A. Runnells</h2>
+            <h3>CWB-206-R11</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam nihil atque iusto harum ipsum assumenda, placeat ut optio, culpa fugiat eos minus dolore aut veritatis tempore recusandae aliquam numquam alias!</p>
+            <a href="#">BUTTON</a>
+        </div>
+
+        <ul class="source_code">
+            <!-- class="social" -->
+            <li><a href="#" target="_blank" title="Go to -> GitHub.com"><img src="./media/img/GitHub-Mark-32px.png" alt="GitHub"></a></li>
+        </ul>
+
+    </main>    
 </body>
 </html>
