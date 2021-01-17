@@ -4,7 +4,7 @@
        BRANCH: main
          FILE: info_output.php
 
-    [ - ] COMPLETE?
+    [ X ] COMPLETE?
 -->
 <?php
     include './player.php';
@@ -20,24 +20,26 @@
     $hr = "<br /><hr /><br />";
 
     // DATA -> DEBUG
-    $fname_player = 'Ziggy';
-    $lname_player = 'Wiggy';
-    $street = '1234 North Main Street';
-    $city = 'AnyTown';
-    $state = 'CA';
-    $zip = '90210';
-    $phone = '415.555.1234';
-    $fname_parent = 'Marley';
-    $lname_parent = 'McFarley';
+    // $fname_player = 'Ziggy';
+    // $lname_player = 'Wiggy';
+    // $street = '1234 North Main Street';
+    // $city = 'AnyTown';
+    // $state = 'CA';
+    // $zip = '90210';
+    // $phone = '415.555.1234';
+    // $fname_parent = 'Marley';
+    // $lname_parent = 'McFarley';
+    // $debug_url_01 = 'http://localhost:8080/_public_html/basics/form_proj/info_output.php?fname=Ziggy&lname=Wiggy&address=1234+S+Main+St&city=AnyTown&state=CO&zip=12345-6789&phone=303-555-9876';
+    // $debug_url_02 = 'http://localhost:8080/_public_html/basics/form_proj/info_output.php?fname=Marley&lname=McFarley&address=4321+SW+Main+St&city=AnyTown&state=CO&zip=12345&phone=303-555-5678';
 
     // DATA -> $_GET
-    // $fname_player = $_GET['fname'];
-    // $lname_player = $_GET['lname'];
-    // $street = $_GET['address'];
-    // $city = $_GET['city'];
-    // $state = $_GET['state'];
-    // $zip = $_GET['zip'];
-    // $phone = $_GET['phone'];
+    $fname_player = $_GET['fname'];
+    $lname_player = $_GET['lname'];
+    $street = $_GET['address'];
+    $city = $_GET['city'];
+    $state = $_GET['state'];
+    $zip = $_GET['zip'];
+    $phone = $_GET['phone'];
 
     // INSTANTIATE PLAYER OBJECT -> SET VALUES
     $player = new Player($fname_player, $lname_player);
@@ -92,13 +94,6 @@
         </tr>
     </table>
     <?php
-        // echo "Player['first']: " . $player->get_player_name()['first'] . $br;
-        // echo "Player['last']: " . $player->get_player_name()['last'] . $br;
-        // echo "Address['street']: " . $player->get_address()['street'] . $br;
-        // echo "Address['city']: " . $player->get_address()['city'] . $br;
-        // echo "Address['state']: " . $player->get_address()['state'] . $br;
-        // echo "Address['zip']: " . $player->get_address()['zip'] . $br;
-        // echo "Phone: " . $player->get_phone() . $br;
         echo '<hr class="title" />';
         echo '<a href=' . NAV_LINK . ' class="nav_link" target="_self" title="Go To -> basics.php...">' . BACK . '</a>';
         echo '</section>';

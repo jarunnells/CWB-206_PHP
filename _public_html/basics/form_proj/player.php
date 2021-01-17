@@ -105,9 +105,7 @@
         }
     }
 
-    // https://stackoverflow.com/questions/11237511/multiple-ways-of-calling-parent-method-in-php
-    // https://www.freecodecamp.org/news/the-best-php-examples/
-    // 
+    // Sub Class -> Player := includes parental information
     class MinorPlayer extends Player {
         public function __construct(
             string $player_first_name, 

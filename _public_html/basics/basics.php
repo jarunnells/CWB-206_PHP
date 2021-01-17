@@ -6,6 +6,7 @@
 -->
 <?php
     define('TITLE', '<h2>Basics Landing Page -> basics.php</h2>');
+    define('SUBTITLE', '<h3>Getting Down With The Basics...</h3>');
     define('NAV_RANDOM', './random/random.php');
     define('NAV_FORM', './form_proj/form_process.php');
     define('NAV_LANDING', '../index.php');
@@ -18,7 +19,10 @@
         <title>Basics Landing Page</title>
     </head>
     <body>
-        <h2><?php echo TITLE; ?></h2>
+        <?php 
+            echo TITLE;
+            echo SUBTITLE;
+        ?>
         <hr/>
         <section class="nav">
             <p><a href=<?php echo NAV_RANDOM; ?> target="_self" title='Go To -> random.php...'>Random Numbers</a></p>

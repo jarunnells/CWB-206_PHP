@@ -4,7 +4,7 @@
        BRANCH: main
          FILE: form_process.php
 
-    [ - ] COMPLETE?
+    [ X ] COMPLETE?
 -->
 <?php
 
@@ -94,16 +94,19 @@
                 <td><input type="text" name="phone" id="phone" placeholder=<?php echo PLACEHOLDERS['phone'] ?> title=<?php echo TITLES['phone'] ?> pattern=<?php echo REGEX['phone'] ?> maxlength="14" required><span class="required">*</span></td>
             </tr>
             <tr>
-                <td><button type="submit">SUBMIT</button></td>
-                <td><button type="reset">CLEAR</button></td>
+                <td colspan="2">
+                    <button type="submit" class="btn styled">SUBMIT</button>
+                    <button type="reset" class="btn styled">CLEAR</button>
+                </td>
             </tr>
         </table>
     </form>
     <?php
         echo '<hr class="title" />';
         echo '<a href=' . NAV_LINK . ' class="nav_link" target="_self" title="Go To -> basics.php...">' . BACK . '</a>';
-        echo $br;
-        echo '<a href=' . NAV_OUTPUT . ' class="nav_link" target="_self" title="Go To -> info_output.php...">' . OUTPUT . '</a>';
+        // DEBUG
+        // echo $br;
+        // echo '<a href=' . NAV_OUTPUT . ' class="nav_link" target="_self" title="Go To -> info_output.php...">' . OUTPUT . '</a>';
         echo '</section>';
         echo '</body>';
     ?>

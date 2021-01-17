@@ -24,6 +24,8 @@ body { background-color: var(--bg-color-body); }
 
 .number { font-family: var(--font-family-numbers); }
 
+#form_process { padding: var(--padding-form); }
+
 #form_process label {
     font-family: var(--font-family-label);
     font-size: var(--font-size-label);
@@ -35,74 +37,88 @@ th#required {
     font-family: var(--font-family-required);
     color: var(--color-required);
     font-size: var(--font-size-required);
-    font-weight: 400; /* 300 400 700*/
-    font-style: italic;
+    font-weight: var(--font-weight-required-th);
+    font-style: var(--font-style-required);
 }
 span.required {
     font-family: var(--font-family-required);
     color: var(--color-required);
     font-size: var(--font-size-required);
-    font-weight: 400; /* 300 400 700*/
-    font-style: italic;
+    font-weight: var(--font-weight-required-span);
+    font-style: var(--font-style-required);
 }
 
-input[type=text] { text-align: center; }
+input[type=text] {     
+    font-family: var(--font-family-input-text);
+    font-size: var(--font-size-9);
+    text-align: var(--input-txt-align); 
+}
 
-input[type=text]:focus { 
+input[type=text]:focus {
     background-color: var(--bg-color-input-focus);
     color: var(--color-input-focus);
 }
 
+#form_process td:first-child:not(button) {
+    padding: var(--padding-not-button);
+}
+
 #form_process button {
-    margin-top: var(--margin-top-button);
+    margin: var(--margin-button);
     font-size: var(--font-size-button-form);
     padding: var(--padding-button);
     width: var(--width-button);
+    border-radius: var(--border-radius-btn);
+    color: var(--color-form_btn);
+    text-align: var(--txt-align-button);
+    cursor: pointer;
 }
 
 #form_process button[type='submit'] {
-    margin-left: 20px;
+    background-color: var(--bg-color-btn-submit);
+    border: var(--border-size) var(--border-line-style-s) var(--bg-color-btn-reset);
 }
 
 #form_process button[type='reset'] {
-    margin-left: 50px;
+    background-color: var(--bg-color-btn-reset);
+    border: var(--border-size) var(--border-line-style-s) var(--bg-color-btn-submit);
 }
 
 #table_output {
-    width: 80%;
-	margin: 0 auto;
-    padding-left: 1.5em;
+    width: var(--table-output-width);
+	margin: var(--table-output-margin);
+    padding-left: var(--table-output-padding-left);;
     border-collapse: collapse;
 }
 
 #table_output td {
     font-family: var(--font-family-data);
-    font-size: 0.85em;
-    padding: 5px;
-    border: 1px solid #DDD;
+    font-size: var(--font-size-label);
+    padding: var(--padding-td-output);
+    border: var(--border-size) var(--border-line-style-s) var(--bg-color-table-hover);
 }
 
-#table_output tr:nth-child(even){ background-color: #F2F2F2; }
+#table_output tr:nth-child(odd){ background-color: var(--bg-color-table-rows-alt); }
 
-#table_output tr:hover {background-color: #DDD;}
+#table_output tr:hover { background-color: var(--bg-color-table-hover); }
 
 #table_output tr td:first-child{
-    background-color: #3C3C4B;
-    border-color: #3C3C4B;
-    color: #DCDCDC;
-    text-align: right;
-    padding-left: 15px;
-    padding-right: 15px;
+    background-color: var(--bg-color-table-row-header);
+    border-color: var(--bg-color-table-row-header);
+    color: var(--color-table-row-header);
+    text-align: var(--txt-align-row-header);
+    padding-left: var(--padding-tr);
+    padding-right: var(--padding-tr);
 }
 #table_output tr td:last-child{
-	text-align: left;
-    padding-left: 15px;
-    padding-right: 15px;
+	text-align: var(--txt-align-row-data);
+    padding-left: var(--padding-tr);
+    padding-right: var(--padding-tr);
 }
 
 #algorithm_used {
     font-family: monospace;
-    font-size: 0.5625em; /* 9px/16=0.5625em */
+    font-size: var(--font-size-9);
 }
 
 .nav_link {
@@ -111,13 +127,13 @@ input[type=text]:focus {
 }
 
 hr.title {
-    border: 1.5px dashed green;
-    border-radius: 25px;
-    width: 450px;
+    border: var(--ln-width-hr-title) var(--border-line-style-d) var(--color-const-green-basics);
+    border-radius: var(--border-radius-hr);
+    width: var(--width-hr-title);
 }
 
 hr.algorithm {
-    border: 1.25px dashed green;
-    border-radius: 25px;
-    width: 200px;
+    border: var(--ln-width-hr-algorithm) var(--border-line-style-d) var(--color-const-green-basics);
+    border-radius: var(--border-radius-hr);
+    width: var(--width-hr-algorithm);
 }
