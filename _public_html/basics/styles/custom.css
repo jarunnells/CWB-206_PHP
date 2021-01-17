@@ -71,17 +71,23 @@ input[type=text]:focus {
     border-radius: var(--border-radius-btn);
     color: var(--color-form_btn);
     text-align: var(--txt-align-button);
-    cursor: pointer;
+    cursor: pointer;    
 }
 
 #form_process button[type='submit'] {
     background-color: var(--bg-color-btn-submit);
-    border: var(--border-size) var(--border-line-style-s) var(--bg-color-btn-reset);
+    border: 0;
+    box-shadow:
+        0 0 0 2px var(--bg-color-div-holder),
+        0 0 0 7px var(--bg-color-btn-submit);
 }
 
 #form_process button[type='reset'] {
     background-color: var(--bg-color-btn-reset);
-    border: var(--border-size) var(--border-line-style-s) var(--bg-color-btn-submit);
+    border: 0;
+    box-shadow:
+        0 0 0 2px var(--bg-color-div-holder),
+        0 0 0 7px var(--bg-color-btn-reset);
 }
 
 #table_output {
