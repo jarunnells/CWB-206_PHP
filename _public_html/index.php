@@ -79,7 +79,7 @@
 
         <ul class="source_code">
             <!-- class="social" -->
-            <li><a href="#" target="_blank" title="Go to -> GitHub.com"><img src="./media/img/GitHub-Mark-32px.png" alt="GitHub"></a></li>
+            <li><a href="#" target="_blank" title="Go to -> GitHub.com"><img src="./media/img/GitHub-Mark-Light-32px.png" alt="GitHub"></a></li>
         </ul>
 
     </main>
