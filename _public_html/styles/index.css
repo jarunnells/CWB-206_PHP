@@ -89,6 +89,10 @@ span.hamburger-label.is-active {
     display: none;
 }
 
+#nav_menu.is-active {
+    display: block;
+}
+
 .hamburger-inner, 
 .hamburger-inner:after, 
 .hamburger-inner:before {
