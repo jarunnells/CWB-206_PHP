@@ -26,7 +26,7 @@
 </head>
 <body>
     <section id="header_bar">
-        <!-- <marquee behavior="scroll" direction="left" scrollamount="3"><?php echo TITLE; ?></marquee> -->
+        <!-- <marquee behavior="scroll" direction="left" scrollamount="3"><?php //echo TITLE; ?></marquee> -->
         <div class="marquee"><?php echo TITLE; ?></div>
         <hr />
     </section>

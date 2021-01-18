@@ -36,10 +36,11 @@ body {
 #header_bar {
     position: absolute;
     width: 100%;
-    color: #789;
+    color: rgba(200, 200, 255, 0.3);
     top: 0;
     left: 0;
     z-index: 5;
+    display: none;
 }
 #header_bar > hr {
     display: none;
