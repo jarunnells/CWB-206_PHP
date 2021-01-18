@@ -14,6 +14,7 @@
     --color-const-red: #f44336;
     --color-const-gray: #e7e7e7;
     --color-const-black: #555555;
+    --color-const-crimson: #DC143C;
 
     /* BACKGROUND COLORS */
     --bg-color-body: #4d4d4d;
@@ -26,7 +27,7 @@
     --bg-color-table-row-header: #3C3C4B;
     --bg-color-hamburger-lt: #FFF;
     --bg-color-hamburger-dk: #111;
-    
+    --bg-color-index-overlay: var(--color-const-crimson);
 
     /* FONT COLORS */
     --color-input-focus: #191970;
