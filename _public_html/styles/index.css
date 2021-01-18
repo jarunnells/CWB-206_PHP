@@ -10,6 +10,8 @@
 /* STYLE IMPORTS */
 @import './fonts.css';
 @import './vars.css';
+@import './hamburgers.min.css';
+@import './marquee.css';
 
 /* ADDITIONAL STYLE RESETS */
 * {
@@ -50,10 +52,58 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #
+    background: #111;
+    color: #FFF;
     z-index: 2;
 }
 
+.container header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.toggle {
+    position: relative;
+    width: 75px; /* 60px */
+    height: 75px; /* 60px */
+}
+
+.logo {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+span.hamburger-label.is-active {
+    /* TODO: style Hamburger menu span */
+}
+
 #nav_menu {
-    /* display: none; */
+    display: none;
+}
+
+.hamburger-inner, 
+.hamburger-inner:after, 
+.hamburger-inner:before {
+    background-color: var(--bg-color-hamburger-lt);
+}
+
+.hamburger.is-active .hamburger-inner, 
+.hamburger.is-active .hamburger-inner:after, 
+.hamburger.is-active .hamburger-inner:before {
+    background-color: var(--bg-color-hamburger-lt);
+}
+
+.hamburger-label {
+    font-weight: 600;
+    display: inline-block;
+    vertical-align: middle;
+    text-transform: uppercase;
 }

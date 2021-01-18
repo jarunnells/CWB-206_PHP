@@ -1,4 +1,4 @@
-<!-- 
+<!--
     DEVELOPER: J.A. Runnells
        COURSE: CIS-206-R11
        BRANCH: main
@@ -19,20 +19,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/index.css">    
+    <link rel="stylesheet" href="./styles/index.css">
+    <script src="./js/event_listeners.js" defer></script>
     <title>CWB-206-R11 | J.A. Runnells</title>
 </head>
 <body>
     <section id="header_bar">
-        <?php echo TITLE; ?>
+        <!-- <marquee behavior="scroll" direction="left" scrollamount="3"><?php echo TITLE; ?></marquee> -->
+        <div class="marquee"><?php echo TITLE; ?></div>
         <hr />
     </section>
-    
+
     <main class="container">
         <!-- class="showcase" -->
         <header>
-            <h2 class="logo">LOGO</h2>
-            <div class="toggle"></div>
+            <h2 class="logo">Logo Here</h2>
+            <!-- <div class="toggle">
+                <button class="hamburger hamburger--collapse toggle" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div> -->
+            <button class="hamburger hamburger--collapse toggle" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+                <span class="hamburger-label">Menu</span>
+            </button>
         </header>
 
         <nav id='nav_menu'>
@@ -49,10 +63,7 @@
             </ul>
         </nav>
 
-        <video src="./media/vid/coding_1920x1080.mp4" type="video/mp4" autoplay muted loop>
-            <!-- <source src="./media/vid/coding_1920x1080.mp4" type="video/mp4"> -->
-            Oops...HTML video tag unsupported...update your browser!
-        </video>
+        <!-- <video src="./media/vid/coding_1920x1080.mp4" type="video/mp4" autoplay muted loop>Oops...HTML video tag unsupported...update your browser!</video> -->
 
         <div class="overlay">
             <!-- class="overlay" -->
@@ -71,6 +82,6 @@
             <li><a href="#" target="_blank" title="Go to -> GitHub.com"><img src="./media/img/GitHub-Mark-32px.png" alt="GitHub"></a></li>
         </ul>
 
-    </main>    
+    </main>
 </body>
 </html>
