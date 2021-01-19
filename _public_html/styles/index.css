@@ -5,7 +5,8 @@
          FILE: index.css
     index.php -> MAIN := STYLING
 */
-/* RESET */
+/* GLOBAL STYLE RESET */
+@import './minireset.css';
 @import './normalize.css';
 /* STYLE IMPORTS */
 @import './fonts.css';
@@ -14,7 +15,7 @@
 @import './marquee.css';
 
 /* GLOBAL STYLE RESETS */
-* {
+/* * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -29,7 +30,7 @@ table {
 }
 a {
     text-decoration: none;
-}
+} */
 body {
     overflow: hidden;
 }

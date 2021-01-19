@@ -44,7 +44,7 @@
                 <span class="hamburger-label">Menu</span>
             </button>
         </header>
-        <video src="./media/vid/coding_1920x1080.mp4" type="video/mp4" autoplay muted loop>Oops...HTML video tag unsupported...update your browser!</video>
+        <video src="./assets/vid/coding_1920x1080.mp4" type="video/mp4" autoplay muted loop>Oops...HTML video tag unsupported...update your browser!</video>
         <div class="overlay">
             <!-- class="overlay" -->
         </div>
@@ -57,7 +57,7 @@
         </div>
         <ul class="source_code">
             <!-- class="social" -->
-            <li><a href=<?php echo GITHUB ?> target="_blank" title="Go to -> GitHub.com"><img src="./media/img/GitHub-Mark-Light-32px.png" alt="GitHub"></a></li>
+            <li><a href=<?php echo GITHUB ?> target="_blank" title="Go to -> GitHub.com"><img src="./assets/img/GitHub-Mark-Light-32px.png" alt="GitHub"></a></li>
         </ul>
     </main>
     <nav id='nav_menu'>

@@ -6,7 +6,10 @@ ex_starts/
 test/
 
 # FILE TYPES
-*.jpg
-*.jpeg
-*.png
-*.mp4
+# *.jpg
+# *.jpeg
+# *.png
+# *.mp4
+**/fonts
+**/img
+**/vid
