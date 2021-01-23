@@ -7,7 +7,7 @@
 <?php
     define('TITLE', '<h2>Main Landing Page -> index.php</h2>');
     define('NAV_COMING_SOON', 'coming_soon.php');
-    define('NAV_ASHLAND', './ashland/src/index.php');
+    define('NAV_ASHLAND', './ashland/dist/index.php');
     define('NAV_BASICS_LANDING', './basics/basics.php');
     define('NAV_SQL', NAV_COMING_SOON);
     define('NAV_SIGNUP', NAV_COMING_SOON);

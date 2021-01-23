@@ -1,3 +1,9 @@
+<!--
+    DEVELOPER: J.A. Runnells
+       COURSE: CIS-206-R11
+       BRANCH: main
+         FILE: index.php
+-->
 <?php $greeting = 'Hello World -> PHP'; ?>
 <!DOCTYPE html>
 <html lang="en-US">
@@ -6,8 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- STYLESHEET(S) -->
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="./temp.css">
+    <link rel="stylesheet" href="./css/styles.min.css">
 
     <!-- SCRIPT(S) -->
     <script src="./js/main.js" defer></script>

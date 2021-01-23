@@ -1,5 +1,14 @@
-"use strict";
+/*
+    DEVELOPER: J.A. Runnells
+       COURSE: CIS-206-R11
+       BRANCH: main
+         FILE: main.js
 
-let greeting = 'Hello World!';
+*/
+const main = () => {
+    "use strict";
+    let greeting = 'Hello World!';
+    console.log(greeting);
+};
 
-console.log(greeting);
+main();

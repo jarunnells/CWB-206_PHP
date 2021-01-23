@@ -1,3 +1,10 @@
+/*
+    DEVELOPER: J.A. Runnells
+       COURSE: CIS-206-R11
+       BRANCH: main
+         FILE: _config.scss
+*/
 @import "./_vars";
-@import "./_reset";
+@import "./_reset.sass";
 @import "./_print";
+@import "./_temp";
