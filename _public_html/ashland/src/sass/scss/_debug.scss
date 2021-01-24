@@ -1,0 +1,20 @@
+//
+//    DEVELOPER: J.A. Runnells
+//       COURSE: CIS-206-R11
+//       BRANCH: main
+//         FILE: _debug.scss
+//
+
+// TEMP -> DEBUG
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    p#test {
+        font-size: 3em;
+        color: rgba(12, 86, 146, 1);
+    }
+}

@@ -1,28 +1,6 @@
-/*
-    DEVELOPER: J.A. Runnells
-       COURSE: CIS-206-R11
-       BRANCH: main
-         FILE: styles.scss
-*/
-/*
-    DEVELOPER: J.A. Runnells
-       COURSE: CIS-206-R11
-       BRANCH: main
-         FILE: _config.scss
-*/
-/*
-    DEVELOPER: J.A. Runnells
-       COURSE: CIS-206-R11
-       BRANCH: main
-         FILE: _vars.scss
-*/
-/* JetBrains Mono */
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;400;700&display=swap");
-/* Space Grotesk */
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap");
-/* Nanum Gothic Coding */
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&display=swap");
-/* Overlock */
 @import url("https://fonts.googleapis.com/css2?family=Overlock:ital,wght@0,400;0,900;1,400;1,900&display=swap");
 html,
 body,
@@ -135,17 +113,6 @@ q:after {
   display: none !important;
 }
 
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
 .clearfix::before,
 .clearfix::after {
   content: " ";
@@ -237,12 +204,6 @@ q:after {
   }
 }
 
-/*
-    DEVELOPER: J.A. Runnells
-       COURSE: CIS-206-R11
-       BRANCH: main
-         FILE: _temp.scss
-*/
 * {
   margin: 0;
   padding: 0;
@@ -250,7 +211,7 @@ q:after {
           box-sizing: border-box;
 }
 
-main > p#test {
+main p#test {
   font-size: 3em;
   color: #0c5692;
 }
