@@ -5,13 +5,65 @@
 //         FILE: _index.scss
 //
 
-@use "fonts";
-@use "reset";
-@use "print";
+@use 'colors' as c;
+@use 'fonts' as f;
+@use 'reset';
+@use 'print';
 @use 'debug';
 
-// @import './fonts';
-// @import './reset';
-// @import './print';
-// @import './debug';
+$mobile: 600px;
+$tablet: 800px;
+$desktop: 1080px;
 
+/// Get font weight by key (bold, etc.)
+///
+/// @param {string} $weight-name - reg(200), med(400), bold(700)
+/// @return {number} returns `$weight-name` as valid CSS weight number value
+@function weight($weight-name) {
+  @return map-get($map: $font-weights, $key: $weight-name);
+}
+
+@function fontFam($family-name) {
+  @return map-get($map: $font-family, $key: $family-name);
+}
+
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin theme($light-theme: true) {
+  @if $light-theme {
+    background: lighten($color: c.$dark-bg, $amount: 80%);
+    // color: darken($color: $text-color, $amount: 80%);
+  }
+}
+
+// MEDIA MIXINS
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (max-width: $desktop) {
+    @content;
+  }
+}
+
+.dark {
+  @include theme($light-theme: false);
+  // @include theme($light-theme: true);
+}
+
+.light {
+  @include theme($light-theme: true);
+  // @include theme($light-theme: true);
+}

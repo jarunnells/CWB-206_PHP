@@ -19,9 +19,9 @@
 
     <title>Ashland</title>
 </head>
-<body>
+<body class="dark">
     <main>
-        <p id="test">
+        <p class="test">
             <?php echo $greeting; ?>
         </p>        
     </main>

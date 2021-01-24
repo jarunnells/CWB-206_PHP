@@ -12,9 +12,16 @@
 //
 
 // sass --color --trace  --style=compressed --watch {file|dir}:{file|dir}
+//
+// ABSOLUTE:
+// ==========
 // sass --color --trace  --style=compressed --watch /Applications/MAMP/htdocs/_public_html/ashland/src/sass/styles.scss:/Applications/MAMP/htdocs/_public_html/ashland/dist/css/styles.min.css
+//
+// RELATIVE:
+// ==========
 // ./_public_html/ashland/src/sass/styles.scss
 // ./_public_html/ashland/dist/css/styles.min.css
+// sass --color --trace  --style=compressed --watch src/sass/styles.scss:dist/css/styles.min.css
+//
 
 @use 'scss';
-// @import './scss/index';

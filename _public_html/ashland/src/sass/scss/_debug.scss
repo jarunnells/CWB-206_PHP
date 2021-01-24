@@ -4,17 +4,14 @@
 //       BRANCH: main
 //         FILE: _debug.scss
 //
-
+@use 'colors' as c;
 // TEMP -> DEBUG
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body {
+  background: c.$dark-bg;
 }
-
 main {
-    p#test {
-        font-size: 3em;
-        color: rgba(12, 86, 146, 1);
-    }
+  .test {
+    font-size: 3em;
+    color: c.$debug;
+  }
 }
