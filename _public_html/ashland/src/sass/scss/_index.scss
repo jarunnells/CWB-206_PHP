@@ -5,10 +5,16 @@
 //         FILE: _index.scss
 //
 
-@use 'colors' as c;
-@use 'fonts' as f;
+// BEM:
+//   .{Block}__{Element}
+//   .{Block}__{Element}--{Modifier}
+//   .{Block}--{Modifier}
+//
+
 @use 'reset';
 @use 'print';
+@use 'colors' as c;
+@use 'fonts' as f;
 @use 'debug';
 
 $mobile: 600px;
@@ -20,11 +26,11 @@ $desktop: 1080px;
 /// @param {string} $weight-name - reg(200), med(400), bold(700)
 /// @return {number} returns `$weight-name` as valid CSS weight number value
 @function weight($weight-name) {
-  @return map-get($map: $font-weights, $key: $weight-name);
+  @return map-get($map: f.$font-weights, $key: $weight-name);
 }
 
 @function fontFam($family-name) {
-  @return map-get($map: $font-family, $key: $family-name);
+  @return map-get($map: f.$families, $key: $family-name);
 }
 
 @mixin flexCenter($direction) {
@@ -36,7 +42,7 @@ $desktop: 1080px;
 
 @mixin theme($light-theme: true) {
   @if $light-theme {
-    background: lighten($color: c.$dark-bg, $amount: 80%);
+    background: lighten($color: c.$dark--bg, $amount: 80%);
     // color: darken($color: $text-color, $amount: 80%);
   }
 }
@@ -66,4 +72,40 @@ $desktop: 1080px;
 .light {
   @include theme($light-theme: true);
   // @include theme($light-theme: true);
+}
+
+.body.dark {
+  color: whitesmoke;
+}
+
+.nav {
+  display: flex;
+  background-color: c.$clr--05;
+  padding: 20px 0;
+  font-family: fontFam(jet);
+  // position: fixed;
+  // position: absolute;
+  position: relative;
+  width: 100%;
+  z-index: 999;
+  
+  #{&}__navbar {
+    @include flexCenter(row);
+    justify-content: flex-end;
+    
+    & a {
+      color: c.$a;
+      padding: 20px 40px;
+      background-color: white;
+
+      &:hover {
+        // color: c.$a;
+        background-color: c.$clr--01;
+      }
+    }
+  }
+}
+
+main {
+  position: absolute;
 }

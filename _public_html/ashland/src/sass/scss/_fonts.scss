@@ -14,22 +14,26 @@
 // Nanum Gothic Coding -> 400, 700
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&display=swap");
 
-// Overlock -> { ital|norm } @ ( 400, 900 )
+// Overlock -> { ital|reg } @ ( 400, 900 )
 @import url("https://fonts.googleapis.com/css2?family=Overlock:ital,wght@0,400;0,900;1,400;1,900&display=swap");
+
+// Noto Sans -> { ital|reg } @ ( 400, 700 )
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 $weights: (
   "xlight": 100,
   "light": 300,
-  "norm": 400,
+  "reg": 400,
   "bold": 700,
   "xbold": 900,
 );
 
 $families: (
-  "jet": "JetBrains Mono",
-  "spc": "Space Grotesk",
-  "naum": "Nanum Gothic Coding",
-  "ovr": "Overlock",
+  "jet": "JetBrains Mono", // 
+  "spc": "Space Grotesk", // 
+  "naum": "Nanum Gothic Coding", // 
+  "ovr": "Overlock", // 
+  'noto': 'Noto Sans', // font-family: 'Noto Sans', sans-serif;
   "mono": monospace,
   "san": sans-serif,
   "ser": serif,

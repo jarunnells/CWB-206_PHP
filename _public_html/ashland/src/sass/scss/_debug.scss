@@ -7,11 +7,9 @@
 @use 'colors' as c;
 // TEMP -> DEBUG
 body {
-  background: c.$dark-bg;
+  background: c.$dark--bg;
 }
-main {
-  .test {
-    font-size: 3em;
-    color: c.$debug;
-  }
+.header__greet {
+  font-size: 3em;
+  color: c.$debug;
 }
