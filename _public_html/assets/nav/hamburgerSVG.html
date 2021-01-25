@@ -16,176 +16,193 @@
 <html lang="en-US">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../styles/minireset.css">
-    <title>Hamburger - SVG</title>
-    <style>
-        @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hamburger - SVG</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
 
-        :root {
-            --primary-bg-color: rgba(20, 110, 200, 0.75);
-            --primary-bg-color-body: rgba(255, 255, 255, 0.75);            
-            --primary-bg-color-nav: rgba(59, 89, 152, 1);
-            --overlay-bg-color: rgba(24, 39, 51, 0.85);
-            --primary-font-color-anchor: rgba(242, 242, 242, 1);
-            --primary-font-color: rgb(46, 72, 98);
-            --hamburger-color: rgb(255, 255, 255);
-            --hamburger-line-width: 2px;
-            --menu-speed: 0.75s;
-        }
+    /* GENERIC RESETS */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    *::before,*::after { box-sizing: border-box; }
+    html > * {
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+      line-height: 1.15;
+    }
+    a { text-decoration: none; color: inherit; }
+    h1,h2,h3,h4,h5,h6 { font-size: 100%; font-weight: normal; }
+    ul { list-style: none; }
+    body { overflow: hidden; }
+    img,video { height: auto; max-width: 100%; }
+    .clearfix::before,.clearfix::after { content: " "; display: table; }
+    .clearfix::after { clear: both; }
+    /* END GENERIC RESETS */
 
-        body {
-            font-family:'Courier New', Courier, monospace;
-            background: var(--primary-bg-color-body);
-            font-family: "Roboto", sans-serif;
-            color: var(--primary-font-color);
-            line-height: 1.4;
-            /* overflow: hidden; */
-        }
-        h1 { font-size: 24px; }
-        .navbar {
-            background-color: var(--primary-bg-color-nav);
-            overflow: hidden;
-            height: 63px;
-        }
+    :root {
+      --primary-bg-color: rgba(20, 110, 200, 0.75);
+      --primary-bg-color-body: rgba(255, 255, 255, 0.75);            
+      --primary-bg-color-nav: rgba(59, 89, 152, 1);
+      --overlay-bg-color: rgba(24, 39, 51, 0.85);
+      --primary-font-color-anchor: rgba(242, 242, 242, 1);
+      --primary-font-color: rgb(46, 72, 98);
+      --hamburger-color: rgb(255, 255, 255);
+      --hamburger-line-width: 2px;
+      --menu-speed: 0.75s;
+    }
 
-        .navbar a {
-            float: left;
-            display: block;
-            color: var(--primary-font-color-anchor);
-            text-align: center;
-            padding: 14px 16px;
-            font-size: 17px;
-        }
+    body {
+      font-family:'Courier New', Courier, monospace;
+      background: var(--primary-bg-color-body);
+      font-family: "Roboto", sans-serif;
+      color: var(--primary-font-color);
+      line-height: 1.4;
+      /* overflow: hidden; */
+    }
+    h1 { font-size: 24px; }
+    .navbar {
+      background-color: var(--primary-bg-color-nav);
+      overflow: hidden;
+      height: 63px;
+    }
 
-        .navbar ul {
-            margin: 8px 0 0 0;
-        }
+    .navbar a {
+      float: left;
+      display: block;
+      color: var(--primary-font-color-anchor);
+      text-align: center;
+      padding: 14px 16px;
+      font-size: 17px;
+    }
 
-        .navbar a:hover {
-            background-color: rgba(221, 221, 221, 1);
-            color: rgba(0, 0, 0, 1);
-        }
+    .navbar ul {
+      margin: 8px 0 0 0;
+    }
 
-        .side-nav {
-            height: 100%;
-            width: 0;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 1;
-            background-color: #111;
-            opacity: 0.9;
-            overflow-x: hidden;
-            padding-top: 60px;
-            transition: 0.5s;
-        }
+    .navbar a:hover {
+      background-color: rgba(221, 221, 221, 1);
+      color: rgba(0, 0, 0, 1);
+    }
 
-        .side-nav a {
-            padding: 10px 10px 10px 30px;
-            font-size: 22px;
-            color: rgba(204, 204, 204, 1);
-            display: block;
-            transition: 0.3s;
-        }
+    .side-nav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      background-color: #111;
+      opacity: 0.9;
+      overflow-x: hidden;
+      padding-top: 60px;
+      transition: 0.5s;
+    }
 
-        .side-nav a:hover {
-            color: rgba(255, 255, 255, 1);
-        }
+    .side-nav a {
+      padding: 10px 10px 10px 30px;
+      font-size: 22px;
+      color: rgba(204, 204, 204, 1);
+      display: block;
+      transition: 0.3s;
+    }
 
-        .side-nav .btn-close {
-            position: absolute;
-            top: 0;
-            right: 22px;
-            font-size: 36px;
-            margin-left: 50px;
-        }
+    .side-nav a:hover {
+      color: rgba(255, 255, 255, 1);
+    }
 
-        #main {
-            transition: margin-left 0.5s;
-            padding: 20px;
-            overflow: hidden;
-            width: 100%;
-        }
-        @media only screen and (max-width: 568px) {
-            .navbar-nav { display: none; }
-        }
+    .side-nav .btn-close {
+      position: absolute;
+      top: 0;
+      right: 22px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
 
-        @media only screen and (min-width: 568px) {
-            .open-slide { display: none; }
-            .navbar { padding-left: 30px; }
-        }
-    </style>
+    #main {
+      transition: margin-left 0.5s;
+      padding: 20px;
+      overflow: hidden;
+      width: 100%;
+    }
+    @media only screen and (max-width: 568px) {
+      .navbar-nav { display: none; }
+    }
+
+    @media only screen and (min-width: 568px) {
+      .open-slide { display: none; }
+      .navbar { padding-left: 30px; }
+    }
+  </style>
 </head>
 
 <body>
-    <nav class="navbar">
-        <span class="open-slide">
-            <a href="#" onclick="openSlideMenuSVG()">
-                <svg width="30" height="30">
-                    <path d="M0,5 30,5" stroke="#FFF" stroke-width="5" />
-                    <path d="M0,14 30,14" stroke="#FFF" stroke-width="5" />
-                    <path d="M0,23 30,23" stroke="#FFF" stroke-width="5" />
-                </svg>
-            </a>
-        </span>
-        <ul class="navbar-nav">
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">LINK</a></li>
-            <li><a href="#">LINK</a></li>
-            <li><a href="#">ABOUT</a></li>
-        </ul>
-    </nav>
-    <aside id="side-menu" class="side-nav">
-        <a href="#" class="btn-close" onclick="closeSlideMenuSVG()">&times;</a>
-        <a href="#">HOME</a>
-        <a href="#">LINK</a>
-        <a href="#">LINK</a>
-        <a href="#">ABOUT</a>
-    </aside>
-    <div id="main">
-        <h1>SVG Hamburger Menu...</h1>
-        <h1>SVG Hamburger Menu...</h1>
-        <h1>SVG Hamburger Menu...</h1>
-        <h1>SVG Hamburger Menu...</h1>
-        <h1>SVG Hamburger Menu...</h1>
-        <h1>SVG Hamburger Menu...</h1>
-        <h1>SVG Hamburger Menu...</h1>
-        <h1>SVG Hamburger Menu...</h1>
-        <h1>SVG Hamburger Menu...</h1>
-        <h1>SVG Hamburger Menu...</h1>
-        <h1>SVG Hamburger Menu...</h1>
-        <h1>SVG Hamburger Menu...</h1>
-        <h1>SVG Hamburger Menu...</h1>
-        <h1>SVG Hamburger Menu...</h1>
-        <h1>SVG Hamburger Menu...</h1>
-        <h1>SVG Hamburger Menu...</h1>
-        <h1>SVG Hamburger Menu...</h1>
-        <h1>SVG Hamburger Menu...</h1>
-        <h1>SVG Hamburger Menu...</h1>
-        <h1>SVG Hamburger Menu...</h1>
-        <h1>SVG Hamburger Menu...</h1>
-        <h1>SVG Hamburger Menu...</h1>
-        <h1>SVG Hamburger Menu...</h1>
-        <h1>SVG Hamburger Menu...</h1>
-        <h1>SVG Hamburger Menu...</h1>
-        <h1>SVG Hamburger Menu...</h1>
-        <h1>SVG Hamburger Menu...</h1>
-        <h1>SVG Hamburger Menu...</h1>
-        <h1>SVG Hamburger Menu...</h1>
-    </div>
-    <script>
-        function openSlideMenuSVG() {
-            document.querySelector("#side-menu").style.width = "250px";
-            document.querySelector("#main").style.marginLeft = "250px";
-        }
-
-        function closeSlideMenuSVG() {
-            document.querySelector("#side-menu").style.width = "0";
-            document.querySelector("#main").style.marginLeft = "0";
-        }
-    </script>
+  <nav class="navbar">
+    <span class="open-slide">
+      <a href="#" onclick="openSlideMenuSVG()">
+        <svg width="30" height="30">
+          <path d="M0,5 30,5" stroke="#FFF" stroke-width="5" />
+          <path d="M0,14 30,14" stroke="#FFF" stroke-width="5" />
+          <path d="M0,23 30,23" stroke="#FFF" stroke-width="5" />
+        </svg>
+      </a>
+    </span>
+    <ul class="navbar-nav">
+      <li><a href="#">HOME</a></li>
+      <li><a href="#">LINK</a></li>
+      <li><a href="#">LINK</a></li>
+      <li><a href="#">ABOUT</a></li>
+    </ul>
+  </nav>
+  <aside id="side-menu" class="side-nav">
+    <a href="#" class="btn-close" onclick="closeSlideMenuSVG()">&times;</a>
+    <a href="#">HOME</a>
+    <a href="#">LINK</a>
+    <a href="#">LINK</a>
+    <a href="#">ABOUT</a>
+  </aside>
+  <div id="main">
+    <h1>SVG Hamburger Menu...</h1>
+    <h1>SVG Hamburger Menu...</h1>
+    <h1>SVG Hamburger Menu...</h1>
+    <h1>SVG Hamburger Menu...</h1>
+    <h1>SVG Hamburger Menu...</h1>
+    <h1>SVG Hamburger Menu...</h1>
+    <h1>SVG Hamburger Menu...</h1>
+    <h1>SVG Hamburger Menu...</h1>
+    <h1>SVG Hamburger Menu...</h1>
+    <h1>SVG Hamburger Menu...</h1>
+    <h1>SVG Hamburger Menu...</h1>
+    <h1>SVG Hamburger Menu...</h1>
+    <h1>SVG Hamburger Menu...</h1>
+    <h1>SVG Hamburger Menu...</h1>
+    <h1>SVG Hamburger Menu...</h1>
+    <h1>SVG Hamburger Menu...</h1>
+    <h1>SVG Hamburger Menu...</h1>
+    <h1>SVG Hamburger Menu...</h1>
+    <h1>SVG Hamburger Menu...</h1>
+    <h1>SVG Hamburger Menu...</h1>
+    <h1>SVG Hamburger Menu...</h1>
+    <h1>SVG Hamburger Menu...</h1>
+    <h1>SVG Hamburger Menu...</h1>
+    <h1>SVG Hamburger Menu...</h1>
+    <h1>SVG Hamburger Menu...</h1>
+    <h1>SVG Hamburger Menu...</h1>
+    <h1>SVG Hamburger Menu...</h1>
+    <h1>SVG Hamburger Menu...</h1>
+    <h1>SVG Hamburger Menu...</h1>
+  </div>
+  <script>
+    function openSlideMenuSVG() {
+      document.querySelector("#side-menu").style.width = "250px";
+      document.querySelector("#main").style.marginLeft = "250px";
+    }
+    function closeSlideMenuSVG() {
+      document.querySelector("#side-menu").style.width = "0";
+      document.querySelector("#main").style.marginLeft = "0";
+    }
+  </script>
 </body>
 
 </html>

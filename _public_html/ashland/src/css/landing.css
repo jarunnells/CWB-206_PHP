@@ -27,28 +27,30 @@ img,video { height: auto; max-width: 100%; }
 /* STYLING */
 .flex { display: flex; }
 header {
-  margin: 5px;
-  padding: 5px;
+  /* padding: 5px; */
   font-family: monospace;
-  /* align-items: center; */
+  align-items: center;
   /* justify-content: center; */
   /* align-content: center; */
   background-color: transparent;
   position: relative;
   z-index: 1000;
 }
-
-.logo {
-  font-size: 1.25em;
-  color: whitesmoke;
+/* 
+.logo img {
   width: 65%;
   height: 65%;
 }
-
+*/
 nav {
-  /* display: none; */
+  display: none;
+  /*
   width: 80%;
   margin: 0 auto; 
+  */
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  /* align-content: center; */
 }
 nav > ul {
   font-family: inherit;
