@@ -7,12 +7,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Responsive Top Navbar</title>
     <style>
       @import url("https://fonts.googleapis.com/css?family=Work+Sans:300,600");
 
       :root {
         --background: rgba(0, 214, 170, 0.85);
+        --background: rgba(20, 110, 200, 0.75);
+        --clr-font: rgba(240, 240, 240, 1);
       }
 
       *,
@@ -29,13 +31,15 @@
       }
 
       .content {
-        height: 200vh;
+        width: 100vw;
+        height: 100vh;
         background-image: url(//unsplash.it/1000/1000);
         background-color: #333;
         background-blend-mode: multiply;
         background-size: cover;
         display: grid;
         place-items: center;
+        color: var(--clr-font);
       }
 
       /* navigation styles start here */
@@ -223,8 +227,8 @@
       </label>
     </header>
 
-    <div class="content">
+    <main class="content">
       <h2>Your content would go here</h2>
-    </div>
+    </main>
   </body>
 </html>

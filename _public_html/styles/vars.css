@@ -36,9 +36,10 @@
     --color-form_btn: #FFF;
 
     /* FONT FAMILIES */
-    --font-family-const-jet-brains: 'JetBrains Mono', monospace;
-    --font-family-const-space-grotesk: 'Space Grotesk', sans-serif;
-    --font-family-const-nanum-gothic: 'Nanum Gothic Coding', monospace;
+    /* --font-family-const-jet-brains: 'JetBrains Mono', monospace; */
+    --font-family-const-jet-brains: 'JetBrainsV', monospace;
+    --font-family-const-space-grotesk: 'SpaceGroteskV', sans-serif;
+    --font-family-const-nanum-gothic: 'NanumGothicCode', monospace;
     --font-family-const-overlock: 'Overlock', cursive;
     --font-family-title: var(--font-family-const-jet-brains);
     --font-family-numbers: var(--font-family-const-space-grotesk);

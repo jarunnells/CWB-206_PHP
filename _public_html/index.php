@@ -25,15 +25,11 @@
     <title>CWB-206-R11 | J.A. Runnells</title>
 </head>
 <body>
-    <section id="header_bar">
-        <!-- <marquee behavior="scroll" direction="left" scrollamount="3"><?php //echo TITLE; ?></marquee> -->
-        <div class="marquee"><?php echo TITLE; ?></div>
-        <hr />
-    </section>
+    
     <main class="container">
         <!-- class="showcase" -->
         <header>
-            <h2 class="logo">Logo</h2>
+            <h2 class="logo"></h2>
             <!-- <div class="toggle">
                 
             </div> -->
@@ -44,7 +40,8 @@
                 <span class="hamburger-label">Menu</span>
             </button>
         </header>
-        <video src="./assets/vid/coding_1920x1080.mp4" type="video/mp4" autoplay muted loop>Oops...HTML video tag unsupported...update your browser!</video>
+        <!-- <video src="./assets/vid/coding_1920x1080.mp4" type="video/mp4" autoplay muted loop>Oops...HTML video tag unsupported...update your browser!</video> -->
+        <div class="img img-bg"></div>
         <div class="overlay">
             <!-- class="overlay" -->
         </div>
@@ -52,8 +49,10 @@
             <!-- class="text" -->
             <h2>J.A. Runnells</h2>
             <h3>CWB-206-R11</h3>
+            <h4>Assignments</h4>
+            <p>Not sure what to put here yet -- Lorem, it's up to you; for now...</p>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam nihil atque iusto harum ipsum assumenda, placeat ut optio, culpa fugiat eos minus dolore aut veritatis tempore recusandae aliquam numquam alias!</p>
-            <a href="#">ABOUT</a>
+            <!-- <a href="#">ABOUT</a> -->
         </div>
         <ul class="source_code">
             <!-- class="social" -->

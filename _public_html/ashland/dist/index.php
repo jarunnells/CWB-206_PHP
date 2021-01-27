@@ -67,10 +67,10 @@
             <tr>
               <th id="required" colspan="2">* Required</th>
             </tr>
-            <tr class="btns-form">
-              <td colspan="2">
-                <button type="submit" class="btn styled">SUBMIT</button>
-                <button type="reset" class="btn styled">CLEAR</button>
+            <tr>
+              <td colspan="2" class="btns-form">
+                <button type="submit" class="btn btn-submit styled">SUBMIT</button>
+                <button type="reset" class="btn btn-clear styled">CLEAR</button>
               </td>
             </tr>
           </table>

@@ -90,6 +90,10 @@ input[type=text]:focus {
         0 0 0 7px var(--bg-color-btn-reset);
 }
 
+button.styled:hover {
+    letter-spacing: 0.25em;
+}
+
 #table_output {
     width: var(--table-output-width);
 	margin: var(--table-output-margin);
