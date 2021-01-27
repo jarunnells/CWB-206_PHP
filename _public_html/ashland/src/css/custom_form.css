@@ -70,6 +70,7 @@ input[type="tel"] {
   font-family: var(--font-family-input-text);
   font-size: var(--font-size-9);
   text-align: var(--input-txt-align);
+  opacity: 0.7;
 }
 
 input[type="text"]:focus,
@@ -77,6 +78,7 @@ input[type="email"]:focus,
 input[type="tel"]:focus {
   background-color: var(--bg-color-input-focus);
   color: var(--color-input-focus);
+  /* opacity: 1; */
 }
 
 #form_process td:first-child:not(button) {
@@ -105,4 +107,11 @@ input[type="tel"]:focus {
   letter-spacing: 0.25em;
   border-color: var(--clr-wht);
   opacity: 0.7;
+}
+
+#form_process button.btn.btn-submit.styled:hover {
+  background-color: rgba(60, 179, 113, 1);
+}
+#form_process button.btn.btn-clear.styled:hover {
+  background-color: rgba(128, 128, 128, 1);
 }

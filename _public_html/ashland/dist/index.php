@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="../src/css/landing.css">
   <!-- SCRIPT(S) -->
   <script src="./js/main.js" defer></script>
-  <title>Ashland</title>
+  <title>Ashland Landing Page</title>
 </head>
 <body>
   <div class="body dark">

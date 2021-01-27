@@ -40,8 +40,8 @@
                 <span class="hamburger-label">Menu</span>
             </button>
         </header>
-        <!-- <video src="./assets/vid/coding_1920x1080.mp4" type="video/mp4" autoplay muted loop>Oops...HTML video tag unsupported...update your browser!</video> -->
-        <div class="img img-bg"></div>
+        <video src="./assets/vid/coding_1920x1080.mp4" type="video/mp4" autoplay muted loop>Oops...HTML video tag unsupported...update your browser!</video>
+        <!-- <div class="img img-bg"></div> -->
         <div class="overlay">
             <!-- class="overlay" -->
         </div>
