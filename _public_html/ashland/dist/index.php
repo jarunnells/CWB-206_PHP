@@ -27,7 +27,7 @@
       <!-- <div class="logo">
         <img src="assets/img/smLogo.gif" alt="LOGO"></img>
       </div> -->
-      <img src="assets/img/provided/smLogo.gif" alt="LOGO"></img>
+      <img src="assets/img/provided/logos/smLogo.gif" alt="LOGO"></img>
       <nav>
         <ul class="flex">
           <li><a href="home.php">Home</a></li>

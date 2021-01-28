@@ -20,8 +20,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/index.css">
-    <script src="./js/event_listeners.js" defer></script>
+    <link rel="stylesheet" href="./styles/index.css">  <!-- /Applications/MAMP/htdocs/_public_html/styles/index.css -->
+    <script src="./js/event_listeners.js" defer></script>  <!-- /Applications/MAMP/htdocs/_public_html/js/event_listeners.js -->
     <title>CWB-206-R11 | J.A. Runnells</title>
 </head>
 <body>
