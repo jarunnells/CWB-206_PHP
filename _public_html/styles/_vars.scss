@@ -1,0 +1,106 @@
+/*
+    DEVELOPER: J.A. Runnells
+       COURSE: CIS-206-R11
+       BRANCH: main
+         FILE: vars.css
+
+*/
+
+/* BASE COLOR CONSTANTS */
+$color-const-green-basics: #008000;
+$color-const-green: #4caf50;
+$color-const-blue: #008cba;
+$color-const-red: #f44336;
+$color-const-gray: #e7e7e7;
+$color-const-black: #555555;
+$color-const-crimson: #dc143c;
+
+/* BACKGROUND COLORS */
+$bg-color-body: #4d4d4d;
+$bg-color-div-holder: #f5f5f5;
+$bg-color-input-focus: #d2e2f9;
+$bg-color-btn-submit: $color-const-green;
+$bg-color-btn-reset: $color-const-black;
+$bg-color-table-hover: #ddd;
+$bg-color-table-rows-alt: #f2f2f2;
+$bg-color-table-row-header: #3c3c4b;
+$bg-color-hamburger-lt: #fff;
+$bg-color-hamburger-dk: #111;
+$bg-color-index-overlay: $color-const-crimson;
+
+/* FONT COLORS */
+$color-input-focus: #191970;
+$color-required: #900;
+$color-table-row-header: #dcdcdc;
+$color-form_btn: #fff;
+
+/* FONT FAMILIES */
+/* $font-family-const-jet-brains: 'JetBrains Mono', monospace; */
+$font-family-const-jet-brains: "JetBrainsV", monospace;
+$font-family-const-space-grotesk: "SpaceGroteskV", sans-serif;
+$font-family-const-nanum-gothic: "NanumGothicCode", monospace;
+$font-family-const-overlock: "Overlock", cursive;
+$font-family-title: $font-family-const-jet-brains;
+$font-family-numbers: $font-family-const-space-grotesk;
+$font-family-label: $font-family-const-space-grotesk;
+$font-family-input-text: $font-family-const-space-grotesk;
+$font-family-anchor: $font-family-const-nanum-gothic;
+$font-family-required: $font-family-const-space-grotesk;
+$font-family-data: $font-family-const-space-grotesk;
+$font-family-text: $font-family-const-overlock;
+
+/* FONT SIZES */
+$font-size-title-form: 1.5em;
+$font-size-label: 0.85em;
+$font-size-caption-form: 1.15em;
+$font-size-button-form: 0.6em;
+$font-size-required: 0.75em;
+$font-size-9: 0.5625em; /* 9px/16=0.5625em */
+
+/* FONT WEIGHTS */ /* 300 400 700*/
+$font-weight-400: 400;
+$font-weight-required-th: $font-weight-400;
+$font-weight-required-span: $font-weight-400;
+
+/* FONT STYLES */
+$font-style-required: italic;
+
+/* TEXT ALIGNMENT VALUES */
+$txt-align-row-header: right;
+$txt-align-row-data: left;
+$txt-align-button: center;
+$input-txt-align: center;
+
+/* LINE HEIGHTS */
+$line-height-title-form: 0.75em;
+
+/* LINE WIDTH VALUES */
+$ln-width-hr-title: 1.5px;
+$ln-width-hr-algorithm: 1.25px;
+
+/* BORDER RADIUS VALUES */
+$border-radius-hr: 25px;
+$border-radius-btn: 12px;
+
+/* PADDING VALUES */ /* T R B L */
+$padding-tr: 15px;
+$padding-td-output: 5px;
+$padding-form: 1em 1em 1em 1em;
+$padding-not-button: 0 15px;
+
+/* WIDTH VALUES */
+$width-hr-title: 450px;
+$width-hr-algorithm: 200px;
+
+/* BUTTON CUSTOMIZATIONS */ /* T R B L */
+$margin-button: 35px 25px 0 25px;
+$padding-button: 8px;
+$width-button: 100px;
+$border-line-style-d: dashed;
+$border-line-style-s: solid;
+$border-size: 2px;
+
+/* TABLE OUTPUT MISC CUSTOMIZATIONS */
+$table-output-width: 80%;
+$table-output-margin: 0 auto;
+$table-output-padding-left: 1.5em;

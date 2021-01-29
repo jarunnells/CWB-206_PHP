@@ -28,27 +28,9 @@
 </head>
 
 <body class="body dark">
-  <header>
-    <!-- <h1 class="logo"><?php //echo LOGO; ?></h1> -->
-    <h1 class="logo">
-      <img src="assets/img/provided/logos/soccerball.gif" alt="LOGO"></img>
-    </h1>
-    <!-- <img src="assets/img/provided/logos/smLogo.gif" alt="LOGO"></img> -->
-    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-    <nav>
-      <!-- <ul class="flex"> -->
-      <ul>
-        <li><a href="home.php">Home</a></li>
-        <li><a href="teams.php">Teams</a></li>
-        <li><a href="action.php">Action</a></li>
-        <li><a href="map.php">Map</a></li>
-      </ul>
-    </nav>
-    <label for="nav-toggle" class="nav-toggle-label">
-      <span></span>
-    </label>
-  </header>
-
+  
+  <?php include 'navbar.php'; ?>
+  
   <main class="content">
     <p class="p__greet"><?php echo HOME_GREETING; ?></p>
   </main>

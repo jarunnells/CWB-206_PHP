@@ -5,20 +5,158 @@
 //         FILE: _fonts.scss
 //
 
-// JetBrains Mono -> 100, 400, 700
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;400;700&display=swap");
+/* font-style: normal, italic, oblique */
+/* font-weight: normal|bold|bolder|lighter|number{100,200,300,400,500,600,700,800,900} */
+/* font-stretch: normal,condensed,ultra-condensed,extra-condensed,semi-condensed,expanded,semi-expanded,extra-expanded,ultra-expanded */
 
-// Space Grotesk -> 300,400,700
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap");
+/* LOCAL FONTS */
+/* JetBrains Mono */
+@font-face {
+  font-family: 'JetBrainsV';
+  src: url(../../../../assets/fonts/JetBrains_Mono/JetBrainsMono-VariableFont_wght.ttf) format('truetype');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'JetBrainsV';
+  src: url(../../../../assets/fonts/JetBrains_Mono/JetBrainsMono-Italic-VariableFont_wght.ttf) format('truetype');
+  font-style: italic;
+}
+@font-face {
+  font-family: 'JetBrains';
+  src: url(../../../../assets/fonts/JetBrains_Mono/static/JetBrainsMono-Thin.ttf) format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'JetBrains';
+  src: url(../../../../assets/fonts/JetBrains_Mono/static/JetBrainsMono-Regular.ttf) format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'JetBrains';
+  src: url(../../../../assets/fonts/JetBrains_Mono/static/JetBrainsMono-Bold.ttf) format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
 
-// Nanum Gothic Coding -> 400, 700
-@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&display=swap");
+/* Space Grotesk */
+@font-face {
+  font-family: 'SpaceGroteskV';
+  src: url(../../../../assets/fonts/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf) format('truetype');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SpaceGrotesk';
+  src: url(../../../../assets/fonts/Space_Grotesk/static/SpaceGrotesk-Light.ttf) format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SpaceGrotesk';
+  src: url(../../../../assets/fonts/Space_Grotesk/static/SpaceGrotesk-Regular.ttf) format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SpaceGrotesk';
+  src: url(../../../../assets/fonts/Space_Grotesk/static/SpaceGrotesk-Bold.ttf) format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
 
-// Overlock -> { ital|reg } @ ( 400, 900 )
-@import url("https://fonts.googleapis.com/css2?family=Overlock:ital,wght@0,400;0,900;1,400;1,900&display=swap");
+/* Nanum Gothic Coding */
+@font-face {
+  font-family: 'NanumGothicCode';
+  src: url(../../../../assets/fonts/Nanum_Gothic_Coding/NanumGothicCoding-Regular.ttf) format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NanumGothicCode';
+  src: url(../../../../assets/fonts/Nanum_Gothic_Coding/NanumGothicCoding-Bold.ttf) format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
 
-// Noto Sans -> { ital|reg } @ ( 400, 700 )
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/* Overlock */
+@font-face {
+  font-family: 'Overlock';
+  src: url(../../../../assets/fonts/Overlock/Overlock-Regular.ttf) format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Overlock';
+  src: url(../../../../assets/fonts/Overlock/Overlock-Bold.ttf) format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Overlock';
+  src: url(../../../../assets/fonts/Overlock/Overlock-Italic.ttf) format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Overlock';
+  src: url(../../../../assets/fonts/Overlock/Overlock-BoldItalic.ttf) format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Noto Sans */
+@font-face {
+  font-family: 'NotoSans';
+  src: url(../../../../assets/fonts/Noto_Sans/NotoSans-Regular.ttf) format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NotoSans';
+  src: url(../../../../assets/fonts/Noto_Sans/NotoSans-Bold.ttf) format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NotoSans';
+  src: url(../../../../assets/fonts/Noto_Sans/NotoSans-Italic.ttf) format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'NotoSans';
+  src: url(../../../../assets/fonts/Noto_Sans/NotoSans-BoldItalic.ttf) format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Work Sans */
+@font-face {
+  font-family: 'WorkSansV';
+  src: url(../../../../assets/fonts/Work_Sans/WorkSans-VariableFont_wght.ttf) format('truetype');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'WorkSansV';
+  src: url(../../../../assets/fonts/Work_Sans/WorkSans-Italic-VariableFont_wght.ttf) format('truetype');
+  font-style: italic;
+}
+
+$families: (
+  'jetV': 'JetBrainsV',          // font-family: ['...', ...] monospace;
+  'spcV': 'SpaceGroteskV',       // font-family: ['...', ...] sans-serif;
+  'wrkV': 'WorkSansV',           // font-family: ['...', ...] sans-serif;
+  'jet': 'JetBrains',            // font-family: ['...', ...] monospace;
+  'spc': 'SpaceGrotesk',         // font-family: ['...', ...] sans-serif;
+  'naum': 'NanumGothicCode',     // font-family: ['...', ...] sans-serif;
+  'ovr': 'Overlock',             // font-family: ['...', ...] cursive;
+  // 'wrk': 'WorkSans',          // font-family: ['...', ...] sans-serif;
+  'noto': 'NotoSans',            // font-family: ['...', ...] sans-serif;
+  'mono': monospace,
+  'san': sans-serif,
+  'ser': serif,
+);
 
 $weights: (
   "xlight": 100,
@@ -26,15 +164,4 @@ $weights: (
   "reg": 400,
   "bold": 700,
   "xbold": 900,
-);
-
-$families: (
-  "jet": "JetBrains Mono", // 
-  "spc": "Space Grotesk", // 
-  "naum": "Nanum Gothic Coding", // 
-  "ovr": "Overlock", // 
-  'noto': 'Noto Sans', // font-family: 'Noto Sans', sans-serif;
-  "mono": monospace,
-  "san": sans-serif,
-  "ser": serif,
 );
