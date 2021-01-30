@@ -5,6 +5,7 @@
          FILE: teams.php
 -->
 <?php
+  include './helpers/photos.php';
   define('TEAMS_GREETING', 'Hello World -> teams.php');
   define('LOGO', 'Logo');
 ?>
@@ -27,8 +28,23 @@
 
   <?php include 'navbar.php'; ?>
 
-  <main class="content">
+  <main class="content flex flex--center flex--col">
     <p class="p__greet"><?php echo TEAMS_GREETING; ?></p>
+
+    <section class='photos'>
+      <div class="flex flex--center flex--col">Team Image #01
+        <img src=<?php echo $images_team[0]?> alt="bluedevils.jpg">
+      </div>
+
+      <div class="flex flex--center flex--col">Team Image #02
+        <img src=<?php echo $images_team[1]?> alt="ateam.jpg">
+      </div>
+
+      <div class="flex flex--center flex--col">Team Image #03
+        <img src=<?php echo $images_team[2]?> alt="dsc.jpg">
+      </div>
+    </section>
+
   </main>
 
   <?php include 'footer.php'; ?>

@@ -65,9 +65,24 @@ body {
   background-color: #333;
   background-blend-mode: multiply;
   background-size: cover;
-  display: grid;
-  place-items: center;
+  /* display: grid;
+  place-items: center; */
   color: var(--clr-font);
+}
+
+.flex {
+  display: flex;
+}
+.flex--col {
+  flex-direction: column;
+}
+.flex--row {
+  flex-direction: row;
+}
+.flex--center {
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 
 /* navigation styles start here */
@@ -81,7 +96,7 @@ body {
   height: 4rem;
 }
 
-/* changed this from the tutorial video to allow it to gain focus, making it tabbable */
+/* gain focus; tabbable */
 .nav-toggle {
   position: absolute !important;
   top: -9999px !important;
@@ -129,7 +144,7 @@ body {
 
 nav {
   position: absolute;
-  text-align: left;
+  /* text-align: left; */
   top: 100%;
   left: 0;
   background: var(--background);
@@ -137,6 +152,10 @@ nav {
   transform: scale(1, 0);
   transform-origin: top;
   transition: transform 400ms ease-in-out;
+}
+
+.header__logo--styled {
+	margin: 0.75em 0;
 }
 
 nav ul {
@@ -179,8 +198,9 @@ nav a:hover {
   }
 
   header {
+    /* TODO: switch to flex */
     display: grid;
-    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+    /* grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr; */
   }
 
   .logo {
@@ -189,9 +209,9 @@ nav a:hover {
   }
 
   nav {
-    /* all: unset; this causes issues with Edge, since it's unsupported */
+    /* all: unset; ... Edge -> unsupported */
 
-    /* the following lines are not from my video, but add Edge support */
+    /* Edge support */
     position: relative;
     text-align: left;
     transition: none;
@@ -199,11 +219,12 @@ nav a:hover {
     background: none;
     top: initial;
     left: initial;
-    /* end Edge support stuff */
+    /* end Edge support */
 
     grid-column: 3 / 4;
     display: flex;
-    justify-content: flex-end;
+    /* justify-content: flex-end; */
+    justify-content: center;
     align-items: center;
   }
 

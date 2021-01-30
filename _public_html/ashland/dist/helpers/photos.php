@@ -5,24 +5,38 @@
          FILE: photos.php
 -->
 <?php
-    $img_teams = array();
-    $img_action = array();
-    define('IMG_AMITH', './assets/img/amith.jpg');
-    define('IMG_BLUEDEVILS', './assets/img/bluedevils.jpg');
-    define('IMG_DIT', './assets/img/dit.jpg');
-    define('IMG_JOHN', './assets/img/john.jpg');
-    define('IMG_KRST', './assets/img/krst.jpg');
-    define('IMG_MAP2', './assets/img/map2.gif');
-    define('IMG_MAP4', './assets/img/map4.gif');
-    define('IMG_REC', './assets/img/rec.jpg');
-    define('IMG_SOCCERBALL', './assets/img/soccerball.gif');
-    define('IMG_ATEAM', './assets/img/ateam.jpg');
-    define('IMG_COMPLEXMAP', './assets/img/complexmap.jpg');
-    define('IMG_DSC', './assets/img/dsc.jpg');
-    define('IMG_KATH', './assets/img/kath.jpg');
-    define('IMG_MAP1', './assets/img/map1.gif');
-    define('IMG_MAP3', './assets/img/map3.gif');
-    define('IMG_MAP5', './assets/img/map5.gif');
-    define('IMG_SMLOGO', './assets/img/smLogo.gif');
-    define('IMG_TSS', './assets/img/tss.gif');
+  // PATH CONSTANTS ***********************************************
+  define('BASE', './assets/img/provided/');
+  define('LOGOS', BASE.'logos/');
+  define('MAPS', BASE.'maps/');
+  define('SOLO', BASE.'solo/');
+  define('TEAM', BASE.'team/');
+  define('ACTION', BASE.'action/');
+  /// LOGOS *******************************************************
+  define('IMG_SMLOGO', LOGOS.'smLogo.gif');
+  define('IMG_SOCCERBALL', LOGOS.'soccerball.gif');
+  define('IMG_TSS', LOGOS.'tss.gif');
+  /// MAPS *******************************************************
+  define('IMG_COMPLEXMAP', MAPS.'complexmap.jpg');
+  define('IMG_MAP1', MAPS.'map1.gif');
+  define('IMG_MAP2', MAPS.'map2.gif');
+  define('IMG_MAP3', MAPS.'map3.gif');
+  define('IMG_MAP4', MAPS.'map4.gif');
+  define('IMG_MAP5', MAPS.'map5.gif');
+  /// SOLO *******************************************************
+  define('IMG_AMITH', SOLO.'amith.jpg');
+  define('IMG_JOHN', SOLO.'john.jpg');
+  define('IMG_KRST', SOLO.'krst.jpg');
+  /// TEAM *******************************************************
+  define('IMG_BLUEDEVILS', TEAM.'bluedevils.jpg');
+  define('IMG_ATEAM', TEAM.'ateam.jpg');
+  define('IMG_DSC', TEAM.'dsc.jpg');
+  /// ACTION *****************************************************
+  define('IMG_DIT', ACTION.'dit.jpg');
+  define('IMG_KATH', ACTION.'kath.jpg');
+  define('IMG_REC', ACTION.'rec.jpg');
+
+  $images_team = array(IMG_BLUEDEVILS, IMG_ATEAM, IMG_DSC);
+  $images_action = array(IMG_DIT, IMG_KATH, IMG_REC);
+  $images_map = array(IMG_COMPLEXMAP, IMG_MAP1, IMG_MAP2, IMG_MAP3, IMG_MAP4, IMG_MAP5);
 ?>

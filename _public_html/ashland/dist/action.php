@@ -5,6 +5,7 @@
          FILE: action.php
 -->
 <?php
+  include './helpers/photos.php';
   define('ACTION_GREETING', 'Hello World -> action.php');
   define('LOGO', 'Logo');
 ?>
@@ -27,8 +28,23 @@
 
   <?php include 'navbar.php'; ?>
 
-  <main class="content">
+  <main class="content flex flex--center flex--col">
     <p class="p__greet"><?php echo ACTION_GREETING; ?></p>
+
+    <section class='photos'>
+      <div class="flex flex--center flex--col">Team Image #01
+        <img src=<?php echo $images_action[0]?> alt="dit.jpg">
+      </div>
+
+      <div class="flex flex--center flex--col">Team Image #02
+        <img src=<?php echo $images_action[1]?> alt="kath.jpg">
+      </div>
+
+      <div class="flex flex--center flex--col">Team Image #03
+        <img src=<?php echo $images_action[2]?> alt="rec.jpg">
+      </div>
+    </section>
+
   </main>
 
   <?php include 'footer.php'; ?>

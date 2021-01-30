@@ -6,7 +6,6 @@
 -->
 <?php
   // include './helpers/photos.php';
-  // include './helpers/files.php';
   define('HOME_GREETING', 'Hello World -> home.php');
   define('LOGO', 'Logo');
 ?>
@@ -31,7 +30,7 @@
   
   <?php include 'navbar.php'; ?>
 
-  <main class="content">
+  <main class="content flex flex--center flex--col">
     <p class="p__greet"><?php echo HOME_GREETING; ?></p>
   </main>
 

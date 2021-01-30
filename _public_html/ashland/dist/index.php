@@ -5,8 +5,7 @@
          FILE: index.php
 -->
 <?php
-  include './helpers/photos.php';
-  include './helpers/files.php';
+  // include './helpers/photos.php';
 ?>
 <!DOCTYPE html>
 <html lang="en-US">
@@ -34,8 +33,8 @@
           <li><a href="teams.php">Teams</a></li>
           <li><a href="action.php">Action</a></li>
           <li><a href="map.php">Map</a></li>
-          <li><a href="#">Soon...</a></li>
-          <li><a href="#">Soon...</a></li>
+          <li><a href="../dist/helpers/coming_soon.php">Signup</a></li>
+          <li><a href="../dist/helpers/coming_soon.php">Schedule</a></li>
         </ul>
       </nav>
     </header>
