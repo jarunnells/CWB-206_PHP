@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="../src/css/ashland_base.css">
 
   <!-- SCRIPT(S) -->
-  <!-- <script src="./js/main.js" defer></script> -->
+  <!-- <script src="./js/app.js" defer></script> -->
 
   <title>Ashland Valley Soccer League</title>
 </head>
@@ -30,7 +30,7 @@
 <body class="body dark">
   
   <?php include 'navbar.php'; ?>
-  
+
   <main class="content">
     <p class="p__greet"><?php echo HOME_GREETING; ?></p>
   </main>

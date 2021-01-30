@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="../src/css/ashland_base.css">
 
   <!-- SCRIPT(S) -->
-  <!-- <script src="./js/main.js" defer></script> -->
+  <!-- <script src="./js/app.js" defer></script> -->
 
   <title>Map</title>
 </head>
@@ -30,6 +30,6 @@
   <main class="content">
     <p class="p__greet"><?php echo MAP_GREETING; ?></p>
   </main>
-  
+
 </body>
 </html>

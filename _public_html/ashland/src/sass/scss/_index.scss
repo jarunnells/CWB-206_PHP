@@ -12,10 +12,8 @@
 //
 
 @use 'reset';
-@use 'print';
 @use 'colors' as c;
 @use 'fonts' as f;
-@use 'debug';
 
 $mobile: 600px;
 $tablet: 800px;

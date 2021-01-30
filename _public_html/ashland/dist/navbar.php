@@ -1,5 +1,6 @@
 <?php 
-  echo '  <header class="header header__navbar--styled">
+  echo '
+    <header class="header header__navbar--styled">
     <!-- <h1 class="logo"><?php //echo LOGO; ?></h1> -->
     <h1 class="logo">
       <img src="assets/img/provided/logos/soccerball.gif" alt="LOGO" class="header__logo--styled"></img>
