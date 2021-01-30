@@ -240,4 +240,17 @@ nav a:hover {
     transform: scale(1, 1);
   }
 }
+
+/* FOOTER */
+.footer.footer--styled {
+  background: var(--background);
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  padding: 1.5em 0;
+  z-index: 999;
+}
+
 /* END */

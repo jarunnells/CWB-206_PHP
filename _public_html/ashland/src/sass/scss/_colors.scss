@@ -25,3 +25,26 @@ $clr--02: rgba(205, 92, 92, 1);
 $clr--03: rgba(65, 105, 225, 1);
 $clr--04: rgba(221, 160, 221, 1);
 $clr--05: rgba(46, 139, 87, 1);
+
+/// COLOR COMBOS
+$green_new_01: #436b51;
+$blue_new_01: #43556b;
+$blue_new_02: #09578c;
+/* COMBO ONE */
+  /* COMPLEMENTARY */
+  $combo_1-1-1: #3d4352;
+  $combo_1-1-2: #524c3d;
+  /* SPLIT COMPLEMENTARY */
+  $combo_1-2-1: $combo_1-1-1;
+  $combo_1-2-2: #503d52;
+  $combo_1-2-3: #4b523d;
+  /* TRIADIC */
+  $combo_1-3-1: $combo_1-1-1;
+  $combo_1-3-2: #523d43;
+  $combo_1-3-3: #43523d;
+  /* TETRADIC */
+  $combo_1-4-1: $combo_1-1-1;
+  $combo_1-4-2: #523d4d;
+  $combo_1-4-3: #524c3d;
+  $combo_1-4-4: #3d5241;
+

@@ -1,5 +1,12 @@
-<?php 
-  echo '
+<!--
+    DEVELOPER: J.A. Runnells
+       COURSE: CIS-206-R11
+       BRANCH: main
+         FILE: navbar.php
+-->
+
+<!-- TODO: extract vars -->
+<?php echo '
     <header class="header header__navbar--styled">
     <!-- <h1 class="logo"><?php //echo LOGO; ?></h1> -->
     <h1 class="logo">
@@ -20,5 +27,5 @@
       <span></span>
     </label>
   </header>
-  ';
+';
 ?>

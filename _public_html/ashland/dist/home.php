@@ -24,7 +24,7 @@
   <!-- SCRIPT(S) -->
   <!-- <script src="./js/app.js" defer></script> -->
 
-  <title>Ashland Valley Soccer League</title>
+  <title>Ashland Valley Soccer League</title>  
 </head>
 
 <body class="body dark">
@@ -34,5 +34,8 @@
   <main class="content">
     <p class="p__greet"><?php echo HOME_GREETING; ?></p>
   </main>
+
+  <?php include 'footer.php'; ?>
+
 </body>
 </html>

@@ -31,5 +31,7 @@
     <p class="p__greet"><?php echo ACTION_GREETING; ?></p>
   </main>
 
+  <?php include 'footer.php'; ?>
+
 </body>
 </html>
