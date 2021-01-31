@@ -18,9 +18,13 @@
   <!-- STYLESHEET(S) -->
   <link rel="stylesheet" href="./css/styles.min.css">
   <link rel="stylesheet" href="../src/css/ashland_base.css">
+  <link rel="stylesheet" href="../src/css/photo_slider.css">
+
+  <!-- EXTERNAL STYLESHEETS -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <!-- SCRIPT(S) -->
-  <!-- <script src="./js/app.js" defer></script> -->
+  <script src="./js/app.js" defer></script>
 
   <title>Action</title>
 </head>
@@ -31,19 +35,25 @@
   <main class="content flex flex--center flex--col">
     <p class="p__greet"><?php echo ACTION_GREETING; ?></p>
 
-    <section class='photos'>
+    <!-- <section class='photos'>
       <div class="flex flex--center flex--col">Team Image #01
-        <img src=<?php echo $images_action[0]?> alt="dit.jpg">
+        <img src=<?php //echo $images_action[0]?> alt="dit.jpg">
       </div>
 
       <div class="flex flex--center flex--col">Team Image #02
-        <img src=<?php echo $images_action[1]?> alt="kath.jpg">
+        <img src=<?php //echo $images_action[1]?> alt="kath.jpg">
       </div>
 
       <div class="flex flex--center flex--col">Team Image #03
-        <img src=<?php echo $images_action[2]?> alt="rec.jpg">
+        <img src=<?php //echo $images_action[2]?> alt="rec.jpg">
       </div>
-    </section>
+    </section> -->
+
+    <?php
+      include_once './helpers/photos.php';
+      set_page('action');
+      output_html();
+    ?>
 
   </main>
 

@@ -57,9 +57,9 @@
     /* FONT SIZES */
     --font-size-label: 0.85em;
     --font-size-caption-form: 2rem;
-    --font-size-button-form: 0.60em;
-    --font-size-required: 0.75em;
-    --font-size-9: 0.5625em; /* 9px/16=0.5625em */
+    --font-size-button-form: 0.60rem;
+    --font-size-required: 0.75rem;
+    --font-size-9: 0.5625rem; /* 9px/16=0.5625rem */
 
     /* FONT WEIGHTS */  /* 300 400 700*/
     --font-weight-400: 400;

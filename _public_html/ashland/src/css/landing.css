@@ -6,8 +6,8 @@ https://source.unsplash.com
 @import 'custom_form.css';
 
 /* GENERIC RESETS */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-*::before,*::after { box-sizing: border-box; }
+* { margin: 0; padding: 0; -webkit-box-sizing: border-box; box-sizing: border-box; }
+*::before,*::after { -webkit-box-sizing: border-box; box-sizing: border-box; }
 html > * {
   border: 0;
   font-size: 100%;
@@ -25,11 +25,13 @@ img,video { height: auto; max-width: 100%; }
 /* END GENERIC RESETS */
 
 /* STYLING */
-.flex { display: flex; }
+.flex { display: -webkit-box; display: -ms-flexbox; display: flex; }
 header {
   /* padding: 5px; */
   font-family: monospace;
-  align-items: center;
+  -webkit-box-align: center;
+     -ms-flex-align: center;
+        align-items: center;
   /* justify-content: center; */
   /* align-content: center; */
   background-color: transparent;
@@ -63,7 +65,7 @@ nav > ul {
 nav a:hover { 
   color: var(--clr-wht);
   letter-spacing: 0.25em;
-  font-size: 1.25em;
+  font-size: 1.25rem;
   border-top: 0.15em solid var(--clr-grn);
   border-bottom: 0.15em solid var(--clr-grn);
 }
@@ -100,7 +102,8 @@ nav a:hover {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  /* font-size: 16px; */
+  font-size: 1rem;
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
@@ -121,10 +124,18 @@ nav a:hover {
 
 /* @media screen and (max-width: 700px) {
   header, .flex {   
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+    -webkit-box-orient: vertical;   
+    -webkit-box-direction: normal;   
+        -ms-flex-direction: column;   
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
   }
   header > img {
     margin-bottom: 1em;

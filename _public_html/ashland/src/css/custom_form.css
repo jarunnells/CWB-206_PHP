@@ -93,7 +93,9 @@ input[type="tel"]:focus {
   display: inline-block;
   font-size: var(--font-size-button-form);
   margin: var(--margin-button);
-  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+       -o-transition-duration: 0.4s;
+          transition-duration: 0.4s;
   cursor: pointer;
   background-color: var(--clr-wht);
   color: var(--clr-blk);

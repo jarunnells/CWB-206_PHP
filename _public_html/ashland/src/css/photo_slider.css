@@ -1,0 +1,99 @@
+
+.slider {
+  --bg-img-unsplash: url(https://source.unsplash.com/400x300/?soccer);
+
+  background: rgba(51, 51, 51, 0.7);
+  background: rgba(66, 136, 98, 0.3);
+
+  position: relative;
+  overflow: hidden;
+  height: 50vh;
+  width: 75vw;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.slide.current { opacity: 1; }
+
+.slide .card {
+  position: absolute;
+  bottom: 1em;
+  left: -1600px;
+  opacity: 0;
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0.8 );
+  color: #333;
+  padding: 15px;
+}
+
+.slide .card h1 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.slide.current .card {
+  opacity: 1;
+  transform: translateX(1600px);
+  transition: all 0.7s ease-in-out 0.3s;
+}
+
+.buttons__prev {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+}
+
+.buttons__next {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+}
+
+.btn {
+  width: 2rem;
+  height: 2rem;
+  background-color: transparent;
+  color: #FFF;
+  cursor: pointer;
+  border-radius: 50%;
+  outline: none;
+}
+
+.btn.buttons__prev:hover,
+.btn.buttons__next:hover {
+  /* background-color: rgba(51, 51, 51, 0.8); */
+  background-color: rgba(66, 136, 98, 0.6);
+  color: rgba(218, 218, 218, 0.8)
+}
+
+.btn__radio { margin-left: 0.5rem; }
+.btn__radio:last-of-type { margin-right: 0.5rem; }
+.btn__radio:hover,
+.btn:hover {
+  cursor: pointer;
+  color: rgba(66, 136, 98, 1);
+}
+
+.buttons.buttons-skip.flex.flex--row.flex--center {
+  margin: 0.5rem;
+}
+
+/* BACKGROUND IMAGE CONFIGS */
+/* .slide:first-child { background: var(--bg-img-unsplash) no-repeat center center/cover; } */
+.slide:first-child { background: url(../../dist/assets/img/provided/team/ateam.jpg) no-repeat center center/contain; }
+.slide:nth-child(2) { background: url(../../dist/assets/img/provided/team/bluedevils.jpg) no-repeat center center/contain; }
+.slide:nth-child(3) { background: url(../../dist/assets/img/provided/team/dsc.jpg) no-repeat center center/contain; }
+
+@media screen and (min-width: 900px) {
+  .slider {
+    width: 50vw;
+  }
+}

@@ -17,7 +17,7 @@
   <!-- UNPROCESSED/UNMERGED STYLESHEET(S) -->
   <link rel="stylesheet" href="../src/css/landing.css">
   <!-- SCRIPT(S) -->
-  <script src="./js/app.js" defer></script>
+  <!-- <script src="./js/app.js" defer></script> -->
   <title>Ashland Landing Page</title>
 </head>
 <body>
