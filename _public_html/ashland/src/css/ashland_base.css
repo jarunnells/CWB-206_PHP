@@ -1,32 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap');
 
-/* GENERIC RESETS */
-/* * { margin: 0; padding: 0; box-sizing: border-box; }
-*::before,*::after { box-sizing: border-box; } */
-/* html > * { */
-/* html * {
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  line-height: 1.15;
-}
-a { text-decoration: none; color: inherit; }
-h1,h2,h3,h4,h5,h6 { font-size: 100%; font-weight: normal; }
-ul { list-style: none; }
-body { overflow: hidden; }
-img,video { height: auto; max-width: 100%; }
-.clearfix::before,.clearfix::after { content: " "; display: table; }
-.clearfix::after { clear: both; } */
-/* END GENERIC RESETS */
-
-/* ASHLAND BASE STYLING */
-.body.dark {
-  background: rgba(34, 34, 34, 1);
-  color: whitesmoke;
-}
-
-/* BEGIN */
+/* CUSTOM PROPERTIES ****************************************************** */
 :root {
   /* --background: rgba(0, 214, 170, 0.85);
   --background: rgba(20, 110, 200, 0.75); */
@@ -38,6 +12,7 @@ img,video { height: auto; max-width: 100%; }
   --btn-maps-clr-hover: rgba(200, 200, 200, 1);
 }
 
+/* GLOBAL STYLING ********************************************************** */
 *,
 *::before,
 *::after {
@@ -49,6 +24,11 @@ body {
   background: #222;
   font-family: "Work Sans", sans-serif;
   font-weight: 400;
+}
+
+.body.dark {
+  background: rgba(34, 34, 34, 1);
+  color: whitesmoke;
 }
 
 .content {
@@ -79,6 +59,7 @@ body {
   align-items: center;
 }
 
+/* MAPS STYLING ********************************************************** */
 .maps.flex {
   flex-wrap: wrap;
 }
@@ -111,8 +92,7 @@ body {
   color: var(--btn-maps-clr-hover);
 }
 
-/* NAVIGATION STYLING */
-
+/* NAVIGATION STYLING ********************************************************** */
 .header__navbar--styled {
   background: var(--background);
   text-align: center;
@@ -205,7 +185,7 @@ nav a {
   opacity: 0;
   transition: opacity 150ms ease-in-out;
 }
-/* **************************** */
+
 nav a:hover {
   color: rgba(51, 51, 51, 1);
 }
@@ -219,7 +199,40 @@ nav a:hover {
   transition: opacity 250ms ease-in-out 250ms;
 }
 
-/* FOOTER */
+/* MVP HOME STYLING ******************************************************** */
+section.container.mvp {
+  margin: 1rem;
+  padding: 1rem;
+  background: rgba(66, 136, 97, 0.3);
+  max-width: 525px;
+  border-radius: 15px;
+}
+section.container.mvp div {
+  background: rgba(255,255,255,0.5);
+  border: 2px solid rgba(255,255,255,0.5);
+}
+.container__img-info {
+  width: 100%;
+  padding: 1rem;
+}
+.container__img-info h1 {
+	font-size: 1.7rem;
+	text-align: center;
+	margin-bottom: 0.5rem;
+	font-weight: 700;
+}
+.container__img-info p {
+	padding: 0.75rem;
+}
+.container__img-lg img,
+.container__imgs img {
+  width: 100%;
+}
+.container__imgs {
+  gap: 0.5rem;
+}
+
+/* FOOTER STYLING ********************************************************** */
 .footer.footer--styled {
   background: var(--background);
   text-align: center;
@@ -240,6 +253,16 @@ nav a:hover {
   z-index: 9999;
 }
 
+/* ANIMATION(S) ************************************************************* */
+@keyframes fadeImg {
+  to { opacity: 1; }
+}
+.fade-img {
+  opacity: 0;
+  animation: fadeImg 0.5s ease-in 1 forwards;
+}
+
+/* MEDIA QUERIE(S) ********************************************************** */
 @media screen and (min-width: 800px) {
   .nav-toggle-label {
     display: none;
@@ -308,5 +331,3 @@ nav a:hover {
     transform: scale(1, 1);
   }
 }
-
-/* END */

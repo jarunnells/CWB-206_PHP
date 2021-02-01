@@ -5,7 +5,7 @@
          FILE: map.php
 -->
 <?php
-  define('MAP_GREETING', 'Hello World -> map.php');
+  // define('MAP_GREETING', 'Hello World -> map.php');
   define('LOGO', 'Logo');
 ?>
 <!DOCTYPE html>
@@ -28,7 +28,7 @@
   <?php include 'navbar.php'; ?>
 
   <main class="content flex flex--center flex--col">
-    <p class="p__greet"><?php echo MAP_GREETING; ?></p>
+    <!-- <p class="p__greet"><?php //echo MAP_GREETING; ?></p> -->
 
     <section class='maps flex flex--center'>
       <div class="maps__map map-1 current">

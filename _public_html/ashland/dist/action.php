@@ -6,7 +6,7 @@
 -->
 <?php
   include './helpers/photos.php';
-  define('ACTION_GREETING', 'Hello World -> action.php');
+  // define('ACTION_GREETING', 'Hello World -> action.php');
   define('LOGO', 'Logo');
 ?>
 <!DOCTYPE html>
@@ -40,7 +40,7 @@
   <?php include 'navbar.php'; ?>
 
   <main class="content flex flex--center flex--col">
-    <p class="p__greet"><?php echo ACTION_GREETING; ?></p>
+    <!-- <p class="p__greet"><?php //echo ACTION_GREETING; ?></p> -->
 
     <?php
       include_once './helpers/photos.php';

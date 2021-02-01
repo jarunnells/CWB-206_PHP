@@ -7,7 +7,6 @@
 ///
 
   define('MAIN_LANDING', '../../index.php');
-  define('SOON', './helpers/coming_soon.php');
   $title = 'Ashland Valley Soccer League';
   $year = date("Y");
   $copyright = '<span class="copy">&copy;</span>';

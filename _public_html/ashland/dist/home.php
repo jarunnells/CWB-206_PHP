@@ -1,3 +1,4 @@
+<?php declare(strict_types=1);?>
 <!--
     DEVELOPER: J.A. Runnells
        COURSE: CIS-206-R11
@@ -6,8 +7,16 @@
 -->
 <?php
   // include './helpers/photos.php';
-  define('HOME_GREETING', 'Hello World -> home.php');
+  // define('HOME_GREETING', 'Hello World -> home.php');
+  define('HOME_GREETING', 'Ashland Valley Soccer');
   define('LOGO', 'Logo');
+
+  // date("m");
+  function getMonth(string $month_format_str = "m") : string {
+    $months = array('JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC');    
+    return $months[ltrim(date($month_format_str),'0') - 1];
+  }
+
 ?>
 <!DOCTYPE html>
 <html lang="en-US">
@@ -32,6 +41,21 @@
 
   <main class="content flex flex--center flex--col">
     <p class="p__greet"><?php echo HOME_GREETING; ?></p>
+
+    <section class="container mvp">
+      <div class="container__img-lg flex">
+        <img class="img-lg current" src="./assets/img/provided/solo/john.jpg" alt="john.jpg">
+        <article class="container__img-info">
+          <h1><?php echo getMonth(); echo ' '; echo date("Y");?> MVPs</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi animi sunt dicta ipsa vitae rem delectus accusantium. Minima, quam assumenda ipsam repudiandae reprehenderit saepe perspiciatis quidem unde veniam consectetur fugit?</p>
+        </article>
+      </div>
+      <div class="container__imgs flex">
+        <img class="img_thumb" src="./assets/img/provided/solo/john.jpg" alt="john.jpg">
+        <img class="img_thumb" src="./assets/img/provided/solo/amith.jpg" alt="amith.jpg">
+        <img class="img_thumb" src="./assets/img/provided/solo/krst.jpg" alt="krst.jpg">
+      </div>
+    </section>
   </main>
 
   <?php include 'footer.php'; ?>

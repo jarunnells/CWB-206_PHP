@@ -7,7 +7,6 @@
 ///
 
   define('SOON', '../dist/helpers/coming_soon.php');
-
   define('LANDING', array('inner'=>'Landing', 'path'=>'./index.php'));
   define('NAV_HOME', array('inner'=>'Home', 'path'=>'./home.php'));
   define('NAV_TEAMS', array('inner'=>'Teams', 'path'=>'./teams.php'));
