@@ -77,5 +77,14 @@
       </section>
     </main>
   </div>
+
+  <script>
+    // PLACEHOLDER CONFIRMATION
+    const submit = document.querySelector('.btn-submit');
+    submit.addEventListener('click', e => {
+      alert("Thank you! We'll be in touch!");
+    });
+  </script>
+  
 </body>
 </html>

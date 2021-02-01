@@ -98,7 +98,7 @@
       }
       echo '
           <div class="card">
-            <h1>Photo One</h1>
+            <h1>Photo Title</h1>
             <p>Lorem ipsum dolor sit amet.</p>
           </div>
         </div>';

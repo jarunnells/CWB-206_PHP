@@ -6,6 +6,8 @@
 
 */
 
+// BEGIN PHOTO PAGES ********************************************************************
+
 // TODO: handle radio active/inactive styling
 // FIXME: navigation button event handle bug!!!
 
@@ -128,6 +130,8 @@ btnRadio.forEach(btn => {
 if(auto_advance) {
   slide_interval = setInterval(next_img, interval_time);
 }
+
+// END PHOTO PAGES **********************************************************************
 
 const run = () => {
   _debug();

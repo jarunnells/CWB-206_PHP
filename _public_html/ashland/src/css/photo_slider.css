@@ -88,9 +88,13 @@
 
 /* BACKGROUND IMAGE CONFIGS */
 /* .slide:first-child { background: var(--bg-img-unsplash) no-repeat center center/cover; } */
-.slide:first-child { background: url(../../dist/assets/img/provided/team/ateam.jpg) no-repeat center center/contain; }
+/* .slide:first-child { background: url(../../dist/assets/img/provided/team/ateam.jpg) no-repeat center center/contain; }
 .slide:nth-child(2) { background: url(../../dist/assets/img/provided/team/bluedevils.jpg) no-repeat center center/contain; }
-.slide:nth-child(3) { background: url(../../dist/assets/img/provided/team/dsc.jpg) no-repeat center center/contain; }
+.slide:nth-child(3) { background: url(../../dist/assets/img/provided/team/dsc.jpg) no-repeat center center/contain; } */
+
+/* .slide:first-child { background: url(../../dist/assets/img/provided/action/dit.jpg) no-repeat center center/contain; }
+.slide:nth-child(2) { background: url(../../dist/assets/img/provided/action/kath.jpg) no-repeat center center/contain; }
+.slide:nth-child(3) { background: url(../../dist/assets/img/provided/action/rec.jpg) no-repeat center center/contain; } */
 
 @media screen and (min-width: 900px) {
   .slider {

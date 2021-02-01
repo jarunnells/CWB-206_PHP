@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AA0BA,IAAI,CAAJ,MAAI",
-    "sources": [
-        "../../src/sass/styles.scss"
-    ],
-    "names": [],
-    "file": "styles.min.css"
-}
+{"version":3,"sourceRoot":"","sources":["../../src/sass/scss/_fonts.scss","../../src/sass/scss/_reset.scss","../../src/sass/scss/_index.scss","../../src/sass/scss/_colors.scss"],"names":[],"mappings":"AAQQ,+FAGA,8FAGA,gGAGA,0GAGA,2GAGA,uHCfR,yEACA,uEAEA,OACE,SACA,eACA,aACA,wBACA,iBAEF,qCACA,oDACA,mBACA,qBACA,qCACA,6DACA,4BC6CA,OA3BI,gBAgCJ,WACE,cAGF,KACE,aACA,iBCtDQ,QDuDR,eACA,6BAGA,kBACA,WACA,YAEA,kBAvDA,aACA,uBACA,mBACA,eAqDsB,IACpB,yBAEA,oBACE,MC1EF,QD2EE,kBACA,sBAEA,0BAEE,iBC9EE,QDoFV,KACE","file":"styles.min.css"}

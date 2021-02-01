@@ -23,6 +23,13 @@
   <!-- EXTERNAL STYLESHEETS -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+  <!-- TEMPORARY EMBEDDED STYLING -->
+  <style>
+    .slide:first-child { background: url(./assets/img/provided/team/ateam.jpg) no-repeat center center/contain; }
+    .slide:nth-child(2) { background: url(./assets/img/provided/team/bluedevils.jpg) no-repeat center center/contain; }
+    .slide:nth-child(3) { background: url(./assets/img/provided/team/dsc.jpg) no-repeat center center/contain; }
+  </style>
+
   <!-- SCRIPT(S) -->
   <script src="./js/app.js" defer></script>
 
