@@ -1,9 +1,9 @@
+@import 'custom_props.css';
+@import 'custom_form.css';
+
 /*
 https://source.unsplash.com
 */
-
-@import 'custom_props.css';
-@import 'custom_form.css';
 
 /* GENERIC RESETS */
 * { margin: 0; padding: 0; -webkit-box-sizing: border-box; box-sizing: border-box; }
