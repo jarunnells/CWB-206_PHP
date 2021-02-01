@@ -84,6 +84,7 @@
     ///   ';
     /// }
 
+    /// TODO: update card h1 to correct photo index
     echo '    <section class="slider">';
     for ($i=0; $i<count($img_array); $i++) {
       if ($i === 0) {

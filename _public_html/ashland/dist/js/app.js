@@ -9,15 +9,15 @@
 // TODO: handle radio active/inactive styling
 // FIXME: navigation button event handle bug!!!
 
-const slides = document.querySelectorAll('.slide');
-const btnPlay = document.querySelector('.buttons__play');
-const btnPause = document.querySelector('.buttons__pause');
-const btnFirst = document.querySelector('.buttons__first');
-const btnNext = document.querySelector('.buttons__next');
-const btnPrev = document.querySelector('.buttons__prev');
-const btnLast = document.querySelector('.buttons__last');
-const btnRadio = document.querySelectorAll('.btn__radio');
-const interval_time = 5000;
+const slides = document.querySelectorAll('.slide'),
+      btnPlay = document.querySelector('.buttons__play'),
+      btnPause = document.querySelector('.buttons__pause'),
+      btnFirst = document.querySelector('.buttons__first'),
+      btnNext = document.querySelector('.buttons__next'),
+      btnPrev = document.querySelector('.buttons__prev'),
+      btnLast = document.querySelector('.buttons__last'),
+      btnRadio = document.querySelectorAll('.btn__radio'),
+      interval_time = 5000;
 let slide_interval;
 var auto_advance = true;
 
@@ -27,6 +27,7 @@ const _debug = () => {
   console.log(greeting);
 };
 
+// BUTTON PRESS LOGIC ***********************************************
 const next_img = () => {
   const current = document.querySelector('.current');
   current.classList.remove('current');
@@ -71,6 +72,7 @@ const handle_radio = (target_id) => {
   setTimeout(() => current.classList.remove('current'));
 };
 
+// EVENT LISTENERS **************************************************
 btnNext.addEventListener('click', e => {
   next_img();
   if(auto_advance) {
@@ -122,6 +124,7 @@ btnRadio.forEach(btn => {
   });
 });
 
+// HANDLE AUTO ADVANCING ********************************************
 if(auto_advance) {
   slide_interval = setInterval(next_img, interval_time);
 }
