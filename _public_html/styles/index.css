@@ -17,19 +17,6 @@ body {
   overflow: hidden;
 }
 /* 
-#header_bar {
-  position: absolute;
-  width: 100%;
-  color: rgba(200, 200, 255, 0.3);
-  top: 0;
-  left: 0;
-  z-index: 5;
-  display: none;
-}
-#header_bar > hr {
-  display: none;
-} 
-*/
 
 /* CONSTANTS -> CUSTOM PROPERTIES */
 html {
@@ -45,7 +32,6 @@ a {
   right: 0;
   width: 100%;
   min-height: 100vh;
-  /* padding: 100px; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -57,7 +43,6 @@ a {
 
 .container.is-active {
   right: 300px;
-  /* transition: 1.5s; */
 }
 
 .container header {
@@ -65,7 +50,6 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  /* padding: 40px 100px; */
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -109,21 +93,18 @@ a {
 }
 
 .text h2 {
-  /* font-size: 4em; */
   font-weight: 700;
   line-height: 1em;
   text-transform: uppercase;
 }
 
 .text h3 {
-  /* font-size: 2.5em; */
   font-weight: 400;
   line-height: 1em;
   text-transform: uppercase;
 }
 
 .text h4 {
-  /* font-size: 2em; */
   font-style: italic;
   font-weight: 100;
   line-height: 1em;
@@ -132,10 +113,7 @@ a {
 
 .text p {
   font-family: var(--font-family-text);
-  /* font-size: 1.25em; */
-  /* margin: 20px 0; */
   font-weight: 400;
-  /* max-width: 600px; */
 }
 
 .text a {
@@ -246,11 +224,11 @@ span.hamburger-label.is-active {
   /* PHONE */
   .container { padding: 100px 50px; }
   .container header { padding: 40px; }
-  .text h2 { font-size: 2em; }
-  .text h3 { font-size: 1.5em; }
-  .text h4 { font-size: 1.2em; }
+  .text h2 { font-size: 2rem; }
+  .text h3 { font-size: 1.5rem; }
+  .text h4 { font-size: 1.2rem; }
   .text p {
-    font-size: 1em;
+    font-size: 1rem;
     margin: 10px 0;
     max-width: 400px;
   }
@@ -260,11 +238,11 @@ span.hamburger-label.is-active {
   /* TABLETS */
   .container { padding: 100px; }
   .container header { padding: 40px 75px; }
-  .text h2 { font-size: 4em; }
-  .text h3 { font-size: 2.5em; }
-  .text h4 { font-size: 2em; }
+  .text h2 { font-size: 4rem; }
+  .text h3 { font-size: 2.5rem; }
+  .text h4 { font-size: 2rem; }
   .text p {
-    font-size: 1.25em;
+    font-size: 1.25rem;
     margin: 20px 0;
     max-width: 600px;
   }
@@ -274,11 +252,11 @@ span.hamburger-label.is-active {
   /* LAPTOP | DESKTOP */
   .container { padding: 150px; }
   .container header { padding: 40px 100px; }
-  .text h2 { font-size: 4em; }
-  .text h3 { font-size: 2.5em; }
-  .text h4 { font-size: 2em; }
+  .text h2 { font-size: 4rem; }
+  .text h3 { font-size: 2.5rem; }
+  .text h4 { font-size: 2rem; }
   .text p {
-    font-size: 1.25em;
+    font-size: 1.25rem;
     margin: 20px 0;
     max-width: 600px;
   }
@@ -287,10 +265,10 @@ span.hamburger-label.is-active {
 @media only screen and (min-width: 1200px) {
   /* JUMBO SCREENS */
   .container { padding: 200px; }
-  .text h2 { font-size: 6em; }
-  .text h3 { font-size: 4em; }
+  .text h2 { font-size: 6rem; }
+  .text h3 { font-size: 4rem; }
   .text p {
-    font-size: 2em;
+    font-size: 2rem;
     margin: 30px 0;
     max-width: 900px;
   }

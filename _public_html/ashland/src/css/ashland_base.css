@@ -210,6 +210,10 @@ nav a:hover {
   color: rgba(51, 51, 51, 1);
 }
 
+nav a:active {
+  color: rgba(138, 45, 45, 1);
+}
+
 .nav-toggle:checked ~ nav {
   transform: scale(1, 1);
 }

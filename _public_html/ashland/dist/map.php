@@ -5,7 +5,6 @@
          FILE: map.php
 -->
 <?php
-  include './helpers/photos.php';
   define('MAP_GREETING', 'Hello World -> map.php');
   define('LOGO', 'Logo');
 ?>
@@ -18,14 +17,6 @@
   <!-- STYLESHEET(S) -->
   <link rel="stylesheet" href="./css/styles.min.css">
   <link rel="stylesheet" href="../src/css/ashland_base.css">
-
-  <!-- TEMP EMBEDDED STYLING -->
-  <style>
-    /* FIXME: adjust .content spacing (h/w) to media query */
-    .content {
-      overflow: scroll;
-    }
-  </style>
 
   <!-- SCRIPT(S) -->
   <script src="./js/map.js" defer></script>
@@ -59,33 +50,6 @@
       <button id="btn-map-3" class="btn-maps-nav__link map">MAP 3</button>
       <button id="btn-map-4" class="btn-maps-nav__link map">MAP 4</button>
     </div>
-
-    <!-- <section class='maps flex flex--center flex--row'>
-      <div class="flex flex--center flex--col">Map Image #01
-        <img src=<?php //echo $images_map[0]?> alt="complexmap.jpg">
-      </div>
-
-      <div class="flex--col">Map Image #02
-        <img src=<?php //echo $images_map[1]?> alt="map1.gif">
-      </div>
-
-      <div class="flex--col">Map Image #03
-        <img src=<?php //echo $images_map[2]?> alt="map2.gif">
-      </div>
-    </section>
-    <section class='maps flex flex--center flex--row'>
-      <div class="flex flex--center flex--col">Map Image #04
-        <img src=<?php //echo $images_map[3]?> alt="map3.gif">
-      </div>
-
-      <div class="fflex--col">Map Image #05
-        <img src=<?php //echo $images_map[4]?> alt="map4.gif">
-      </div>
-
-      <div class="flex--col">Map Image #06
-        <img src=<?php //echo $images_map[5]?> alt="map5.gif">
-      </div>
-    </section> -->
 
   </main>
 

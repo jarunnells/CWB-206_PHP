@@ -1,15 +1,15 @@
-//
-//    DEVELOPER: J.A. Runnells
-//       COURSE: CIS-206-R11
-//       BRANCH: main
-//         FILE: _index.scss
-//
+///
+///    DEVELOPER: J.A. Runnells
+///       COURSE: CIS-206-R11
+///       BRANCH: main
+///         FILE: _index.scss
+///
 
-// BEM:
-//   .{Block}__{Element}
-//   .{Block}__{Element}--{Modifier}
-//   .{Block}--{Modifier}
-//
+/// BEM:
+///   .{Block}__{Element}
+///   .{Block}__{Element}--{Modifier}
+///   .{Block}--{Modifier}
+///
 
 @use 'reset';
 @use 'colors' as c;
@@ -41,11 +41,11 @@ $desktop: 1080px;
 @mixin theme($light-theme: true) {
   @if $light-theme {
     background: lighten($color: c.$dark--bg, $amount: 80%);
-    // color: darken($color: $text-color, $amount: 80%);
+    /// color: darken($color: $text-color, $amount: 80%);
   }
 }
 
-// MEDIA MIXINS
+/// MEDIA MIXINS
 @mixin mobile {
   @media (max-width: $mobile) {
     @content;
@@ -64,12 +64,12 @@ $desktop: 1080px;
 
 .dark {
   @include theme($light-theme: false);
-  // @include theme($light-theme: true);
+  /// @include theme($light-theme: true);
 }
 
 .light {
   @include theme($light-theme: true);
-  // @include theme($light-theme: true);
+  /// @include theme($light-theme: true);
 }
 
 .body.dark {
@@ -81,8 +81,8 @@ $desktop: 1080px;
   background-color: c.$clr--05;
   padding: 20px 0;
   font-family: fontFam(jet);
-  // position: fixed;
-  // position: absolute;
+  /// position: fixed;
+  /// position: absolute;
   position: relative;
   width: 100%;
   z-index: 999;
@@ -97,7 +97,7 @@ $desktop: 1080px;
       background-color: white;
 
       &:hover {
-        // color: c.$a;
+        /// color: c.$a;
         background-color: c.$clr--01;
       }
     }

@@ -1,11 +1,11 @@
-<!--
-    DEVELOPER: J.A. Runnells
-       COURSE: CIS-206-R11
-       BRANCH: main
-         FILE: photos.php
--->
 <?php
-  $page;
+///
+///    DEVELOPER: J.A. Runnells
+///       COURSE: CIS-206-R11
+///       BRANCH: main
+///         FILE: photos.php
+///
+
   // PATH CONSTANTS ***********************************************
   define('BASE', './assets/img/provided/');
   define('LOGOS', BASE.'logos/');
@@ -37,6 +37,7 @@
   define('IMG_KATH', ACTION.'kath.jpg');
   define('IMG_REC', ACTION.'rec.jpg');
 
+  $page;
   $images_team = array(IMG_BLUEDEVILS, IMG_ATEAM, IMG_DSC);
   $images_action = array(IMG_DIT, IMG_KATH, IMG_REC);
   $images_map = array(IMG_COMPLEXMAP, IMG_MAP1, IMG_MAP2, IMG_MAP3, IMG_MAP4, IMG_MAP5);

@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="../src/css/ashland_base.css">
 
   <!-- SCRIPT(S) -->
-  <!-- <script src="./js/app.js" defer></script> -->
+  <script src="./js/app.js" defer></script>
 
   <title>Ashland Valley Soccer League</title>  
 </head>

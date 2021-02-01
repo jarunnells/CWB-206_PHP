@@ -27,12 +27,9 @@
 <body>
     
     <main class="container">
-        <!-- class="showcase" -->
         <header>
             <h2 class="logo"></h2>
-            <!-- <div class="toggle">
-                
-            </div> -->
+            <!-- <div class="toggle"></div> -->
             <button class="hamburger hamburger--collapse toggle" type="button">
                 <span class="hamburger-box">
                     <span class="hamburger-inner"></span>
@@ -40,27 +37,23 @@
                 <span class="hamburger-label">Menu</span>
             </button>
         </header>
-        <video src="./assets/vid/coding_1920x1080.mp4" type="video/mp4" autoplay muted loop>Oops...HTML video tag unsupported...update your browser!</video>
-        <!-- <div class="img img-bg"></div> -->
+        <!-- <video src="./assets/vid/coding_1920x1080.mp4" type="video/mp4" autoplay muted loop>Oops...HTML video tag unsupported...update your browser!</video> -->
+        <div class="img img-bg"></div>
         <div class="overlay">
-            <!-- class="overlay" -->
         </div>
         <div class="text">
-            <!-- class="text" -->
             <h2>J.A. Runnells</h2>
             <h3>CWB-206-R11</h3>
             <h4>Assignments</h4>
             <p>Not sure what to put here yet -- Lorem, it's up to you; for now...</p>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam nihil atque iusto harum ipsum assumenda, placeat ut optio, culpa fugiat eos minus dolore aut veritatis tempore recusandae aliquam numquam alias!</p>
-            <!-- <a href="#">ABOUT</a> -->
+            <!-- <a href="#">ASSIGNMENT CALENDAR</a> -->
         </div>
         <ul class="source_code">
-            <!-- class="social" -->
             <li><a href=<?php echo GITHUB ?> target="_blank" title="Go to -> GitHub.com"><img src="./assets/img/GitHub-Mark-Light-32px.png" alt="GitHub"></a></li>
         </ul>
     </main>
     <nav id='nav_menu'>
-        <!-- class="menu" -->
         <ul>
             <li><a href=<?php echo NAV_ASHLAND; ?> target="_self" title='Go To -> ashland.php...'>Ashland Website</a></li>
             <li><a href=<?php echo NAV_BASICS_LANDING; ?> target="_self" title='Go To -> basics.php...'>Basics Landing Page</a></li>

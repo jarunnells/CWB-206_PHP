@@ -1,5 +1,13 @@
 "use strict";
 
+/*
+    DEVELOPER: J.A. Runnells
+       COURSE: CIS-206-R11
+       BRANCH: main
+         FILE: map.js
+
+*/
+
 const [ current, divs_map, btns_map ] = [
   document.querySelector('.maps__map.current'),
   document.querySelectorAll('.maps__map'),

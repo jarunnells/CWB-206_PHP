@@ -1,12 +1,11 @@
-<!--
-    DEVELOPER: J.A. Runnells
-       COURSE: CIS-206-R11
-       BRANCH: main
-         FILE: navbar.php
--->
+<?php /// TODO: extract vars
+///
+///    DEVELOPER: J.A. Runnells
+///       COURSE: CIS-206-R11
+///       BRANCH: main
+///         FILE: navbar.php
+///
 
-<!-- TODO: extract vars -->
-<?php 
   define('SOON', '../dist/helpers/coming_soon.php');
 
   define('LANDING', array('inner'=>'Landing', 'path'=>'./index.php'));

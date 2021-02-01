@@ -1,11 +1,13 @@
-<!--
-    DEVELOPER: J.A. Runnells
-       COURSE: CIS-206-R11
-       BRANCH: main
-         FILE: footer.php ©
--->
 <?php 
+///
+///    DEVELOPER: J.A. Runnells
+///       COURSE: CIS-206-R11
+///       BRANCH: main
+///         FILE: footer.php ©
+///
+
   define('MAIN_LANDING', '../../index.php');
+  define('SOON', './helpers/coming_soon.php');
   $title = 'Ashland Valley Soccer League';
   $year = date("Y");
   $copyright = '<span class="copy">&copy;</span>';
@@ -24,6 +26,6 @@
       '.$copyright.' '.$year.' '.$copyright.'
     </h1>
   </footer>
-  <div class="home_icon"><a class="anchor__main-landing" href="'.MAIN_LANDING.'">🏠</a></div>
+  <div class="home_icon"><a class="anchor__main-landing" href="'.MAIN_LANDING.'">🏠</a><span>  </span><a href="'.SOON.'">🔐</a></div>
   ';
 ?>

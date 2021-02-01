@@ -1,14 +1,14 @@
-//
-//    DEVELOPER: J.A. Runnells
-//       COURSE: CIS-206-R11
-//       BRANCH: main
-//         FILE: _reset.sass
-//
+///
+///    DEVELOPER: J.A. Runnells
+///       COURSE: CIS-206-R11
+///       BRANCH: main
+///         FILE: _reset.sass
+///
 
-/* GENERIC RESETS */
+/// GENERIC RESETS *******************************************************************
 * { margin: 0; padding: 0; -webkit-box-sizing: border-box; box-sizing: border-box; }
 *::before,*::after { -webkit-box-sizing: border-box; box-sizing: border-box; }
-// html > * {
+/// html > * {
 html * {
   border: 0;
   font-size: 100%;
@@ -23,4 +23,4 @@ body { overflow: hidden; }
 img,video { height: auto; max-width: 100%; }
 .clearfix::before,.clearfix::after { content: " "; display: table; }
 .clearfix::after { clear: both; }
-/* END GENERIC RESETS */
+/// END GENERIC RESETS ***************************************************************

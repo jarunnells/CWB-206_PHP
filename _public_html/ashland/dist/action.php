@@ -31,7 +31,7 @@
   </style>
 
   <!-- SCRIPT(S) -->
-  <script src="./js/app.js" defer></script>
+  <script src="./js/photos.js" defer></script>
 
   <title>Action</title>
 </head>
@@ -41,20 +41,6 @@
 
   <main class="content flex flex--center flex--col">
     <p class="p__greet"><?php echo ACTION_GREETING; ?></p>
-
-    <!-- <section class='photos'>
-      <div class="flex flex--center flex--col">Team Image #01
-        <img src=<?php //echo $images_action[0]?> alt="dit.jpg">
-      </div>
-
-      <div class="flex flex--center flex--col">Team Image #02
-        <img src=<?php //echo $images_action[1]?> alt="kath.jpg">
-      </div>
-
-      <div class="flex flex--center flex--col">Team Image #03
-        <img src=<?php //echo $images_action[2]?> alt="rec.jpg">
-      </div>
-    </section> -->
 
     <?php
       include_once './helpers/photos.php';
