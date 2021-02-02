@@ -130,6 +130,7 @@ button.styled:hover {
     text-align: var(--txt-align-row-header);
     padding-left: var(--padding-tr);
     padding-right: var(--padding-tr);
+    width: 8rem;
 }
 #table_output tr td:last-child{
 	text-align: var(--txt-align-row-data);

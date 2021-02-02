@@ -48,31 +48,31 @@
           <!-- <caption>Player Info</caption> -->
           <tr>
             <td><label for="fname">First Name:</label></td>
-            <td><input type="text" name="fname" id="fname" maxlength="40" required autofocus><span class="required">*</span></td>
+            <td><input type="text" name="fname" id="fname" maxlength="40" autofocus><span class="required">*</span></td>
           </tr>
           <tr>
             <td><label for="lname">Last Name:</label></td>
-            <td><input type="text" name="lname" id="lname" maxlength="40" required><span class="required">*</span></td>
+            <td><input type="text" name="lname" id="lname" maxlength="40"><span class="required">*</span></td>
           </tr>
           <tr>
             <td><label for="address">Address:</label></td>
-            <td><input type="text" name="address" id="address" maxlength="50" required><span class="required">*</span></td>
+            <td><input type="text" name="address" id="address" maxlength="50"><span class="required">*</span></td>
           </tr>
           <tr>
             <td><label for="city">City:</label></td>
-            <td><input type="text" name="city" id="city" maxlength="25" required><span class="required">*</span></td>
+            <td><input type="text" name="city" id="city" maxlength="25"><span class="required">*</span></td>
           </tr>
           <tr>
             <td><label for="state">State:</label></td>
-            <td><input type="text" name="state" id="state" placeholder=<?php echo PLACEHOLDERS['state'] ?> title=<?php echo TITLES['state'] ?> maxlength="2" required><span class="required">*</span></td>
+            <td><input type="text" name="state" id="state" placeholder=<?php echo PLACEHOLDERS['state'] ?> title=<?php echo TITLES['state'] ?> maxlength="2"><span class="required">*</span></td>
           </tr>
           <tr>
             <td><label for="zip">Zip:</label></td>
-            <td><input type="text" name="zip" id="zip" placeholder=<?php echo PLACEHOLDERS['zip'] ?> title=<?php echo TITLES['zip'] ?> maxlength="10" required><span class="required">*</span></td>
+            <td><input type="text" name="zip" id="zip" placeholder=<?php echo PLACEHOLDERS['zip'] ?> title=<?php echo TITLES['zip'] ?> maxlength="10"><span class="required">*</span></td>
           </tr>
           <tr>
             <td><label for="phone">Phone:</label></td>
-            <td><input type="text" name="phone" id="phone" placeholder=<?php echo PLACEHOLDERS['phone'] ?> title=<?php echo TITLES['phone'] ?> maxlength="14" required><span class="required">*</span></td>
+            <td><input type="text" name="phone" id="phone" placeholder=<?php echo PLACEHOLDERS['phone'] ?> title=<?php echo TITLES['phone'] ?> maxlength="14"><span class="required">*</span></td>
           </tr>
           <tr>
             <th id="required" colspan="2">* Required</th>
