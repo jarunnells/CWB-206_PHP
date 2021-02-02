@@ -11,7 +11,7 @@
   define('TITLE_P', 'Getting Down With The Basics...');
   define('NAV_RANDOM', './random/random.php');
   define('NAV_FORM', './form_proj/form_process.php');
-  define('NAV_FORM_INCLD', NAV_SOON);
+  define('NAV_FORM_INCLD', './form_includes/'); // index.php
   define('NAV_TICKETS', NAV_SOON);
   define('NAV_PLAYER', NAV_SOON);
   define('NAV_LANDING', '../index.php');

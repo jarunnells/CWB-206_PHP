@@ -2,38 +2,25 @@
     DEVELOPER: J.A. Runnells
        COURSE: CIS-206-R11
        BRANCH: main
-         FILE: info_output.php
-
-    [ X ] COMPLETE?
+         FILE: process_data.php -> Form Includes
 -->
 <?php
+  // IMPORT(S)
   include '../helpers/player.php';
-  // include './player.php';
-  // require './player.php';
 
   // CONSTANTS
-  define('NAV_LINK', './form_process.php');
+  define('NAV_LINK', './index.php');
   define('BACK', '<< FORM >>');
   define('TITLE', 'Player Data');
 
-  // MISC VARS
-  $br = "<br />";
-  $hr = "<br /><hr /><br />";
-
-  // DATA -> DEBUG
-  // $debug_url_01 = 'http://localhost:8080/_public_html/basics/form_proj/info_output.php?fname=Ziggy&lname=Wiggy&address=1234+S+Main+St&city=AnyTown&state=CO&zip=12345-6789&phone=303-555-9876';
-  // $debug_url_02 = 'http://localhost:8080/_public_html/basics/form_proj/info_output.php?fname=Marley&lname=McFarley&address=4321+SW+Main+St&city=AnyTown&state=CO&zip=12345&phone=303-555-5678';
-  // $fname_parent = 'Marley';
-  // $lname_parent = 'McFarley';
-
-  // DATA -> $_GET
-  $fname_player = $_GET['fname'];
-  $lname_player = $_GET['lname'];
-  $street = $_GET['address'];
-  $city = $_GET['city'];
-  $state = $_GET['state'];
-  $zip = $_GET['zip'];
-  $phone = $_GET['phone'];
+  // DATA -> $_POST
+  $fname_player = $_POST['fname'];
+  $lname_player = $_POST['lname'];
+  $street = $_POST['address'];
+  $city = $_POST['city'];
+  $state = $_POST['state'];
+  $zip = $_POST['zip'];
+  $phone = $_POST['phone'];
 
   // INSTANTIATE PLAYER OBJECT -> SET VALUES
   $player = new Player($fname_player, $lname_player);
@@ -47,7 +34,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../styles/custom.css" />
-  <title>Info Output | PHP</title>
+  <title>Player Info Output | PHP</title>
 </head>
 
 <body>
@@ -95,3 +82,4 @@
   </main>
 </body>
 </html>
+
