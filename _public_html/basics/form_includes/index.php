@@ -19,12 +19,8 @@
     'state'=>'Two Letter Abbreviation...',
     'zip'=>'Zip[+4]...'
   ));
-  // REMOVE ME!!!
-  define('REGEX', array(
-    'phone'=>'(?:\(\d{3}\)\s|\d{3})[-]?\d{3}[-]?\d{4}',
-    'state'=>'[A-Za-z]{2}',
-    'zip'=>'^\d{5}(?:[-]\d{4})?$'
-  ));
+  $error = 'OOPS! Error...';
+  $error = '';
 ?>
 <!DOCTYPE html>
 <html lang="en-US">
@@ -39,15 +35,17 @@
 <body>
   <main class="container">
 
-    <section id="holder">
+    <section id="holder" class="section__styled">
       <h3 id="form_title"><?php echo TITLE; ?></h3>
       <hr class="title" />
-      <form action="./process_data.php" method="post" id="form_process">
+      <div class="form_subtitle">Player Info</div>
+      <hr class="title" />
+      <div class="error">
+        <?php echo $error; ?>
+      </div>
+      <form action="./process_data.php" method="post" id="form_process">        
         <table>
-          <caption>Player Info</caption>
-          <tr>
-            <th id="required" colspan="2">* Required</th>
-          </tr>
+          <!-- <caption>Player Info</caption> -->
           <tr>
             <td><label for="fname">First Name:</label></td>
             <td><input type="text" name="fname" id="fname" maxlength="40" required autofocus><span class="required">*</span></td>
@@ -66,15 +64,18 @@
           </tr>
           <tr>
             <td><label for="state">State:</label></td>
-            <td><input type="text" name="state" id="state" placeholder=<?php echo PLACEHOLDERS['state'] ?> title=<?php echo TITLES['state'] ?> pattern=<?php echo REGEX['state'] ?> maxlength="2" required><span class="required">*</span></td>
+            <td><input type="text" name="state" id="state" placeholder=<?php echo PLACEHOLDERS['state'] ?> title=<?php echo TITLES['state'] ?> maxlength="2" required><span class="required">*</span></td>
           </tr>
           <tr>
             <td><label for="zip">Zip:</label></td>
-            <td><input type="text" name="zip" id="zip" placeholder=<?php echo PLACEHOLDERS['zip'] ?> title=<?php echo TITLES['zip'] ?> pattern=<?php echo REGEX['zip'] ?> maxlength="10" required><span class="required">*</span></td>
+            <td><input type="text" name="zip" id="zip" placeholder=<?php echo PLACEHOLDERS['zip'] ?> title=<?php echo TITLES['zip'] ?> maxlength="10" required><span class="required">*</span></td>
           </tr>
           <tr>
             <td><label for="phone">Phone:</label></td>
-            <td><input type="text" name="phone" id="phone" placeholder=<?php echo PLACEHOLDERS['phone'] ?> title=<?php echo TITLES['phone'] ?> pattern=<?php echo REGEX['phone'] ?> maxlength="14" required><span class="required">*</span></td>
+            <td><input type="text" name="phone" id="phone" placeholder=<?php echo PLACEHOLDERS['phone'] ?> title=<?php echo TITLES['phone'] ?> maxlength="14" required><span class="required">*</span></td>
+          </tr>
+          <tr>
+            <th id="required" colspan="2">* Required</th>
           </tr>
           <tr>
             <td colspan="2">

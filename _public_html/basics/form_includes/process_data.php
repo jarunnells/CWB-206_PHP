@@ -2,11 +2,12 @@
     DEVELOPER: J.A. Runnells
        COURSE: CIS-206-R11
        BRANCH: main
-         FILE: process_data.php -> Form Includes
+         FILE: process_data.php -> Form Includes ... $_POST
 -->
 <?php
   // IMPORT(S)
   include '../helpers/player.php';
+  include '../helpers/sanitation.php';
 
   // CONSTANTS
   define('NAV_LINK', './index.php');
@@ -14,13 +15,13 @@
   define('TITLE', 'Player Data');
 
   // DATA -> $_POST
-  $fname_player = $_POST['fname'];
-  $lname_player = $_POST['lname'];
-  $street = $_POST['address'];
-  $city = $_POST['city'];
-  $state = $_POST['state'];
-  $zip = $_POST['zip'];
-  $phone = $_POST['phone'];
+  $fname_player = sanitize_input($_POST['fname']);
+  $lname_player = sanitize_input($_POST['lname']);
+  $street = sanitize_input($_POST['address']);
+  $city = sanitize_input($_POST['city']);
+  $state = sanitize_input($_POST['state']);
+  $zip = sanitize_input($_POST['zip']);
+  $phone = sanitize_input($_POST['phone']);
 
   // INSTANTIATE PLAYER OBJECT -> SET VALUES
   $player = new Player($fname_player, $lname_player);
@@ -38,8 +39,8 @@
 </head>
 
 <body>
-  <main>
-    <section id="holder">
+  <main class="container">
+    <section id="holder" class="section__styled">
       <h3 id="form_title"><?php echo TITLE ?></h3>
       <?php // echo "Player(asString=true): " . $player->get_player_name(true) . $br; ?>
       <hr class="title" />
