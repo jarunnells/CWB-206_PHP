@@ -77,6 +77,8 @@ a {
   opacity: 0.2;
 }
 
+button .hamburger { outline: none; }
+
 .overlay {
   position: absolute;
   top: 0;
