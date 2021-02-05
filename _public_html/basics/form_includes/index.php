@@ -5,11 +5,14 @@
          FILE: index.php -> Form Includes
 -->
 <?php
+// IMPORT(S)
   include ('../helpers/sanitation.php');
 
-  define('NAV_LINK', '../basics.php');
-  define('BACK', '<< BACK >>');
-  define('TITLE', '!Sign Up Now!');
+  // VARS
+  $NAV_LINK = '../basics.php';
+  $BACK = '<< BACK >>';
+  $TITLE = '!Sign Up Now!';
+  
   define('PLACEHOLDERS', array(
     'phone'=>'303-555-1234',
     'state'=>'CO',
@@ -21,19 +24,16 @@
     'zip'=>'Zip[+4]...'
   ));
 
-  // define('FIELDS', array('fname', 'lname', 'address', 'city', 'state', 'zip', 'phone'));
+  // define('FIELDS', array('fname', 'lname', 'street', 'city', 'state', 'zip', 'phone'));
   // foreach(FIELDS as $field) { if (!isset($field)) { $field = 'setme'; } }
 
   if (!isset($fname)) { $fname = ''; }
   if (!isset($lname)) { $lname = ''; }
-  if (!isset($address)) { $address = ''; }
+  if (!isset($street)) { $street = ''; }
   if (!isset($city)) { $city = ''; }
   if (!isset($state)) { $state = ''; }
   if (!isset($zip)) { $zip = ''; }
   if (!isset($phone)) { $phone = ''; }
-
-  $error = 'OOPS! Error...';
-  $error = '';
 ?>
 <!DOCTYPE html>
 <html lang="en-US">
@@ -49,7 +49,7 @@
   <main class="container">
 
     <section id="holder" class="section__styled">
-      <h3 id="form_title"><?php echo TITLE; ?></h3>
+      <h3 id="form_title"><?php echo $TITLE; ?></h3>
       <hr class="title" />
       <div class="form_subtitle">Player Info</div>
       <hr class="title" />
@@ -66,8 +66,8 @@
             <td><input type="text" name="lname" id="lname" maxlength="40" value=<?php echo sanitize_input($lname); ?>><span class="required">*</span></td>
           </tr>
           <tr>
-            <td><label for="address">Address:</label></td>
-            <td><input type="text" name="address" id="address" maxlength="50" value=<?php echo sanitize_input($address); ?>><span class="required">*</span></td>
+            <td><label for="street">Address:</label></td>
+            <td><input type="text" name="street" id="street" maxlength="50" value=<?php echo htmlspecialchars($street); ?>><span class="required">*</span></td>
           </tr>
           <tr>
             <td><label for="city">City:</label></td>
@@ -97,7 +97,7 @@
         </table>
       </form>
       <hr class="title" />
-      <?php echo '<a href=' . NAV_LINK . ' class="nav_link" target="_self" title="Go To -> basics.php...">' . BACK . '</a>'; ?>
+      <?php echo '<a href=' . $NAV_LINK . ' class="nav_link" target="_self" title="Go To -> basics.php...">' . $BACK . '</a>'; ?>
     </section>
   </main>
 </body>
