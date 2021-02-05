@@ -53,7 +53,7 @@
       <hr class="title" />
       <div class="form_subtitle">Player Info</div>
       <hr class="title" />
-      <?php if (!empty($error)) { echo '<div class="error">'.$error.'</div>'; } ?>
+      <?php if (!empty($error)) { echo '<div class="error">'.sanitize_input($error).'</div>'; } ?>
       <form action="./process_data.php" method="post" id="form_process">        
         <table>
           <!-- <caption>Player Info</caption> -->
