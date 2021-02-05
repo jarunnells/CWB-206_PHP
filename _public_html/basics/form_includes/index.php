@@ -59,31 +59,31 @@
           <!-- <caption>Player Info</caption> -->
           <tr>
             <td><label for="fname">First Name:</label></td>
-            <td><input type="text" name="fname" id="fname" maxlength="40" value=<?php echo sanitize_input($fname); ?>><span class="required">*</span></td>
+            <td><input type="text" name="fname" id="fname" maxlength="40" value=<?php if (isset($fname)) { echo $fname; } ?>><span class="required">*</span></td>
           </tr>
           <tr>
             <td><label for="lname">Last Name:</label></td>
-            <td><input type="text" name="lname" id="lname" maxlength="40" value=<?php echo sanitize_input($lname); ?>><span class="required">*</span></td>
+            <td><input type="text" name="lname" id="lname" maxlength="40" value=<?php if (isset($lname)) { echo $lname; } ?>><span class="required">*</span></td>
           </tr>
           <tr>
             <td><label for="street">Address:</label></td>
-            <td><input type="text" name="street" id="street" maxlength="50" value=<?php echo htmlspecialchars($street); ?>><span class="required">*</span></td>
+            <td><input type="text" name="street" id="street" maxlength="50" value="<?php if (isset($street)) {echo sanitize_input($street);} ?>"><span class="required">*</span></td>
           </tr>
           <tr>
             <td><label for="city">City:</label></td>
-            <td><input type="text" name="city" id="city" maxlength="25" value=<?php echo sanitize_input($city); ?>><span class="required">*</span></td>
+            <td><input type="text" name="city" id="city" maxlength="25" value=<?php if (isset($city)) { echo $city; } ?>><span class="required">*</span></td>
           </tr>
           <tr>
             <td><label for="state">State:</label></td>
-            <td><input type="text" name="state" id="state" placeholder=<?php echo PLACEHOLDERS['state'] ?> title=<?php echo TITLES['state'] ?> maxlength="2" value=<?php echo sanitize_input($state); ?>><span class="required">*</span></td>
+            <td><input type="text" name="state" id="state" placeholder=<?php echo PLACEHOLDERS['state'] ?> title=<?php echo TITLES['state'] ?> maxlength="2" value=<?php if (isset($state)) { echo $state; } ?>><span class="required">*</span></td>
           </tr>
           <tr>
             <td><label for="zip">Zip:</label></td>
-            <td><input type="text" name="zip" id="zip" placeholder=<?php echo PLACEHOLDERS['zip'] ?> title=<?php echo TITLES['zip'] ?> maxlength="10" value=<?php echo sanitize_input($zip); ?>><span class="required">*</span></td>
+            <td><input type="text" name="zip" id="zip" placeholder=<?php echo PLACEHOLDERS['zip'] ?> title=<?php echo TITLES['zip'] ?> maxlength="10" value=<?php if (isset($zip)) { echo $zip; } ?>><span class="required">*</span></td>
           </tr>
           <tr>
             <td><label for="phone">Phone:</label></td>
-            <td><input type="text" name="phone" id="phone" placeholder=<?php echo PLACEHOLDERS['phone'] ?> title=<?php echo TITLES['phone'] ?> maxlength="14" value=<?php echo sanitize_input($phone); ?>><span class="required">*</span></td>
+            <td><input type="text" name="phone" id="phone" placeholder=<?php echo PLACEHOLDERS['phone'] ?> title=<?php echo TITLES['phone'] ?> maxlength="14" value=<?php if (isset($phone)) { echo $phone; } ?>><span class="required">*</span></td>
           </tr>
           <tr>
             <th id="required" colspan="2">* Required</th>

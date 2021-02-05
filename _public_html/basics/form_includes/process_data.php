@@ -17,23 +17,22 @@
   // DATA -> $_POST
   // define('FIELDS', array('fname', 'lname', 'street', 'city', 'state', 'zip', 'phone'));
   // foreach(FIELDS as $field) { $field = ''; }
-  $fname = filter_input(INPUT_POST, 'fname');
-  $lname = filter_input(INPUT_POST, 'lname');
-  $street = filter_input(INPUT_POST, 'street');
-  $city = filter_input(INPUT_POST, 'city');
-  $state = filter_input(INPUT_POST, 'state');
-  $zip = filter_input(INPUT_POST, 'zip');
-  $phone = filter_input(INPUT_POST, 'phone');
+  $fname = $_POST['fname'] ?? '';
+  $lname = $_POST['lname'] ?? '';
+  $street = $_POST['street'] ?? '';
+  $city = $_POST['city'] ?? '';
+  $state = $_POST['state'] ?? '';
+  $zip = $_POST['zip'] ?? '';
+  $phone = $_POST['phone'] ?? '';
 
-
-  // define('REGEX', array(
-  //   'name'=>"/^[a-zA-Z-' ]+$/",
-  //   'street'=>"/^(\d{3,})\s?(\w{0,5})\s([a-zA-Z]{2,30})\s([a-zA-Z]{2,15})\.?\s?(\w{0,5})/",
-  //   'city'=>"/^[A-z]{2,}/",
-  //   'state'=>"/^[A-Z]{2,}/",
-  //   'zip'=>"/^\d{2,}(-\d{4})?$/",
-  //   'phone'=>"/^1?[-\. ]?(\(\d{3}\)?[-\. ]?|\d{3}?[-\. ]?)?\d{3}?[-\. ]?\d{4}$/"
-  // ));
+  define('REGEX', array(
+    'name'=>"/^[a-zA-Z-' ]+$/",
+    'street'=>"/^(\d{3,})\s?(\w{0,5})\s([a-zA-Z]{2,30})\s([a-zA-Z]{2,15})\.?\s?(\w{0,5})$/",
+    'city'=>"/^[A-z]{2,}$/",
+    'state'=>"/^[A-Z]{2,}$/",
+    'zip'=>"/^\d{2,}(-\d{4})?$/",
+    'phone'=>"/^1?[-\. ]?(\(\d{3}\)?[-\. ]?|\d{3}?[-\. ]?)?\d{3}?[-\. ]?\d{4}$/"
+  ));
 
   // $fname = filter_var($_POST['fname'], FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>REGEX['name'])));
   // $lname = filter_var($_POST['lname'], FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>REGEX['name'])));
@@ -43,13 +42,13 @@
   // $zip = filter_var($_POST['zip'], FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>REGEX['zip'])));
   // $phone = filter_var($_POST['phone'], FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>REGEX['phone'])));
 
-  if ($fname === FALSE) { $error = 'Invalid/Empty First Name!'; }
-  elseif ($lname === FALSE) { $error = 'Invalid/Empty Last Name!'; }
-  elseif ($street === FALSE) { $error = 'Invalid/Empty Street Address!'; }
-  elseif ($city === FALSE) { $error = 'Invalid/Empty City!'; }
-  elseif ($state === FALSE) { $error = 'Invalid/Empty State!'; }
-  elseif ($zip === FALSE) { $error = 'Invalid/Empty Zip!'; }
-  elseif ($phone === FALSE) { $error = 'Invalid/Empty Phone Number!'; }
+  if (empty($fname)) { $error = 'Invalid/Empty First Name!'; }
+  elseif (empty($lname)) { $error = 'Invalid/Empty Last Name!'; }
+  elseif (empty($street)) { $error = 'Invalid/Empty Street Address!'; }
+  elseif (empty($city)) { $error = 'Invalid/Empty City!'; }
+  elseif (empty($state)) { $error = 'Invalid/Empty State!'; }
+  elseif (empty($zip)) { $error = 'Invalid/Empty Zip!'; }
+  elseif (empty($phone)) { $error = 'Invalid/Empty Phone Number!'; }
   else { $error = ''; }
 
   if ($error != '') {
