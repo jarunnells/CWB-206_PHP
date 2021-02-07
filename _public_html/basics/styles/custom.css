@@ -104,6 +104,7 @@ input[type=text]:focus {
     color: var(--color-form_btn);
     text-align: var(--txt-align-button);
     cursor: pointer;
+    outline: none;
 }
 
 #form_process button[type='submit'],

@@ -71,7 +71,7 @@
               <td><label for="city">City:</label></td>
               <td><input type="text" name="city" id="city" maxlength="25" value="<?php echo sanitize_input($city); ?>"><span class="required">*</span></td>
             </tr>
-            <tr>
+            <tr></tr>
               <td><label for="state">State:</label></td>
               <td><input type="text" name="state" id="state" placeholder="<?php echo PLACEHOLDERS['state'] ?>" title="<?php echo TITLES['state'] ?>" maxlength="2" value="<?php echo sanitize_input($state); ?>"><span class="required">*</span></td>
             </tr>

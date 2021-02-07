@@ -14,6 +14,8 @@
   $BACK = '<< FORM >>';
   $TITLE = 'Player Data';
 
+  // if ($_SERVER["REQUEST_METHOD"] == "POST") { echo 'POST'; }
+
   // DATA -> $_POST
   $fname = $_POST['fname'] ?? '';
   $lname = $_POST['lname'] ?? '';

@@ -1,6 +1,7 @@
 # DIRECTORIES
 .DS_Store
 .vscode
+.idea
 book_apps/
 ex_solutions/
 ex_starts/
