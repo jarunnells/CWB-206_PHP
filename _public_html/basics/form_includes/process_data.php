@@ -25,22 +25,22 @@
   $zip = $_POST['zip'] ?? '';
   $phone = $_POST['phone'] ?? '';
 
-  define('REGEX', array(
+  define('REGEX', [
     'name'=>"/^[a-zA-Z-' ]+$/",
     'street'=>"/^(\d{3,})\s?(\w{0,5})\s([a-zA-Z]{2,30})\s([a-zA-Z]{2,15})\.?\s?(\w{0,5})$/",
     'city'=>"/^[A-z]{2,}$/",
     'state'=>"/^[A-Z]{2}$/",
     'zip'=>"/^\d{5}(-\d{4})?$/",
     'phone'=>"/^1?[-\. ]?(\(\d{3}\)?[-\. ]?|\d{3}?[-\. ]?)?\d{3}?[-\. ]?\d{4}$/"
-  ));
+  ]);
 
-  $fname_re = filter_var($_POST['fname'], FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>REGEX['name'])));
-  $lname_re = filter_var($_POST['lname'], FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>REGEX['name'])));
-  $street_re = filter_var($_POST['street'], FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>REGEX['street'])));
-  $city_re = filter_var($_POST['city'], FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>REGEX['city'])));
-  $state_re = filter_var($_POST['state'], FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>REGEX['state'])));
-  $zip_re = filter_var($_POST['zip'], FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>REGEX['zip'])));
-  $phone_re = filter_var($_POST['phone'], FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>REGEX['phone'])));
+  $fname_re = filter_var($_POST['fname'], FILTER_VALIDATE_REGEXP, ["options"=>["regexp"=>REGEX['name']]]);
+  $lname_re = filter_var($_POST['lname'], FILTER_VALIDATE_REGEXP, ["options"=>["regexp"=>REGEX['name']]]);
+  $street_re = filter_var($_POST['street'], FILTER_VALIDATE_REGEXP, ["options"=>["regexp"=>REGEX['street']]]);
+  $city_re = filter_var($_POST['city'], FILTER_VALIDATE_REGEXP, ["options"=>["regexp"=>REGEX['city']]]);
+  $state_re = filter_var($_POST['state'], FILTER_VALIDATE_REGEXP, ["options"=>["regexp"=>REGEX['state']]]);
+  $zip_re = filter_var($_POST['zip'], FILTER_VALIDATE_REGEXP, ["options"=>["regexp"=>REGEX['zip']]]);
+  $phone_re = filter_var($_POST['phone'], FILTER_VALIDATE_REGEXP, ["options"=>["regexp"=>REGEX['phone']]]);
 
   if (empty($fname)) { $error = 'Empty First Name!'; }
   elseif (!$fname_re) { $error = 'Invalid First Name!'; }

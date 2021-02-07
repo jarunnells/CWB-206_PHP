@@ -83,10 +83,10 @@
     public function get_player_name(bool $asString=false): array|string {
       if ($asString) { return $this->player_first_name . ' ' . $this->player_last_name; } 
       else {
-        return array(
+        return [
           'first'=>$this->player_first_name, 
           'last'=>$this->player_last_name
-        );
+        ];
       }                
     }
 
@@ -97,10 +97,10 @@
     public function get_parent_name(bool $asString=false): array|string {
       if ($asString) { return $this->parent_first_name . ' ' . $this->parent_last_name; }
       else {
-        return array(
+        return [
           'first'=>$this->parent_first_name, 
           'last'=>$this->parent_last_name
-        );
+        ];
       }                
     }
 
@@ -126,12 +126,12 @@
     public function get_address(bool $asString=false): array|string {
       if ($asString) { return $this->street . ', ' . $this->city . ', ' . $this->state . ' ' . $this->zip; }
       else {
-        return array(
+        return [
             'street'=>$this->street, 
             'city'=>$this->city, 
             'state'=>$this->state, 
             'zip'=>$this->zip
-        );
+        ];
       }
     }
   }

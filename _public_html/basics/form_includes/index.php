@@ -9,16 +9,16 @@
   include ('../helpers/sanitation.php');
 
   // CONSTANTS
-  define('PLACEHOLDERS', array(
+  define('PLACEHOLDERS', [
     'phone'=>'303-555-1234',
     'state'=>'CO',
     'zip'=>'12345[-6789]'
-  ));
-  define('TITLES', array(
+  ]);
+  define('TITLES', [
     'phone'=>'303-555-1234 or (303) 555-1234',
     'state'=>'Two Letter Abbreviation...',
     'zip'=>'Zip[+4]...'
-  ));
+  ]);
 
   // VARS
   $NAV_LINK = '../basics.php';
@@ -71,7 +71,7 @@
               <td><label for="city">City:</label></td>
               <td><input type="text" name="city" id="city" maxlength="25" value="<?php echo sanitize_input($city); ?>"><span class="required">*</span></td>
             </tr>
-            <tr></tr>
+            <tr>
               <td><label for="state">State:</label></td>
               <td><input type="text" name="state" id="state" placeholder="<?php echo PLACEHOLDERS['state'] ?>" title="<?php echo TITLES['state'] ?>" maxlength="2" value="<?php echo sanitize_input($state); ?>"><span class="required">*</span></td>
             </tr>
