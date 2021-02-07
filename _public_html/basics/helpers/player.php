@@ -1,26 +1,36 @@
-<!-- 
-    DEVELOPER: J.A. Runnells
-       COURSE: CIS-206-R11
-       BRANCH: main
-         FILE: player.php
--->
-<?php
-  // declare(strict_types=1);
+<?php declare(strict_types=1);
+  /********************************************************
+   *   DEVELOPER: J.A. Runnells
+   *      COURSE: CIS-206-R11
+   *      BRANCH: main
+   *        FILE: player.php
+  ********************************************************/
+
+/**
+ * Class Player
+ */
   class Player {
     // Properties
-    public $player_first_name;
-    public $player_last_name;
-    public $birth_date;
-    public $phone;
-    public $team;
-    public $street;
-    public $city;
-    public $state;
-    public $zip;
-    public $parent_first_name;
-    public $parent_last_name;
+    public string $player_first_name;
+    public string $player_last_name;
+    public null|string $birth_date;
+    public string $phone;
+    public string $team;
+    public string $street;
+    public string $city;
+    public string $state;
+    public string $zip;
+    public null|string $parent_first_name;
+    public null|string $parent_last_name;
 
-    // Player Class Constructor
+    /**
+     * Player constructor.
+     * @param string $player_first_name
+     * @param string $player_last_name
+     * @param string|null $birth_date
+     * @param string|null $parent_first_name
+     * @param string|null $parent_last_name
+     */
     public function __construct(
       string $player_first_name, 
       string $player_last_name, 
@@ -36,14 +46,22 @@
     }
 
     // Player Class Set Methods
-    public function set_team(string $team) {
-      $this->team = $team;
-    }
+    /**
+     * @param string $team
+     */
+    public function set_team(string $team) { $this->team = $team; }
 
-    public function set_phone(string $phone) {
-      $this->phone = $phone;
-    }
+    /**
+     * @param string $phone
+     */
+    public function set_phone(string $phone) { $this->phone = $phone; }
 
+    /**
+     * @param string $street
+     * @param string $city
+     * @param string $state
+     * @param string $zip
+     */
     public function set_address(
       string $street, 
       string $city='Denver', 
@@ -57,7 +75,12 @@
     }
 
     // Player Class Get Methods
-    public function get_player_name(bool $asString=false) {
+
+    /**
+     * @param bool $asString
+     * @return array|string
+     */
+    public function get_player_name(bool $asString=false): array|string {
       if ($asString) { return $this->player_first_name . ' ' . $this->player_last_name; } 
       else {
         return array(
@@ -67,7 +90,11 @@
       }                
     }
 
-    public function get_parent_name(bool $asString=false) {
+    /**
+     * @param bool $asString
+     * @return array|string
+     */
+    public function get_parent_name(bool $asString=false): array|string {
       if ($asString) { return $this->parent_first_name . ' ' . $this->parent_last_name; }
       else {
         return array(
@@ -77,13 +104,26 @@
       }                
     }
 
+    /**
+     * @return string
+     */
     public function get_birth_date(): string { return $this->birth_date; }
 
+    /**
+     * @return string
+     */
     public function get_team(): string { return $this->team; }
 
+    /**
+     * @return string
+     */
     public function get_phone(): string { return $this->phone; }
 
-    public function get_address(bool $asString=false) {
+    /**
+     * @param bool $asString
+     * @return array|string
+     */
+    public function get_address(bool $asString=false): array|string {
       if ($asString) { return $this->street . ', ' . $this->city . ', ' . $this->state . ' ' . $this->zip; }
       else {
         return array(
@@ -97,7 +137,19 @@
   }
 
   // Sub Class -> Player := includes parental information
+
+/**
+ * Class MinorPlayer
+ */
   class MinorPlayer extends Player {
+    /**
+     * MinorPlayer constructor.
+     * @param string $player_first_name
+     * @param string $player_last_name
+     * @param string $birth_date
+     * @param string $parent_first_name
+     * @param string $parent_last_name
+     */
     public function __construct(
       string $player_first_name, 
       string $player_last_name, 

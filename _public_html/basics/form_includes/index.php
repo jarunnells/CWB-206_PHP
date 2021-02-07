@@ -5,14 +5,10 @@
          FILE: index.php -> Form Includes
 -->
 <?php
-// IMPORT(S)
+  // IMPORT(S)
   include ('../helpers/sanitation.php');
 
-  // VARS
-  $NAV_LINK = '../basics.php';
-  $BACK = '<< BACK >>';
-  $TITLE = '!Sign Up Now!';
-  
+  // CONSTANTS
   define('PLACEHOLDERS', array(
     'phone'=>'303-555-1234',
     'state'=>'CO',
@@ -24,82 +20,99 @@
     'zip'=>'Zip[+4]...'
   ));
 
-  // define('FIELDS', array('fname', 'lname', 'street', 'city', 'state', 'zip', 'phone'));
-  // foreach(FIELDS as $field) { if (!isset($field)) { $field = 'setme'; } }
+  // VARS
+  $NAV_LINK = '../basics.php';
+  $BACK = '<< BACK >>';
+  $TITLE = '!Sign Up Now!';
 
-  if (!isset($fname)) { $fname = ''; }
-  if (!isset($lname)) { $lname = ''; }
-  if (!isset($street)) { $street = ''; }
-  if (!isset($city)) { $city = ''; }
-  if (!isset($state)) { $state = ''; }
-  if (!isset($zip)) { $zip = ''; }
-  if (!isset($phone)) { $phone = ''; }
+  $fname = $_POST['fname'] ?? '';
+  $lname = $_POST['lname'] ?? '';
+  $street = $_POST['street'] ?? '';
+  $city = $_POST['city'] ?? '';
+  $state = $_POST['state'] ?? '';
+  $zip = $_POST['zip'] ?? '';
+  $phone = $_POST['phone'] ?? '';
+
 ?>
 <!DOCTYPE html>
 <html lang="en-US">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../styles/custom.css" />
-  <title>Form Includes | PHP</title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/custom.css" />
+    <title>Form Includes | PHP</title>
+  </head>
 
-<body>
-  <main class="container">
+  <body>
+    <main class="container">
+      <section id="holder" class="section__styled">
+        <h3 id="form_title"><?php echo $TITLE; ?></h3>
+        <hr class="title" />
+        <div class="form_subtitle">Player Info</div>
+        <hr class="title" />
+        <?php if (!empty($error)) { echo '<div class="error">'.sanitize_input($error).'</div>'; } ?>
+        <form action="./process_data.php" method="post" id="form_process">        
+          <table>
+            <!-- <caption>Player Info</caption> -->
+            <tr>
+              <td><label for="fname">First Name:</label></td>
+              <td><input type="text" name="fname" id="fname" maxlength="40" value="<?php echo sanitize_input($fname); ?>"><span class="required">*</span></td>
+            </tr>
+            <tr>
+              <td><label for="lname">Last Name:</label></td>
+              <td><input type="text" name="lname" id="lname" maxlength="40" value="<?php echo sanitize_input($lname); ?>"><span class="required">*</span></td>
+            </tr>
+            <tr>
+              <td><label for="street">Address:</label></td>
+              <td><input type="text" name="street" id="street" maxlength="50" value="<?php echo sanitize_input($street); ?>"><span class="required">*</span></td>
+            </tr>
+            <tr>
+              <td><label for="city">City:</label></td>
+              <td><input type="text" name="city" id="city" maxlength="25" value="<?php echo sanitize_input($city); ?>"><span class="required">*</span></td>
+            </tr>
+            <tr>
+              <td><label for="state">State:</label></td>
+              <td><input type="text" name="state" id="state" placeholder="<?php echo PLACEHOLDERS['state'] ?>" title="<?php echo TITLES['state'] ?>" maxlength="2" value="<?php echo sanitize_input($state); ?>"><span class="required">*</span></td>
+            </tr>
+            <tr>
+              <td><label for="zip">Zip:</label></td>
+              <td><input type="text" name="zip" id="zip" placeholder="<?php echo PLACEHOLDERS['zip'] ?>" title="<?php echo TITLES['zip'] ?>" maxlength="10" value="<?php echo sanitize_input($zip); ?>"><span class="required">*</span></td>
+            </tr>
+            <tr>
+              <td><label for="phone">Phone:</label></td>
+              <td><input type="text" name="phone" id="phone" placeholder="<?php echo PLACEHOLDERS['phone'] ?>" title="<?php echo TITLES['phone'] ?>" maxlength="14" value="<?php echo sanitize_input($phone); ?>"><span class="required">*</span></td>
+            </tr>
+            <tr>
+              <th id="required" colspan="2">* Required</th>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <button type="submit" class="btn btn-submit styled">SUBMIT</button>
+                <button type="submit" class="btn btn-clr styled">CLEAR</button>
+              </td>
+            </tr>
+          </table>
+        </form>
+        <hr class="title" />
+        <?php echo '<a href='.$NAV_LINK.' class="nav_link" target="_self" title="Go To -> basics.php...">'.$BACK.'</a>'; ?>
+      </section>
+    </main>
 
-    <section id="holder" class="section__styled">
-      <h3 id="form_title"><?php echo $TITLE; ?></h3>
-      <hr class="title" />
-      <div class="form_subtitle">Player Info</div>
-      <hr class="title" />
-      <?php if (!empty($error)) { echo '<div class="error">'.sanitize_input($error).'</div>'; } ?>
-      <form action="./process_data.php" method="post" id="form_process">        
-        <table>
-          <!-- <caption>Player Info</caption> -->
-          <tr>
-            <td><label for="fname">First Name:</label></td>
-            <td><input type="text" name="fname" id="fname" maxlength="40" value=<?php if (isset($fname)) { echo $fname; } ?>><span class="required">*</span></td>
-          </tr>
-          <tr>
-            <td><label for="lname">Last Name:</label></td>
-            <td><input type="text" name="lname" id="lname" maxlength="40" value=<?php if (isset($lname)) { echo $lname; } ?>><span class="required">*</span></td>
-          </tr>
-          <tr>
-            <td><label for="street">Address:</label></td>
-            <td><input type="text" name="street" id="street" maxlength="50" value="<?php if (isset($street)) {echo sanitize_input($street);} ?>"><span class="required">*</span></td>
-          </tr>
-          <tr>
-            <td><label for="city">City:</label></td>
-            <td><input type="text" name="city" id="city" maxlength="25" value=<?php if (isset($city)) { echo $city; } ?>><span class="required">*</span></td>
-          </tr>
-          <tr>
-            <td><label for="state">State:</label></td>
-            <td><input type="text" name="state" id="state" placeholder=<?php echo PLACEHOLDERS['state'] ?> title=<?php echo TITLES['state'] ?> maxlength="2" value=<?php if (isset($state)) { echo $state; } ?>><span class="required">*</span></td>
-          </tr>
-          <tr>
-            <td><label for="zip">Zip:</label></td>
-            <td><input type="text" name="zip" id="zip" placeholder=<?php echo PLACEHOLDERS['zip'] ?> title=<?php echo TITLES['zip'] ?> maxlength="10" value=<?php if (isset($zip)) { echo $zip; } ?>><span class="required">*</span></td>
-          </tr>
-          <tr>
-            <td><label for="phone">Phone:</label></td>
-            <td><input type="text" name="phone" id="phone" placeholder=<?php echo PLACEHOLDERS['phone'] ?> title=<?php echo TITLES['phone'] ?> maxlength="14" value=<?php if (isset($phone)) { echo $phone; } ?>><span class="required">*</span></td>
-          </tr>
-          <tr>
-            <th id="required" colspan="2">* Required</th>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <button type="submit" class="btn styled">SUBMIT</button>
-              <button type="reset" class="btn styled">CLEAR</button>
-            </td>
-          </tr>
-        </table>
-      </form>
-      <hr class="title" />
-      <?php echo '<a href=' . $NAV_LINK . ' class="nav_link" target="_self" title="Go To -> basics.php...">' . $BACK . '</a>'; ?>
-    </section>
-  </main>
-</body>
+    <script>
+      const reset_fields = () => {
+        const txt_fields = document.querySelectorAll('input[type="text"]');
+        txt_fields.forEach(field => {
+          field.value = "";
+        });
+        <?php $error = ''; ?>
+      };
+      const btn_clr = document.querySelector('.btn-clr');
+      btn_clr.addEventListener('click', e => {
+        e.preventDefault();
+        reset_fields();
+      });
+    </script>
 
+  </body>
 </html>

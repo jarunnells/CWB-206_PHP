@@ -38,6 +38,16 @@ body { background-color: var(--bg-color-body); }
     color: #900;
 }
 
+.error {
+    width: 450px;
+    margin: 0 auto;
+    background-color: rgba(255, 48, 48, 0.35);
+    color: rgba(153, 0, 0, 0.98);
+    border-radius: 10px;
+    padding: 10px 5px;
+    transition: all 1s ease;
+}
+
 .number { font-family: var(--font-family-numbers); }
 
 #form_process { padding: var(--padding-form); }
@@ -96,7 +106,8 @@ input[type=text]:focus {
     cursor: pointer;
 }
 
-#form_process button[type='submit'] {
+#form_process button[type='submit'],
+#form_process button[type='submit'].btn-submit {
     background-color: var(--bg-color-btn-submit);
     border: 0;
     box-shadow:
@@ -104,7 +115,9 @@ input[type=text]:focus {
         0 0 0 7px var(--bg-color-btn-submit);
 }
 
-#form_process button[type='reset'] {
+#form_process button[type='reset'],
+#form_process button[type='submit'].btn-clr,
+#form_process button[type='button'].btn-clr {
     background-color: var(--bg-color-btn-reset);
     border: 0;
     box-shadow:
