@@ -11,29 +11,39 @@
    */
   class MinorPlayer extends Player
   {
-    public ?string $parent_first_name;
-    public ?string $parent_last_name;
+    private string $parent_first_name;
+    private string $parent_last_name;
 
     /**
      * MinorPlayer constructor.
      * @param string $player_first_name
      * @param string $player_last_name
-     * @param string|null $birth_date
-     * @param string|null $parent_first_name
-     * @param string|null $parent_last_name
+     * @param string $birth_date
+     * @param string $parent_first_name
+     * @param string $parent_last_name
      */
     public function __construct(
       string $player_first_name,
       string $player_last_name,
-      string $birth_date = NULL,
-      string $parent_first_name = NULL,
-      string $parent_last_name = NULL
+      string $birth_date,
+      string $parent_first_name,
+      string $parent_last_name
     )
     {
       parent::__construct($player_first_name, $player_last_name, $birth_date);
       $this->parent_first_name = $parent_first_name;
       $this->parent_last_name = $parent_last_name;
     }
+
+    /**
+     * @param string $parent_first_name
+     * @param string $parent_last_name
+     */
+//    public function set_parent_name(string $parent_first_name, string $parent_last_name): void
+//    {
+//      $this->parent_first_name = $parent_first_name;
+//      $this->parent_last_name = $parent_last_name;
+//    }
 
     /**
      * @param bool $asString

@@ -12,27 +12,27 @@
   class Player
   {
     // Properties
-    public string $player_first_name;
-    public string $player_last_name;
-    public ?string $birth_date;
-    public string $phone;
-    public string $team;
-    public string $street;
-    public string $city;
-    public string $state;
-    public string $zip;
+    protected string $player_first_name;
+    protected string $player_last_name;
+    protected string $birth_date;
+    protected string $phone;
+    protected string $team;
+    protected string $street;
+    protected string $city;
+    protected string $state;
+    protected string $zip;
     public static int $counter = 0;
 
     /**
      * Player constructor.
      * @param string $player_first_name
      * @param string $player_last_name
-     * @param string|null $birth_date
+     * @param string $birth_date
      */
     public function __construct(
       string $player_first_name,
       string $player_last_name,
-      string $birth_date = NULL
+      string $birth_date
     )
     {
       $this->player_first_name = $player_first_name;
@@ -45,7 +45,7 @@
     /**
      * @param string $team
      */
-    public function set_team(string $team)
+    public function set_team(string $team): void
     {
       $this->team = $team;
     }
@@ -53,7 +53,7 @@
     /**
      * @param string $phone
      */
-    public function set_phone(string $phone)
+    public function set_phone(string $phone): void
     {
       $this->phone = $phone;
     }
@@ -69,7 +69,7 @@
       string $city = 'Denver',
       string $state = 'CO',
       string $zip = '80203'
-    )
+    ): void
     {
       $this->street = $street;
       $this->city = $city;

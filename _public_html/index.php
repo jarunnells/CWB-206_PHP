@@ -11,7 +11,7 @@
     define('NAV_BASICS_LANDING', './basics/basics.php');
     define('NAV_SQL', NAV_COMING_SOON);
     define('NAV_SIGNUP', NAV_COMING_SOON);
-    define('NAV_PLAYER_MANAGER', './player_manager/player.php');
+    define('NAV_PLAYER_MANAGER', './player_manager/player_output.php');
     define('NAV_FINAL', NAV_COMING_SOON);
     define('GITHUB', 'https://github.com/jarunnells/CWB-206_PHP');
 ?>

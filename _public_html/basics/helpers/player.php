@@ -9,18 +9,18 @@
 /**
  * Class Player
  */
-  class Player {
+  class PlayerTest {
     // Properties
-    public string $player_first_name;
-    public string $player_last_name;
-    public ?string $birth_date;
-    public string $phone;
-    public string $team;
-    public string $street;
-    public string $city;
-    public string $state;
-    public string $zip;
-    public static int $counter = 0;
+    private string $player_first_name;
+    private string $player_last_name;
+    private ?string $birth_date;
+    private string $phone;
+    private string $team;
+    private string $street;
+    private string $city;
+    private string $state;
+    private string $zip;
+    private static int $counter = 0;
 
     /**
      * Player constructor.
@@ -31,7 +31,7 @@
     public function __construct(
       string $player_first_name, 
       string $player_last_name, 
-      string $birth_date=NULL
+      string $birth_date=null
     ) {
       $this->player_first_name = $player_first_name;
       $this->player_last_name = $player_last_name;

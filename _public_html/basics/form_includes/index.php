@@ -105,7 +105,6 @@
         txt_fields.forEach(field => {
           field.value = "";
         });
-        <?php $error = ''; ?>
       };
       const btn_clr = document.querySelector('.btn-clr');
       btn_clr.addEventListener('click', e => {

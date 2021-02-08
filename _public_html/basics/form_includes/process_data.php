@@ -14,8 +14,8 @@
   $BACK = '<< FORM >>';
   $TITLE = 'Player Data';
 
-  // if ($_SERVER["REQUEST_METHOD"] == "POST") { echo 'POST'; }
-
+  // TODO: extract
+  // if ($_SERVER["REQUEST_METHOD"] === "POST") { echo 'POST'; }
   // DATA -> $_POST
   $fname = $_POST['fname'] ?? '';
   $lname = $_POST['lname'] ?? '';
@@ -42,20 +42,22 @@
   $zip_re = filter_var($_POST['zip'], FILTER_VALIDATE_REGEXP, ["options"=>["regexp"=>REGEX['zip']]]);
   $phone_re = filter_var($_POST['phone'], FILTER_VALIDATE_REGEXP, ["options"=>["regexp"=>REGEX['phone']]]);
 
-  if (empty($fname)) { $error = 'Empty First Name!'; }
-  elseif (!$fname_re) { $error = 'Invalid First Name!'; }
-  elseif (empty($lname)) { $error = 'Empty Last Name!'; }
-  elseif (!$lname_re) { $error = 'Invalid Last Name!'; }
-  elseif (empty($street)) { $error = 'Empty Street Address!'; }
-  elseif (!$street_re) { $error = 'Invalid Street Address!'; }
-  elseif (empty($city)) { $error = 'Empty City!'; }
-  elseif (!$city_re) { $error = 'Invalid City!'; }
-  elseif (empty($state)) { $error = 'Empty State!'; }
-  elseif (!$state_re) { $error = 'Invalid State!'; }
-  elseif (empty($zip)) { $error = 'Empty Zip!'; }
-  elseif (!$zip_re) { $error = 'Invalid Zip!'; }
-  elseif (empty($phone)) { $error = 'Empty Phone Number!'; }
-  elseif (!$phone_re) { $error = 'Invalid Phone Number!'; }
+  // TODO: improve warning message(s)
+  // FIXME: modernize?
+  if (empty($fname)) { $error = 'First Name Required!'; }
+  elseif (!$fname_re) { $error = 'Invalid First Name. Letters Only!'; }
+  elseif (empty($lname)) { $error = 'Last Name Required!'; }
+  elseif (!$lname_re) { $error = 'Invalid Last Name. Letters Only!'; }
+  elseif (empty($street)) { $error = 'Street Address Required!'; }
+  elseif (!$street_re) { $error = 'Invalid Street Address. Try Again!'; }
+  elseif (empty($city)) { $error = 'City Required!'; }
+  elseif (!$city_re) { $error = 'Invalid City. Letters Only!'; }
+  elseif (empty($state)) { $error = 'State Required!'; }
+  elseif (!$state_re) { $error = 'Two-Letter State Only!'; }
+  elseif (empty($zip)) { $error = 'Zip Required!'; }
+  elseif (!$zip_re) { $error = 'Five Digit or zip+4 Only!'; }
+  elseif (empty($phone)) { $error = 'Phone Number Required!'; }
+  elseif (!$phone_re) { $error = 'Invalid Phone Number. Try Again!'; }
   else { $error = ''; }
 
   if ($error != '') {
@@ -64,7 +66,7 @@
   }
 
   // INSTANTIATE PLAYER OBJECT -> SET VALUES
-  $player = new Player($fname, $lname);
+  $player = new PlayerTest($fname, $lname);
   $player->set_address($street, $city, $state, $zip);
   $player->set_phone($phone);
 ?>
