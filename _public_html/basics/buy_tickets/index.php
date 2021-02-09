@@ -15,7 +15,10 @@
 
 //  $adult_qty = $_POST['adult'] ?? '';
 //  $youth_qty = $_POST['youth'] ?? '';
-  $tickets_purchased = ['adult'=>$_POST['adult'] ?? '', 'youth'=>$_POST['youth'] ?? ''];
+  $tickets_purchased = [
+    'adult'=>$_POST['adult'] ?? '',
+    'youth'=>$_POST['youth'] ?? ''
+  ];
 ?>
 <!DOCTYPE html>
 <html lang="en-US">
@@ -23,7 +26,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/custom.css" />
-    <script src="../js/reset_fields.js" defer></script>
+<!--    <script src="../js/reset_fields.js" defer></script>-->
     <title>Buy Tickets | index.php</title>
   </head>
   <body>
@@ -38,11 +41,11 @@
             <!-- <caption>Player Info</caption> -->
             <tbody>
               <tr>
-                <td class="tix"><label for="adult_qty">Adult Ticket ($15.00):</label></td>
+                <td class="tix"><label for="adult_qty">Adult Ticket <span class="price">($15.00)</span>:</label></td>
                 <td><input type="number" name="adult" id="adult_qty" min="0" max="5" step="1" maxlength="2" value="<?php echo sanitize_input($tickets_purchased['adult']); ?>"></td>
               </tr>
               <tr>
-                <td class="tix"><label for="youth_qty">Youth Ticket ($ 7.50):</label></td>
+                <td class="tix"><label for="youth_qty">Youth Ticket <span class="price">($ 7.50)</span>:</label></td>
                 <td><input type="number" name="youth" id="youth_qty" min="0" max="5" step="1" maxlength="2" value="<?php echo sanitize_input($tickets_purchased['youth']); ?>"></td>
               </tr>
             </tbody>
@@ -60,5 +63,18 @@
         <a href="<?php echo $NAV_LINK ?>" class="nav_link" target="_self" title="Go To -> basics.php..."><?php echo $BACK; ?></a>
       </section>
     </main>
+    <script>
+      const reset_fields = () => {
+        const num_fields = document.querySelectorAll('input[type="number"]');
+        num_fields.forEach(field => {
+          field.value = "";
+        });
+      };
+      const btn_clr = document.querySelector('.btn-clr');
+      btn_clr.addEventListener('click', e => {
+        e.preventDefault();
+        reset_fields();
+      });
+    </script>
   </body>
 </html>

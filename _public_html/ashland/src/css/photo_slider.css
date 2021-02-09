@@ -1,4 +1,11 @@
+@charset "UTF-8";
+/*
+    DEVELOPER: J.A. Runnells
+       COURSE: CIS-206-R11
+       BRANCH: main
+         FILE: photo_slider.css
 
+*/
 .slider {
   --bg-img-unsplash: url(https://source.unsplash.com/400x300/?soccer);
 

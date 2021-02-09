@@ -6,8 +6,7 @@
    *        FILE: sanitation.php -> Form Includes :: input data sanitization
    ***************************************************************************/
   /**
-   * @param $data
-   * @return string // trim($string) -> stripslashes($string) -> htmlspecialchars($string)
+   * @param $input - Value to sanitize
+   * @return string Sanitized input -> trim($string) -> stripslashes($string) -> htmlspecialchars($string)
    */
-  function sanitize_input($data): string { return htmlspecialchars(stripslashes(trim($data))); }
-?>
+  function sanitize_input($input): string { return htmlspecialchars(stripslashes(trim($input))); }
