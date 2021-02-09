@@ -37,8 +37,8 @@
 
     /* FONT FAMILIES */
     /* --font-family-const-jet-brains: 'JetBrains Mono', monospace; */
-    --font-family-const-jet-brains: 'JetBrainsV', monospace;
-    --font-family-const-space-grotesk: 'SpaceGroteskV', sans-serif;
+    --font-family-const-jet-brains: 'JetBrains', monospace;
+    --font-family-const-space-grotesk: 'SpaceGrotesk', sans-serif;
     --font-family-const-nanum-gothic: 'NanumGothicCode', monospace;
     --font-family-const-overlock: 'Overlock', cursive;
     --font-family-title: var(--font-family-const-jet-brains);

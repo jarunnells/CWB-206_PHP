@@ -12,16 +12,16 @@
 
 /* LOCAL FONTS */
 /* JetBrains Mono */
-@font-face {
-  font-family: 'JetBrainsV';
-  src: url(../assets/fonts/JetBrains_Mono/JetBrainsMono-VariableFont_wght.ttf) format('truetype');
-  font-style: normal;
-}
-@font-face {
-  font-family: 'JetBrainsV';
-  src: url(../assets/fonts/JetBrains_Mono/JetBrainsMono-Italic-VariableFont_wght.ttf) format('truetype');
-  font-style: italic;
-}
+/*@font-face {*/
+/*  font-family: 'JetBrainsV';*/
+/*  src: url(../assets/fonts/JetBrains_Mono/JetBrainsMono-VariableFont_wght.ttf) format('truetype');*/
+/*  font-style: normal;*/
+/*}*/
+/*@font-face {*/
+/*  font-family: 'JetBrainsV';*/
+/*  src: url(../assets/fonts/JetBrains_Mono/JetBrainsMono-Italic-VariableFont_wght.ttf) format('truetype');*/
+/*  font-style: italic;*/
+/*}*/
 @font-face {
   font-family: 'JetBrains';
   src: url(../assets/fonts/JetBrains_Mono/static/JetBrainsMono-Thin.ttf) format('truetype');
@@ -42,11 +42,11 @@
 }
 
 /* Space Grotesk */
-@font-face {
-  font-family: 'SpaceGroteskV';
-  src: url(../assets/fonts/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf) format('truetype');
-  font-style: normal;
-}
+/*@font-face {*/
+/*  font-family: 'SpaceGroteskV';*/
+/*  src: url(../assets/fonts/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf) format('truetype');*/
+/*  font-style: normal;*/
+/*}*/
 @font-face {
   font-family: 'SpaceGrotesk';
   src: url(../assets/fonts/Space_Grotesk/static/SpaceGrotesk-Light.ttf) format('truetype');

@@ -61,7 +61,7 @@
   else { $error = ''; }
 
   if ($error != '') {
-    include ('./index.php');
+    include('./index.php');
     exit();
   }
 

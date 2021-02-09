@@ -24,9 +24,9 @@
 
     /**
      * Player constructor.
-     * @param string $player_first_name
-     * @param string $player_last_name
-     * @param string|null $birth_date
+     * @param string $player_first_name Player's first name
+     * @param string $player_last_name Player's last name
+     * @param string|null $birth_date Player's birthdate
      */
     public function __construct(
       string $player_first_name, 
@@ -39,22 +39,26 @@
       self::$counter++;
     }
 
-    // Player Class Set Methods
+    // Player Class Set Methods -----------------------------------------------
+
     /**
-     * @param string $team
+     * Set Player's Team Assignment
+     * @param string $team Player's team assignment
      */
     public function set_team(string $team) { $this->team = $team; }
 
     /**
-     * @param string $phone
+     * Set Player's Phone Number
+     * @param string $phone Player's phone number
      */
     public function set_phone(string $phone) { $this->phone = $phone; }
 
     /**
-     * @param string $street
-     * @param string $city
-     * @param string $state
-     * @param string $zip
+     * Set Player's Address (FULL)
+     * @param string $street Player's street address
+     * @param string $city Player's city
+     * @param string $state Player's state (two letter abbreviations)
+     * @param string $zip Player's zipcode (zip or zip+4 valid)
      */
     public function set_address(
       string $street, 
@@ -68,13 +72,15 @@
       $this->zip = $zip;
     }
 
-    // Player Class Get Methods
+    // Player Class Get Methods -----------------------------------------------
 
     /**
-     * @param bool $asString
-     * @return array|string
+     * Get Player's FULL Name
+     * @param bool $asString Boolean flag -> output full name as string [object=>(default)]
+     * @return array|string Returns Player's FULL name as concatenated string OR iterable (associative=>array)
      */
-    public function get_player_name(bool $asString=false): array|string {
+//    public function get_player_name(bool $asString=false): array|string {
+    public function get_player_name(bool $asString=false) {
       if ($asString) { return $this->player_first_name . ' ' . $this->player_last_name; } 
       else {
         return [
@@ -85,25 +91,30 @@
     }
 
     /**
-     * @return string
+     * Get Player's Birthdate
+     * @return string Returns player's birthday as a string
      */
     public function get_birth_date(): string { return $this->birth_date; }
 
     /**
-     * @return string
+     * Get Player's Assigned Team
+     * @return string Returns player's assigned team as string
      */
     public function get_team(): string { return $this->team; }
 
     /**
-     * @return string
+     * Get Player's Phone Number
+     * @return string Returns player's phone number
      */
     public function get_phone(): string { return $this->phone; }
 
     /**
-     * @param bool $asString
-     * @return array|string
+     * Get Player's Address (FULL)
+     * @param bool $asString Boolean flag -> output full address as string [object=>(default)]
+     * @return array|string Returns Player's FULL address as concatenated string OR iterable (associative=>array)
      */
-    public function get_address(bool $asString=false): array|string {
+//    public function get_address(bool $asString=false): array|string {
+    public function get_address(bool $asString=false) {
       if ($asString) { return $this->street . ', ' . $this->city . ', ' . $this->state . ' ' . $this->zip; }
       else {
         return [
