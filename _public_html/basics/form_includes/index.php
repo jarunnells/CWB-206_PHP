@@ -41,6 +41,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/custom.css" />
+    <script src="../js/reset_fields.js" defer></script>
     <title>Form Includes | PHP</title>
   </head>
 
@@ -99,19 +100,19 @@
       </section>
     </main>
 
-    <script>
-      const reset_fields = () => {
-        const txt_fields = document.querySelectorAll('input[type="text"]');
-        txt_fields.forEach(field => {
-          field.value = "";
-        });
-      };
-      const btn_clr = document.querySelector('.btn-clr');
-      btn_clr.addEventListener('click', e => {
-        e.preventDefault();
-        reset_fields();
-      });
-    </script>
+<!--    <script>-->
+<!--      const reset_fields = () => {-->
+<!--        const txt_fields = document.querySelectorAll('input[type="text"]');-->
+<!--        txt_fields.forEach(field => {-->
+<!--          field.value = "";-->
+<!--        });-->
+<!--      };-->
+<!--      const btn_clr = document.querySelector('.btn-clr');-->
+<!--      btn_clr.addEventListener('click', e => {-->
+<!--        e.preventDefault();-->
+<!--        reset_fields();-->
+<!--      });-->
+<!--    </script>-->
 
   </body>
 </html>
