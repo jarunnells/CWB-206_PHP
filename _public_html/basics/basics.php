@@ -12,8 +12,8 @@
   define('NAV_RANDOM', './random/random.php');
   define('NAV_FORM', './form_proj/form_process.php');
   define('NAV_FORM_INCLD', './form_includes/'); // index.php
-  define('NAV_TICKETS', NAV_SOON);
-  define('NAV_PLAYER', NAV_SOON);
+  define('NAV_TICKETS', './buy_tickets/'); // index.php
+  define('NAV_PLAYER', './team_players/'); // index.php
   define('NAV_LANDING', '../index.php');
 ?>
 <!DOCTYPE html>
@@ -58,9 +58,9 @@
       <ul>
         <li><a href=<?php echo NAV_RANDOM; ?> target="_self" title='Go To -> ashland.php...'>Random Numbers</a></li>
         <li><a href=<?php echo NAV_FORM; ?> target="_self" title='Go To -> basics.php...'>Form Project</a></li>
-        <li><a href=<?php echo NAV_FORM_INCLD; ?> target="_self" title='Go To -> coming_soon.php...'>Form Includes</a></li>
+        <li><a href=<?php echo NAV_FORM_INCLD; ?> target="_self" title='Go To -> index.php...'>Form Includes</a></li>
+        <li><a href=<?php echo NAV_PLAYER; ?> target="_self" title='Go To -> index.php...'>Team Players</a></li>
         <li><a href=<?php echo NAV_TICKETS; ?> target="_self" title='Go To -> coming_soon.php...'>Buy Tickets</a></li>
-        <li><a href=<?php echo NAV_PLAYER; ?> target="_self" title='Go To -> coming_soon.php...'>Team Players</a></li>
         <li><a href=<?php echo NAV_LANDING; ?> target="_self" title='Go To -> index.php...'>BACK -> HOME</a></li>
       </ul>
     </nav>
