@@ -54,6 +54,7 @@ body { background-color: var(--bg-color-body); }
     color: rgba(153, 0, 0, 0.98);
     border-radius: 10px;
     padding: 10px 5px;
+    box-shadow: var(--box-shadow-buy-tix);
     transition: all 1s ease;
 }
 
@@ -107,6 +108,7 @@ input[type=number] {
     height: 1.25rem;
     text-align: center;
     box-shadow: var(--box-shadow-buy-tix);
+    border-radius: 6px;
 }
 
 #form_process td:first-child:not(button) {
@@ -148,9 +150,13 @@ button.styled {
     letter-spacing: 0.1em;
 }
 
-button.styled:hover,
-button.styled-buy-tix:hover {
+button.styled:hover {
     letter-spacing: 0.25em;
+    opacity: 0.8;
+}
+
+button.styled-buy-tix:hover {
+    letter-spacing: 0.15em;
     opacity: 0.8;
 }
 

@@ -27,7 +27,9 @@
   ];
 
   // TODO: implement $tickets_purchased.forEach() w/in if conditions
+  // FIXME: elseif() -> alpha
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//    if (empty($tickets_purchased['adult']|$tickets_purchased['youth'])) { $error = 'Minimum One Adult Ticket!'; }
     if (empty($tickets_purchased['adult']) && empty($tickets_purchased['youth'])) {
       $error = 'Minimum One Adult Ticket!';
     } elseif (empty($tickets_purchased['adult']) && !empty($tickets_purchased['youth'])) {
@@ -38,6 +40,9 @@
       $error = 'Whole Numbers Only! ';
     } elseif ($tickets_purchased['adult'] + $tickets_purchased['youth'] > 5) {
       $error = 'Maximum Ticket Quantity (5) Exceeded!';
+//    } elseif ($tickets_purchased['adult']|$tickets_purchased['youth'] < 0) { $error = 'Negative Quantities Not Allowed!';
+    } elseif ($tickets_purchased['adult'] < 0 || $tickets_purchased['youth'] < 0) {
+      $error = 'Negative Quantities Not Allowed!';
     } elseif (
         !is_numeric($tickets_purchased['adult']) && !empty($tickets_purchased['adult']) ||
         !is_numeric($tickets_purchased['youth']) && !empty($tickets_purchased['youth'])) {
