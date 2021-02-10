@@ -36,6 +36,9 @@
     --color-table-row-header: #DCDCDC;
     --color-form_btn: #FFF;
 
+    /* BOX SHADOWS */
+    --box-shadow-buy-tix: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
     /* FONT FAMILIES */
     /* --font-family-const-jet-brains: 'JetBrains Mono', monospace; */
     --font-family-const-jet-brains: 'JetBrains', monospace;

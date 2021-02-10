@@ -52,8 +52,8 @@
             <tfoot>
               <tr>
                 <td colspan="2">
-                  <button type="submit" class="btn btn-submit styled">ORDER<br/>TICKETS</button>
-                  <button type="submit" class="btn btn-clr styled">CLEAR<br/> FORM</button>
+                  <button type="submit" class="btn btn-submit styled-buy-tix">ORDER<br/>TICKETS</button>
+                  <button type="submit" class="btn btn-clr styled-buy-tix">CLEAR<br/> FORM</button>
                 </td>
               </tr>
             </tfoot>

@@ -20,12 +20,6 @@
       'total'=>5
     ]
   );
-
-//  $tickets_purchased = [
-//    'adult'=>$_POST['adult'] ?? '',
-//    'youth'=>$_POST['youth'] ?? ''
-//  ];
-
   $error = '';
   $tickets_purchased = [
     'adult'=>filter_input(INPUT_POST,'adult', FILTER_VALIDATE_INT),
@@ -33,7 +27,6 @@
   ];
 
   // TODO: implement $tickets_purchased.forEach() w/in if conditions
-  // FIXME: check !empty($tickets_purchased['...']) first
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($tickets_purchased['adult']) && empty($tickets_purchased['youth'])) {
       $error = 'Minimum One Adult Ticket!';
