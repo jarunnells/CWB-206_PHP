@@ -210,3 +210,7 @@ hr.algorithm {
     border-radius: var(--border-radius-hr);
     width: var(--width-hr-algorithm);
 }
+
+.logo.totheleft {
+    margin: 0.5rem;
+}
