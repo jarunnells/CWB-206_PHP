@@ -13,9 +13,14 @@
     ]
   );
 
-  function calc_total($adult_tix, $youth_tix): float {
-    return ($adult_tix > 0 && $adult_tix != '' ? TICKET_COST['adult']*$adult_tix : 0.0)
-      + ($youth_tix > 0 && $youth_tix != '' ? TICKET_COST['youth']*$youth_tix : 0.0);
+  function calc_total(array $tickets_purchased): array {
+    $adult = $tickets_purchased['adult'] > 0 && $tickets_purchased['adult'] !== ''
+      ? TICKET_COST['adult']*$tickets_purchased['adult']
+      : 0.0;
+    $youth = $tickets_purchased['youth'] > 0 && $tickets_purchased['youth'] !== ''
+      ? TICKET_COST['youth']*$tickets_purchased['youth']
+      : 0.0;
+    return ['adult'=>$adult, 'youth'=>$youth];
   }
 
   function format_currency(float $total): string {

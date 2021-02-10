@@ -35,42 +35,40 @@
   // TODO: implement $tickets_purchased.forEach() w/in if conditions
   // FIXME: check !empty($tickets_purchased['...']) first
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (empty($tickets_purchased['adult']) && !empty($tickets_purchased['youth'])) {
+    if (empty($tickets_purchased['adult']) && empty($tickets_purchased['youth'])) {
+      $error = 'Minimum One Adult Ticket!';
+    } elseif (empty($tickets_purchased['adult']) && !empty($tickets_purchased['youth'])) {
       $error = 'Youth Tickets Require Adult Accompaniment!';
-    } elseif ($tickets_purchased['adult'] === false || $tickets_purchased['youth'] === false) {
+    } elseif (
+        $tickets_purchased['adult'] === false && !empty($tickets_purchased['adult']) ||
+        $tickets_purchased['youth'] === false && !empty($tickets_purchased['youth'])) {
       $error = 'Whole Numbers Only! ';
     } elseif ($tickets_purchased['adult'] + $tickets_purchased['youth'] > 5) {
-      $error = 'Maximum Ticket Quantity Exceeded!';
-    } elseif (!is_numeric($tickets_purchased['adult']) || !is_numeric($tickets_purchased['youth'])) {
-      $error = 'Invalid Purchase Quantity';
+      $error = 'Maximum Ticket Quantity (5) Exceeded!';
+    } elseif (
+        !is_numeric($tickets_purchased['adult']) && !empty($tickets_purchased['adult']) ||
+        !is_numeric($tickets_purchased['youth']) && !empty($tickets_purchased['youth'])) {
+      $error = 'Invalid Purchase Quantity!';
     } else {
       $error = '';
     }
   }
 
-//  $error = 'OOPS!';
-//  $test = [
-//    'adult_cost'=>TICKET_COST['adult'],
-//    'youth_cost'=>TICKET_COST['youth'],
-//    'adult_tix'=>$tickets_purchased['adult'],
-//    'youth_tix'=>$tickets_purchased['youth'],
-//    'error'=>$error
-//  ];
-
-  // DEBUGGING ---------------------------------------------------------------------
-  echo '<pre>';
-//    var_dump($test);
+  // DEBUGGING -------------------------------------
+//  echo '<pre>';
 //    var_dump($_GET);
-    var_dump($_POST);
-    var_dump($tickets_purchased);
-    var_dump(calc_total($tickets_purchased['adult'],$tickets_purchased['youth']));
-  echo '</pre>';
-  // DEBUGGING ---------------------------------------------------------------------
+//    var_dump($_POST);
+//    var_dump($tickets_purchased);
+//    var_dump(calc_total($tickets_purchased));
+//  echo '</pre>';
+  // DEBUGGING -------------------------------------
 
   if ($error != '') {
     include('./index.php');
     exit();
   }
+
+  $totals = calc_total($tickets_purchased);
 ?>
 <!DOCTYPE html>
 <html lang="en-US">
@@ -82,13 +80,18 @@
   </head>
   <body>
     <main class="container">
-      <section id="holder" class="section__styled">
+      <section id="holder" class="section__styled order-summary">
         <div class="logo totheleft"><img src="<?php echo $LOGO; ?>" alt="AVSL Logo"></div>
         <h3 id="form_title" class="tickets"><?php echo $TITLE ?></h3>
         <hr class="title" />
         <div>
-          <pre><?php echo get_date(); ?></pre>
-          <pre><?php echo format_currency(calc_total($tickets_purchased['adult'],$tickets_purchased['youth'])); ?></pre>
+          <pre class="purchase_date"><?php echo get_date(); ?></pre>
+          <pre class="adult-total">Adult (<?php echo $tickets_purchased['adult']; ?>x<?php echo number_format(TICKET_COST['adult'], 2); ?>): <?php echo format_currency($totals['adult']); ?></pre>
+          <?php if ($tickets_purchased['youth'] > 0): ?>
+            <pre class="youth-total">Youth (<?php echo $tickets_purchased['youth']; ?>x<?php echo number_format(TICKET_COST['youth'], 2); ?>): <?php echo format_currency($totals['youth']); ?></pre>
+          <?php endif; ?>
+          <pre class="total">ORDER TOTAL: <?php echo format_currency($totals['adult']+$totals['youth']); ?></pre>
+          <pre class="thank-you">Thank You!</pre>
         </div>
         <hr class="title" />
         <a href="<?php echo $NAV_LINK ?>" class="nav_link" target="_self" title="Go To -> basics.php..."><?php echo $BACK; ?></a>

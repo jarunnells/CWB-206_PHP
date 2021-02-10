@@ -59,6 +59,9 @@
             </tfoot>
           </table>
         </form>
+        <div class="limit-msg">
+          <pre>LIMIT 5 TICKETS PER ORDER</pre>
+        </div>
         <hr class="title" />
         <a href="<?php echo $NAV_LINK ?>" class="nav_link" target="_self" title="Go To -> basics.php..."><?php echo $BACK; ?></a>
       </section>

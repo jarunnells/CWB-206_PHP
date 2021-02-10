@@ -17,6 +17,10 @@ body { background-color: var(--bg-color-body); }
 
 #holder.section__styled { border-radius: 25px; }
 
+#holder.section__styled.order-summary {
+    font-family: var(--font-family-const-jet-brains);
+}
+
 #random_title { font-family: var(--font-family-title); }
 
 #form_title {
@@ -213,4 +217,12 @@ hr.algorithm {
 
 .logo.totheleft {
     margin: 0.5rem;
+}
+
+.limit-msg {
+    margin: 0.25rem auto;
+    padding: 0.1rem;
+    font-family: var(--font-family-required);
+    font-size: 0.85rem;
+    color: rgba(153, 0, 0, 0.98);
 }
