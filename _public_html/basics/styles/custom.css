@@ -54,7 +54,10 @@ body { background-color: var(--bg-color-body); }
     color: rgba(153, 0, 0, 0.98);
     border-radius: 10px;
     padding: 10px 5px;
+    -webkit-box-shadow: var(--box-shadow-buy-tix);
     box-shadow: var(--box-shadow-buy-tix);
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
     transition: all 1s ease;
 }
 
@@ -100,6 +103,7 @@ input[type=number]:focus {
     background-color: var(--bg-color-input-focus);
     color: var(--color-input-focus);
     outline: none;
+    -webkit-box-shadow: var(--box-shadow-buy-tix);
     box-shadow: var(--box-shadow-buy-tix);
 }
 
@@ -107,6 +111,7 @@ input[type=number] {
     width: 4rem;
     height: 1.25rem;
     text-align: center;
+    -webkit-box-shadow: var(--box-shadow-buy-tix);
     box-shadow: var(--box-shadow-buy-tix);
     border-radius: 6px;
 }
@@ -131,6 +136,9 @@ input[type=number] {
 #form_process button[type='submit'].btn-submit {
     background-color: var(--bg-color-btn-submit);
     border: 0;
+    -webkit-box-shadow:
+        0 0 0 2px var(--bg-color-div-holder),
+        0 0 0 7px var(--bg-color-btn-submit);
     box-shadow:
         0 0 0 2px var(--bg-color-div-holder),
         0 0 0 7px var(--bg-color-btn-submit);
@@ -141,6 +149,9 @@ input[type=number] {
 #form_process button[type='button'].btn-clr {
     background-color: var(--bg-color-btn-reset);
     border: 0;
+    -webkit-box-shadow:
+        0 0 0 2px var(--bg-color-div-holder),
+        0 0 0 7px var(--bg-color-btn-reset);
     box-shadow:
         0 0 0 2px var(--bg-color-div-holder),
         0 0 0 7px var(--bg-color-btn-reset);
@@ -161,12 +172,16 @@ button.styled-buy-tix:hover {
 }
 
 #form_process button[type='submit'].styled-buy-tix {
+    -webkit-box-shadow: none;
     box-shadow: none;
+    -webkit-box-shadow: var(--box-shadow-buy-tix);
     box-shadow: var(--box-shadow-buy-tix);
 }
 
 button.styled-buy-tix:active {
-    transform: translateY(0.15rem);
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
 }
 
 #table_output {
@@ -233,9 +248,7 @@ hr.algorithm {
     width: var(--width-hr-algorithm);
 }
 
-.logo.totheleft {
-    margin: 0.5rem;
-}
+.logo.totheleft { margin: 0.5rem; }
 
 .limit-msg {
     margin: 0.25rem auto;
@@ -245,8 +258,16 @@ hr.algorithm {
     color: rgba(153, 0, 0, 0.98);
     background: rgba(183, 94, 80, 0.27);
     width: 250px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: var(--box-shadow-buy-tix);
+    box-shadow: var(--box-shadow-buy-tix);
     text-align: center;
     /*padding: 5px;*/
     border-radius: 25px;
+}
+
+.limit-msg:hover {
+    -webkit-transform: translateY(-3px);
+    -ms-transform: translateY(-3px);
+    transform: translateY(-3px);
+    letter-spacing: 0.06rem;
 }
