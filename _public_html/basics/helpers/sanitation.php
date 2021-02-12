@@ -3,10 +3,12 @@
    *   DEVELOPER:  J.A. Runnells
    *      COURSE: CIS-206-R11
    *      BRANCH: main
-   *        FILE: sanitation.php -> Form Includes :: input data sanitization
+   *        FILE: sanitation.php -> input data sanitization
    ***************************************************************************/
+
   /**
+   * Sanitizes input<br/> -> trim($string)<br/> -> stripslashes($string)<br/> -> htmlspecialchars($string)
    * @param $input - Value to sanitize
-   * @return string Sanitized input -> trim($string) -> stripslashes($string) -> htmlspecialchars($string)
+   * @return string Sanitized input
    */
   function sanitize_input($input): string { return htmlspecialchars(stripslashes(trim($input))); }
