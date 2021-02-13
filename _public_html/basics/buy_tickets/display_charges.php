@@ -4,7 +4,7 @@
        BRANCH: main
          FILE: display_charges.php -> Buy Tickets
 
-    [ - ] COMPLETE?
+    [ x ] COMPLETE?
 -->
 <?php
   include_once('../helpers/buy_tix/calculate_total.php');
@@ -17,40 +17,31 @@
     'youth'=>filter_input(INPUT_POST,'youth', FILTER_VALIDATE_INT)
   ];
 
-  // TODO: implement $tickets_purchased.forEach() w/in if conditions
-  // FIXME: elseif() -> alpha
-  // [1] empty(adult) -> [ x ]
-  // [2] !is_numeric(adult) -> [ - ]
-  // [3] adult <= 0
-  // [4] is_int(adult)
-  // [5] !empty(youth) && !is_numeric(youth)
-  // [6] !empty(youth) && !is_int(youth)
-  // [7] !sum(adult, youth) > 5
+  // TODO: improve...
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // if (empty($tickets_purchased['adult']|$tickets_purchased['youth'])) { $error = 'Minimum One Adult Ticket!'; }
-    if (empty($tickets_purchased['adult']) && empty($tickets_purchased['youth'])) {
+    if (empty($tickets_purchased['adult'])) {
       $error = 'Minimum One Adult Ticket!';
-    } elseif (empty($tickets_purchased['adult']) && !empty($tickets_purchased['youth'])) {
-      $error = 'Youth Tickets Require Adult Accompaniment!';
+      if (!empty($tickets_purchased['youth'])) {
+        $error = 'Youth Tickets Require Adult Accompaniment!';
+      }
     } elseif (
-        $tickets_purchased['adult'] === false && !empty($tickets_purchased['adult']) ||
-        $tickets_purchased['youth'] === false && !empty($tickets_purchased['youth'])) {
+      !is_numeric($tickets_purchased['adult']) && !empty($tickets_purchased['adult']) ||
+      !is_numeric($tickets_purchased['youth']) && !empty($tickets_purchased['youth'])) {
+      $error = 'Invalid Purchase Quantity!';
+    } elseif (
+      $tickets_purchased['adult'] === false && !empty($tickets_purchased['adult']) ||
+      $tickets_purchased['youth'] === false && !empty($tickets_purchased['youth'])) {
       $error = 'Whole Numbers Only! ';
-    } elseif ($tickets_purchased['adult'] + $tickets_purchased['youth'] > QTY['TOTAL']) {
-      $error = 'Maximum Ticket Quantity (5) Exceeded!';
-//    } elseif ($tickets_purchased['adult']|$tickets_purchased['youth'] < 0) { $error = 'Negative Quantities Not Allowed!';
     } elseif ($tickets_purchased['adult'] < 0 || $tickets_purchased['youth'] < 0) {
       $error = 'Negative Quantities Not Allowed!';
-    } elseif (
-        !is_numeric($tickets_purchased['adult']) && !empty($tickets_purchased['adult']) ||
-        !is_numeric($tickets_purchased['youth']) && !empty($tickets_purchased['youth'])) {
-      $error = 'Invalid Purchase Quantity!';
+    } elseif ($tickets_purchased['adult'] + $tickets_purchased['youth'] > QTY['TOTAL']) {
+      $error = 'Maximum Ticket Quantity (5) Exceeded!';
     } else {
       $error = '';
     }
   }
 
-  // DEBUGGING -------------------------------------
+    // DEBUGGING -------------------------------------
 //  echo '<pre>';
 //    var_dump($_GET);
 //    var_dump($_POST);
@@ -72,6 +63,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/custom.css" />
+    <style>
+      thead, tfoot { font-size: 1.25em; }
+      table {
+        font: 1.25rem monospace;
+        margin: 0 auto;
+        width: 75%;
+        border-collapse: collapse;
+        color: rgb(51, 51, 51);
+      }
+      td, th { padding: .25em 0; }
+      #cart_header th {
+        border-bottom: 2px solid rgb(0, 0, 0);
+        background-color: rgba(0, 128, 0, 0.5);
+      }
+      #cart_footer td {
+        text-align: right;
+        border-top: 2px solid rgb(0, 0, 0);
+        background-color: rgba(0, 128, 0, 0.5);
+      }
+      .total { font-weight: bold; }
+      .right { text-align: right; }
+      .left { text-align: left; }
+      .center { text-align: center; }
+    </style>
     <title>Buy Tickets | display_charges.php</title>
   </head>
   <body>
@@ -81,13 +96,44 @@
         <h3 id="form_title" class="tickets"><?php echo TITLE['charges'] ?></h3>
         <hr class="title" />
         <div>
-          <pre class="purchase_date"><?php echo get_date(); ?></pre>
-          <pre class="adult-total">Adult (<?php echo $tickets_purchased['adult']; ?>x<?php echo format_currency(TICKET_COST['adult']); ?>): <?php echo format_currency($totals['adult']); ?></pre>
-          <?php if ($tickets_purchased['youth'] > 0): ?>
-            <pre class="youth-total">Youth (<?php echo $tickets_purchased['youth']; ?>x<?php echo format_currency(TICKET_COST['youth']); ?>): <?php echo format_currency($totals['youth']); ?></pre>
-          <?php endif; ?>
-          <pre class="total">ORDER TOTAL: <?php echo format_currency($totals['adult']+$totals['youth']); ?></pre>
-          <pre class="thank-you">Thank You!</pre>
+          <table>
+            <thead>
+            <tr>
+              <td colspan="4" class="purchase_date"><?php echo get_date(); ?></td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr id="cart_header">
+              <th class="left">Ticket Type</th>
+              <th class="right">Cost</th>
+              <th class="right">QTY</th>
+              <th class="right">Total</th>
+            </tr>
+            <tr class="cart_body adult-total">
+              <td class="left">ADULT Ticket</td>
+              <td class="right"><?php echo format_currency(TICKET_COST['adult']); ?></td>
+              <td class="right"><?php echo $tickets_purchased['adult']; ?></td>
+              <td class="right"><?php echo format_currency($totals['adult']); ?></td>
+            </tr>
+            <?php if ($tickets_purchased['youth'] > 0): ?>
+              <tr class="cart_body youth-total">
+                <td class="left">YOUTH Ticket</td>
+                <td class="right"><?php echo format_currency(TICKET_COST['youth']); ?></td>
+                <td class="right"><?php echo $tickets_purchased['youth']; ?></td>
+                <td class="right"><?php echo format_currency($totals['youth']); ?></td>
+              </tr>
+            <?php endif; ?>
+            <tr id="cart_footer">
+              <td class="total" colspan="3">ORDER TOTAL:</td>
+              <td class="total"><?php echo format_currency($totals['adult']+$totals['youth']); ?></td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+              <td colspan="4" class="thank-you">Thank You!</td>
+            </tr>
+            </tfoot>
+          </table>
         </div>
         <hr class="title" />
         <a href="<?php echo NAV_LINK['charges'] ?>" class="nav_link" target="_self" title="Go To -> basics.php..."><?php echo BACK['charges']; ?></a>

@@ -32,7 +32,10 @@
         <div class="logo totheleft"><img src="<?php echo LOGO; ?>" alt="AVSL Logo"></div>
         <h3 id="form_title" class="tickets"><?php echo TITLE['index'] ?></h3>
         <hr class="title" />
-        <?php if (!empty($error)) { echo '<div class="error">'.sanitize_input($error).'</div>'; } ?>
+<!--        --><?php //if (!empty($error)) { echo '<div class="error">'.sanitize_input($error).'</div>'; } ?>
+        <?php if (!empty($error)): ?>
+          <div class="error"><?php echo sanitize_input($error) ?></div>
+        <?php endif; ?>
         <form action="./display_charges.php" method="post" id="form_process">
           <table class="players">
             <!-- <caption>Player Info</caption> -->
