@@ -42,7 +42,8 @@
             <tbody>
               <tr>
                 <td class="tix"><label for="adult_qty">Adult Ticket <span class="price">(<?php echo format_currency(TICKET_COST['adult']); ?>)</span>:</label></td>
-                <td><input type="number" name="adult" id="adult_qty" min="<?php echo QTY['MIN']['adult'] ?>" max="<?php echo QTY['MAX'] ?>" step="1" maxlength="2" value="<?php echo sanitize_input($tickets_purchased['adult']); ?>"></td>
+<!--                <td><input type="number" name="adult" id="adult_qty" min="--><?php //echo QTY['MIN']['adult'] ?><!--" max="--><?php //echo QTY['MAX'] ?><!--" step="1" maxlength="2" value="--><?php //echo sanitize_input($tickets_purchased['adult']); ?><!--"></td>-->
+                <td><input type="text" name="adult" id="adult_qty" value="<?php echo sanitize_input($tickets_purchased['adult']); ?>"></td>
               </tr>
               <tr>
                 <td class="tix"><label for="youth_qty">Youth Ticket <span class="price">(<?php echo format_currency(TICKET_COST['youth']); ?>)</span>:</label></td>

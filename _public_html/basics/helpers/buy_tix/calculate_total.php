@@ -38,3 +38,35 @@
     date_default_timezone_set('America/Denver');
     return date('Y-m-d @ h:ia');
   }
+
+  /**
+   * Validate Purchase QTY
+   * @param array $tix
+   * @return bool
+   */
+  function valid_qty(array $tix): bool {
+    if ($tix['adult']) {
+      if (!$tix['youth'] || $tix['youth'] === 0) {
+        if ($tix['adult'] <= QTY['MAX']) { return true; }
+      } elseif ($tix['youth'] || $tix['youth'] > 0) {
+        if ($tix['adult'] + $tix['youth'] <= QTY['MAX']) { return true; }
+      }
+    }
+    return false;
+  }
+
+  /**
+   * Validate Positive Purchase QTY
+   * @param array $tix
+   * @return bool
+   */
+  function valid_positive(array $tix): bool {
+    if ($tix['adult'] && !$tix['youth']) {
+      if ($tix['adult'] >= 0) { return true; }
+    } elseif ($tix['adult'] && $tix['youth']) {
+      if ($tix['adult'] >= 0 && $tix['youth'] >= 0) { return true; }
+    } elseif (!$tix['adult'] && $tix['youth']) {
+      if ($tix['youth'] >= 0) { return true; }
+    }
+    return false;
+  }

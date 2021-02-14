@@ -26,7 +26,7 @@
         'youth'=>0
       ],
       'MAX'=>5,
-      'TOTAL'=>5
+//      'TOTAL'=>5
     ]
   );
   define(

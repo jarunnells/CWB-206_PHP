@@ -12,9 +12,17 @@
   // VARS
   include_once('../helpers/buy_tix/vars.php');
   $error = '';
+//  $tickets_purchased = [
+//    'adult'=>filter_input(INPUT_POST,'adult', FILTER_VALIDATE_INT),
+//    'youth'=>filter_input(INPUT_POST,'youth', FILTER_VALIDATE_INT)
+//  ];
   $tickets_purchased = [
-    'adult'=>filter_input(INPUT_POST,'adult', FILTER_VALIDATE_INT),
-    'youth'=>filter_input(INPUT_POST,'youth', FILTER_VALIDATE_INT)
+    'adult'=>$_POST['adult'] ?? '',
+    'youth'=>$_POST['youth'] ?? ''
+  ];
+  $tickets_purchased_f = [
+    'adult'=>filter_var($tickets_purchased['adult'], FILTER_VALIDATE_INT),
+    'youth'=>filter_var($tickets_purchased['youth'], FILTER_VALIDATE_INT)
   ];
 
   // TODO: improve...
@@ -25,17 +33,21 @@
         $error = 'Youth Tickets Require Adult Accompaniment!';
       }
     } elseif (
-      !is_numeric($tickets_purchased['adult']) && !empty($tickets_purchased['adult']) ||
-      !is_numeric($tickets_purchased['youth']) && !empty($tickets_purchased['youth'])) {
+      !empty($tickets_purchased['adult']) && !is_numeric($tickets_purchased['adult']) ||
+      !empty($tickets_purchased['youth']) && !is_numeric($tickets_purchased['youth'])) {
       $error = 'Invalid Purchase Quantity!';
     } elseif (
-      $tickets_purchased['adult'] === false && !empty($tickets_purchased['adult']) ||
-      $tickets_purchased['youth'] === false && !empty($tickets_purchased['youth'])) {
+      !empty($tickets_purchased['adult']) && $tickets_purchased_f['adult'] === false ||
+      !empty($tickets_purchased['youth']) && $tickets_purchased_f['youth'] === false) {
       $error = 'Whole Numbers Only! ';
-    } elseif ($tickets_purchased['adult'] < 0 || $tickets_purchased['youth'] < 0) {
+    } elseif (!valid_positive($tickets_purchased)) {
       $error = 'Negative Quantities Not Allowed!';
-    } elseif ($tickets_purchased['adult'] + $tickets_purchased['youth'] > QTY['TOTAL']) {
+//    } elseif ($tickets_purchased['adult'] < 0 || $tickets_purchased['youth'] < 0) {
+//      $error = 'Negative Quantities Not Allowed!';
+    } elseif (!valid_qty($tickets_purchased)) {
       $error = 'Maximum Ticket Quantity (5) Exceeded!';
+//    } elseif ($tickets_purchased['adult'] + $tickets_purchased['youth'] > QTY['MAX']) {
+//      $error = 'Maximum Ticket Quantity (5) Exceeded!';
     } else {
       $error = '';
     }
