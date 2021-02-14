@@ -8,14 +8,9 @@
 -->
 <?php
   include_once('../helpers/buy_tix/calculate_total.php');
-
-  // VARS
   include_once('../helpers/buy_tix/vars.php');
+  // VARS
   $error = '';
-//  $tickets_purchased = [
-//    'adult'=>filter_input(INPUT_POST,'adult', FILTER_VALIDATE_INT),
-//    'youth'=>filter_input(INPUT_POST,'youth', FILTER_VALIDATE_INT)
-//  ];
   $tickets_purchased = [
     'adult'=>$_POST['adult'] ?? '',
     'youth'=>$_POST['youth'] ?? ''
@@ -25,7 +20,7 @@
     'youth'=>filter_var($tickets_purchased['youth'], FILTER_VALIDATE_INT)
   ];
 
-  // TODO: improve...
+  // TODO: improve...ing...
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($tickets_purchased['adult'])) {
       $error = 'Minimum One Adult Ticket!';
@@ -42,12 +37,8 @@
       $error = 'Whole Numbers Only! ';
     } elseif (!valid_positive($tickets_purchased)) {
       $error = 'Negative Quantities Not Allowed!';
-//    } elseif ($tickets_purchased['adult'] < 0 || $tickets_purchased['youth'] < 0) {
-//      $error = 'Negative Quantities Not Allowed!';
     } elseif (!valid_qty($tickets_purchased)) {
       $error = 'Maximum Ticket Quantity (5) Exceeded!';
-//    } elseif ($tickets_purchased['adult'] + $tickets_purchased['youth'] > QTY['MAX']) {
-//      $error = 'Maximum Ticket Quantity (5) Exceeded!';
     } else {
       $error = '';
     }
@@ -75,30 +66,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/custom.css" />
-    <style>
-      thead, tfoot { font-size: 1.25em; }
-      table {
-        font: 1.25rem monospace;
-        margin: 0 auto;
-        width: 75%;
-        border-collapse: collapse;
-        color: rgb(51, 51, 51);
-      }
-      td, th { padding: .25em 0; }
-      #cart_header th {
-        border-bottom: 2px solid rgb(0, 0, 0);
-        background-color: rgba(0, 128, 0, 0.5);
-      }
-      #cart_footer td {
-        text-align: right;
-        border-top: 2px solid rgb(0, 0, 0);
-        background-color: rgba(0, 128, 0, 0.5);
-      }
-      .total { font-weight: bold; }
-      .right { text-align: right; }
-      .left { text-align: left; }
-      .center { text-align: center; }
-    </style>
     <title>Buy Tickets | display_charges.php</title>
   </head>
   <body>
@@ -107,7 +74,7 @@
         <div class="logo totheleft"><img src="<?php echo LOGO; ?>" alt="AVSL Logo"></div>
         <h3 id="form_title" class="tickets"><?php echo TITLE['charges'] ?></h3>
         <hr class="title" />
-        <div>
+        <div id="order_summary">
           <table>
             <thead>
             <tr>

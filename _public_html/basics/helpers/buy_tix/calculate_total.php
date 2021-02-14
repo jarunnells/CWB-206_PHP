@@ -8,15 +8,15 @@
 
   /**
    * Calculate purchase total by category
-   * @param array $tickets_purchased array of qty of tickets purchased by category
+   * @param array $tix array of qty of tickets purchased by category
    * @return array calculated totals -> [adult_total, youth_total]
    */
-  function calc_total(array $tickets_purchased): array {
-    $adult = $tickets_purchased['adult'] > 0 && $tickets_purchased['adult'] !== ''
-      ? TICKET_COST['adult']*$tickets_purchased['adult']
+  function calc_total(array $tix): array {
+    $adult = $tix['adult'] > 0 && $tix['adult'] !== ''
+      ? TICKET_COST['adult']*$tix['adult']
       : 0.0;
-    $youth = $tickets_purchased['youth'] > 0 && $tickets_purchased['youth'] !== ''
-      ? TICKET_COST['youth']*$tickets_purchased['youth']
+    $youth = $tix['youth'] > 0 && $tix['youth'] !== ''
+      ? TICKET_COST['youth']*$tix['youth']
       : 0.0;
     return ['adult'=>$adult, 'youth'=>$youth];
   }
@@ -41,8 +41,8 @@
 
   /**
    * Validate Purchase QTY
-   * @param array $tix
-   * @return bool
+   * @param array $tix array of qty of tickets purchased by category
+   * @return bool boolean flag -> is_valid vs !is_valid
    */
   function valid_qty(array $tix): bool {
     if ($tix['adult']) {
@@ -57,8 +57,8 @@
 
   /**
    * Validate Positive Purchase QTY
-   * @param array $tix
-   * @return bool
+   * @param array $tix array of qty of tickets purchased by category
+   * @return bool boolean flag -> is_valid vs !is_valid
    */
   function valid_positive(array $tix): bool {
     if ($tix['adult'] && !$tix['youth']) {

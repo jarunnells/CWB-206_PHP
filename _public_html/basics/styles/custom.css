@@ -271,3 +271,28 @@ hr.algorithm {
     transform: translateY(-3px);
     letter-spacing: 0.06rem;
 }
+
+
+/* BUY TICKETS ORDER SUMMARY STYLING *************************************** */
+#order_summary thead, #order_summary tfoot { font-size: 1.25em; }
+#order_summary table {
+    font: 1.25rem monospace;
+    margin: 0 auto;
+    width: 75%;
+    border-collapse: collapse;
+    color: rgb(51, 51, 51);
+}
+#order_summary td, #order_summary th { padding: .25em 0; }
+#order_summary #cart_header th {
+    border-bottom: 2px solid rgb(0, 0, 0);
+    background-color: rgba(0, 128, 0, 0.5);
+}
+#order_summary #cart_footer td {
+    text-align: right;
+    border-top: 2px solid rgb(0, 0, 0);
+    background-color: rgba(0, 128, 0, 0.5);
+}
+#order_summary .total { font-weight: bold; }
+#order_summary .right { text-align: right; }
+#order_summary .left { text-align: left; }
+.center { text-align: center; }
