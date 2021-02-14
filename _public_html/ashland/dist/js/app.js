@@ -38,8 +38,6 @@ const _debug = () => {
   console.log(greeting);
 };
 
-const run = () => {
-  _debug();
-};
+const run = () => _debug();
 
-window.onload = () => { run(); };
+window.onload = () => run();

@@ -24,6 +24,7 @@
   <style>
     pre { font-size: 1.25rem; }
   </style>
+  <script src="player_prototype.js." defer></script>
   <title>Player Class</title>
 </head>
 <body>

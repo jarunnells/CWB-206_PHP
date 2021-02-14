@@ -8,17 +8,19 @@
 
 */
 // VARS
-let hamburger = document.querySelector(".hamburger"),
-lbl_hamburger = document.querySelector(".hamburger-label"),
-nav_menu = document.querySelector("#nav_menu"),
-container = document.querySelector(".container");
+let [hamburger, lbl_hamburger, nav_menu, container] = [
+  document.querySelector(".hamburger"),
+  document.querySelector(".hamburger-label"),
+  document.querySelector("#nav_menu"),
+  document.querySelector(".container"),
+];
 
 let handleEvent = () => {
-    hamburger.classList.toggle("is-active");
-    lbl_hamburger.classList.toggle("is-active");
-    nav_menu.classList.toggle("is-active");
-    container.classList.toggle("is-active");
+  hamburger.classList.toggle("is-active");
+  lbl_hamburger.classList.toggle("is-active");
+  nav_menu.classList.toggle("is-active");
+  container.classList.toggle("is-active");
 };
 
 // EVENT -> Hamburger.OnClick
-hamburger.onclick = e => { handleEvent(); };
+hamburger.onclick = e => handleEvent();

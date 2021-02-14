@@ -13,23 +13,28 @@
 // TODO: handle radio active/inactive styling
 // FIXME: navigation button event handle bug!!!
 
-const slides = document.querySelectorAll('.slide'),
-      btnPlay = document.querySelector('.buttons__play'),
-      btnPause = document.querySelector('.buttons__pause'),
-      btnFirst = document.querySelector('.buttons__first'),
-      btnNext = document.querySelector('.buttons__next'),
-      btnPrev = document.querySelector('.buttons__prev'),
-      btnLast = document.querySelector('.buttons__last'),
-      btnRadio = document.querySelectorAll('.btn__radio'),
-      interval_time = 5000;
-let slide_interval;
-var auto_advance = true;
+const [slides, btnPlay, btnPause, btnFirst, btnNext, btnPrev, btnLast, btnRadio, interval_time] =[
+  document.querySelectorAll('.slide'),
+  document.querySelector('.buttons__play'),
+  document.querySelector('.buttons__pause'),
+  document.querySelector('.buttons__first'),
+  document.querySelector('.buttons__next'),
+  document.querySelector('.buttons__prev'),
+  document.querySelector('.buttons__last'),
+  document.querySelectorAll('.btn__radio'),
+  5000,
+];
+// let slide_interval;
+// let auto_advance = true;
+let [slide_interval, auto_advance] =[ undefined, true];
 
-const _debug = () => {
-  "use strict";
-  let greeting = 'Hello World!';
-  console.log(greeting);
-};
+// const _debug = () => {
+//   "use strict";
+//   let greeting = 'Hello World!';
+//   console.log(greeting);
+// };
+
+const _debug = (greeting = 'Hello World!') => console.log(greeting);
 
 // BUTTON PRESS LOGIC ***********************************************
 const next_img = () => {
@@ -135,8 +140,6 @@ if(auto_advance) {
 
 // END PHOTO PAGES **********************************************************************
 
-const run = () => {
-  _debug();
-};
+const run = () => _debug();
 
-window.onload = () => { run(); };
+window.onload = () => run();
