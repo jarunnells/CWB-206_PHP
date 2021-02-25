@@ -23,9 +23,6 @@
         background-size: cover;
         color: whitesmoke;
       }
-      #form_signup table {
-        background-color: rgba(46, 139, 87,0.95);
-      }
       .container {
         display: flex;
         justify-content: center;
@@ -35,8 +32,12 @@
       #form_signup {
         font-family: monospace;
       }
+      #form_signup table {
+        background-color: rgba(46, 139, 87,0.95);
+      }
       caption {
         margin-bottom: 1rem;
+        font-size: 1.5rem;
       }
       label {
         margin-right: 0.5rem;
@@ -145,6 +146,7 @@
 
     <!-- EXTERNAL STYLESHEETS -->
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<!--    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
 
     <!-- SCRIPT(S) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -236,11 +238,11 @@
           fld.value = "";
         });
       };
-      const btn_clr = document.querySelector('.btn-clr');
-      btn_clr.addEventListener('click', e => {
-        e.preventDefault();
-        reset_fields();
-      });
+      // const btn_clr = document.querySelector('.btn-clr');
+      // btn_clr.addEventListener('click', e => {
+      //   e.preventDefault();
+      //   reset_fields();
+      // });
       $(function() {
         $('#player_bday').datepicker({
           changeMonth: true,
@@ -254,13 +256,17 @@
           closeText: 'CLOSE',
           classes: {
             'ui-datepicker-close': 'btn btn-success',
-          }
+          },
           // showOn: "button",
-          // buttonImage: "images/calendar.gif",
+          // buttonImage: "assets/img/today-white-18dp.svg",
           // buttonImageOnly: true,
           // buttonText: "Select date",
         });
-        $('.ui-datepicker').css({"font-family": "JetBrains Mono, Courier New, monospace"})
+        $('.ui-datepicker').css({"font-family": "JetBrains Mono, Courier New, monospace"});
+        $('.btn-clr').click(e => {
+          e.preventDefault();
+          reset_fields();
+        });
       });
     </script>
   </body>
