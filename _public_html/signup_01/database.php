@@ -2,6 +2,7 @@
   $dsn = 'mysql:host=localhost;dbname=ashland';
   $usr = 'user';
   $psw = 'Passw0rd';
+  // $psw = 'password';
 
   try {
     $db = new PDO($dsn, $usr, $psw);
