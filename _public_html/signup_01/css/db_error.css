@@ -3,7 +3,8 @@
 body {
     background: #111;
     color: whitesmoke;
-    font-family: monospace;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
     margin: 25px;
     padding: 10px;
 }
