@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-:root {
+body {
     --box-shadow-form: 0 0 10px 5px rgba(0,0,0,0.2), 0 0 10px 5px rgba(0,0,0,0.19);
     --bg-color-input-focus: rgb(210, 226, 249);
     --bg-color-body: rgb(112, 128, 144);
@@ -14,9 +14,7 @@
     --color-btn-blue: rgb(0, 140, 186);
     --color-btn-green: rgb(76, 175, 80);
     --color-bg-green: rgba(46, 139, 87,0.95);
-}
 
-body {
     background: var(--bg-color-body) url(../../ashland/dist/assets/img/background_ball.jpg);
     background-size: cover;
     color: var(--color-white);
