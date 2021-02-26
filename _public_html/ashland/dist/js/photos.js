@@ -26,7 +26,7 @@ const [slides, btnPlay, btnPause, btnFirst, btnNext, btnPrev, btnLast, btnRadio,
 ];
 // let slide_interval;
 // let auto_advance = true;
-let [slide_interval, auto_advance] =[ undefined, true];
+let [slide_interval, auto_advance] = [ undefined, true];
 
 // const _debug = () => {
 //   "use strict";

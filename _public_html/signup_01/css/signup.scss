@@ -1,0 +1,183 @@
+@charset "UTF-8";
+
+$box-shadow-form: 0 0 10px 5px rgba(0,0,0,0.2), 0 0 10px 5px rgba(0,0,0,0.19);
+$bg-color-body: rgb(112, 128, 144);
+$bg-color-input-focus: rgb(210, 226, 249);
+$color-input-focus: rgb(25, 25, 112);
+$color-white: rgb(245, 245, 245);
+$color-black: rgb(0, 0, 0);
+$color-black-dark: rgb(33, 36, 38);
+$color-black-light: rgb(35, 42, 50);
+$color-btn-red: rgb(244, 67, 54);
+$color-btn-gray: rgb(85, 85, 85);
+$color-btn-blue: rgb(0, 140, 186);
+$color-btn-green: rgb(76, 175, 80);
+$color-bg-green: rgba(46, 139, 87,0.95);
+
+body {
+  background: $bg-color-body url(../../ashland/dist/assets/img/background_ball.jpg);
+  background-size: cover;
+  color: $color-white;
+
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100vh;
+  }
+}
+#form_signup {
+  min-width: 525px;
+  min-height: 660px;
+  font-family: monospace;
+
+  table {
+    background-color: $color-bg-green;
+
+    caption {
+      margin-bottom: 2rem;
+      padding: 15px 35px;
+      border: 3px solid $color-white;
+      border-radius: 15px;
+      font-size: 1.75rem;
+      font-weight: bold;
+      letter-spacing: 0.25rem;
+      text-transform: uppercase;
+    }
+
+    label { margin-right: 0.5rem; }
+
+    .required { margin: 0 2px; }
+
+    .btns_action { margin-top: 1rem; }
+
+    input[type=text],
+    input[type=date] {
+      font-family: monospace;
+      font-size: 0.85em;
+      text-align: center;
+      border-radius: 6px;
+      height: 1.5rem;
+      width: 10rem;
+      background-color: $color-white;
+      margin: 2px 0;
+    }
+
+    input[type=text]:focus,
+    input[type=date]:focus {
+      background-color: $bg-color-input-focus;
+      color: $color-input-focus;
+      outline: none;
+      -webkit-box-shadow: $box-shadow-form;
+      box-shadow: $box-shadow-form;
+      -webkit-transform: translate(-10%) scale(1.15);
+      -ms-transform: translate(-10%) scale(1.15);
+      transform: translate(-10%) scale(1.15);
+      text-align: left;
+      padding: 5px 5px 5px 20px;
+    }
+
+    .signup table {
+      border-collapse: collapse;
+      border: 1px solid $color-white;
+      border-radius: 10px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      padding: 40px;
+    }
+
+    td:first-of-type { text-align: right; }
+
+    .btns_action {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+    }
+
+    .btn {
+      border: none;
+      border-radius: 15px;
+      color: $color-white;
+      padding: 0.5rem 1rem;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      /*font-size: 0.5rem;*/
+      margin: 4px 2px;
+      cursor: pointer;
+      -webkit-transition-duration: 0.4s;
+      -o-transition-duration: 0.4s;
+      transition-duration: 0.4s;
+    }
+
+    .btn:hover {
+      -webkit-box-shadow: $box-shadow-form;
+      box-shadow: $box-shadow-form;
+      letter-spacing: 2px;
+    }
+
+    .btn-submit {
+      background-color: $color-btn-blue;
+      color: $color-white;
+      border: 2px solid $color-white;
+    }
+
+    .btn-submit:hover {
+      background-color: $color-white;
+      color: $color-black;
+      border: 2px solid $color-btn-blue;
+    }
+
+    .btn-clr {
+      background-color: $color-btn-gray;
+      color: $color-white;
+      border: 2px solid $color-white;
+    }
+
+    .btn-clr:hover {
+      background-color: $color-white;
+      color: $color-black;
+      border: 2px solid $color-btn-gray;
+    }
+
+    .btn-db-conn {
+      background-color: $color-btn-red;
+      color: $color-white;
+      border: 2px solid $color-white;
+    }
+
+    .btn-db-conn:hover {
+      background-color: $color-white;
+      color: $color-black;
+      border: 2px solid $color-btn-red;
+    }
+
+    .ui-datepicker-trigger {
+      padding: 0 3px;
+      -webkit-transform: translateX(5%) translateY(35%) scale(1.25);
+      -ms-transform: translateX(5%) translateY(35%) scale(1.25);
+      transform: translateX(5%) translateY(35%) scale(1.25);
+    }
+
+    .ui-datepicker-trigger:hover {
+      cursor: pointer;
+    }
+  }
+}
