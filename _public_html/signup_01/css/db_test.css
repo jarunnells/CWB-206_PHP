@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+main.container {
+    width: 100vw;
+    height: 100vh;
+}
+section.output_table_desc {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.output_table_desc p {
+    color: whitesmoke;
+    font: 1.15rem monospace;
+}
+.describe {
+    margin: 20px;
+    padding: 20px;
+    background: darkgray;
+    width: fit-content;
+    border-radius: 10px;
+}
+.describe .desc_tbl table,
+.describe .desc_tbl td,
+.describe .desc_tbl th {
+    border: 1px solid black;
+}
+.describe .desc_tbl table {
+    border-collapse: collapse;
+    font: 0.85rem 'JetBrains Mono', monospace;
+}
+.describe .desc_tbl td,
+.describe .desc_tbl th {
+    padding: 5px;
+}
+.describe .query {
+    margin: 5px;
+    padding: 0 5px 15px 5px;
+}
+.describe .query .keyword {
+    color: blue;
+    font-weight: 700;
+}
+.describe .desc_tbl thead {
+    background: slategray;
+    color: whitesmoke;
+}
+.describe .desc_tbl tbody {
+    background: whitesmoke;
+}
+.success {
+    font-weight: 700;
+    color: limegreen;
+}

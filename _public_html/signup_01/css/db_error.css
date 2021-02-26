@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+body {
+    background: #111;
+    color: whitesmoke;
+    font-family: monospace;
+    margin: 25px;
+    padding: 10px;
+}
+.error {
+    color: red;
+}
+.bold {
+    font-weight: 700;
+}
+.verify {
+    color: goldenrod;
+    font-style: italic;
+}
+.error.bold,
+h2.error {
+    text-transform: uppercase;
+}

@@ -1,5 +1,10 @@
 <?php
   require_once('database.php');
+  /** @var PDO $db */
+  $q = 'DESCRIBE new_player_tmp;';
+  $tbl_desc = $db->query($q);
+  $result = $tbl_desc->fetchAll(PDO::FETCH_ASSOC);
+  //var_dump($result);
 ?>
 
 <!doctype html>
@@ -11,14 +16,49 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- STYLESHEET(S) -->
+    <link rel="stylesheet" href="./css/db_test.css">
 
     <title>Sign up</title>
   </head>
 
-  <body>
-    <p>If you got this far without an error, you have successfully connected to the database!</p>
-    <div id="footer">
-      <p class="copyright">&copy; <?php echo date("Y"); ?> Aims Community College</p>
-    </div>
+  <body style="background: #111;">
+    <main class="container">
+      <section class="output_table_desc">
+        <p>Connection <span class="success">SUCCESSFUL</span>!</p>
+        <div class="describe">
+          <div class="query">
+            <code><span class="keyword">DESCRIBE</span> new_player_tmp;</code>
+          </div>
+          <div class="desc_tbl">
+            <table>
+              <thead>
+              <tr>
+                <th>Field</th>
+                <th>Type</th>
+                <th>Null</th>
+                <th>Key</th>
+                <th>Default</th>
+              </tr>
+              </thead>
+              <tbody>
+              <?php foreach ($result as $col) : ?>
+                <tr>
+                  <td><?php echo $col['Field'] ?></td>
+                  <td><?php echo $col['Type'] ?></td>
+                  <td><?php echo $col['Null'] ?></td>
+                  <td><?php echo $col['Key'] ?></td>
+                  <td><?php echo $col['Default'] ?></td>
+                </tr>
+              <?php endforeach; ?>
+              </tbody>
+              <tfoot></tfoot>
+            </table>
+          </div>
+        </div>
+        <div id="footer">
+          <p class="copyright">&copy; <?php echo date("Y"); ?> Aims Community College</p>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

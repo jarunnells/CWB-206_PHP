@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- STYLESHEET(S) -->
+    <link rel="stylesheet" href="./css/db_error.css">
 
     <title>Database Error</title>
   </head>
@@ -15,16 +16,18 @@
   <body>
     <div id="page">
       <div id="header">
-        <h1>Soccer Sign Up</h1>
+        <h1>Player Sign Up</h1>
       </div>
 
       <div id="main">
-        <h1>Database Error</h1>
-        <p>There was an error connecting to the database.</p>
-        <p>The database must be installed.</p>
-        <p>MySQL must be running.</p>
-        <p>Error message: <?php /** @var $err_msg */ echo $err_msg; ?></p>
-        <p>&nbsp;</p>
+        <h2 class="error">Database Error</h2>
+        <br />
+        <h3>There was an error connecting to the database.</h3>
+        <p>[ 1 ] <span class="verify">The database must be installed.</span></p>
+        <p>[ 2 ] <span class="verify">MySQL must be running.</span></p>
+        <br />
+        <p><span class="error bold">[Error]</span><?php /** @var $err_msg */ echo $err_msg; ?></p>
+        <br />
       </div>
 
       <div id="footer">
