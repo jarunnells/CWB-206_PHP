@@ -13,28 +13,28 @@
     <title>Database Error</title>
   </head>
 
-  <body>
-    <div id="page">
-      <div id="header">
+  <body class="error-output">
+    <main class="container">
+      <header class="heading">
         <h1>Player Sign Up</h1>
-      </div>
+      </header>
 
-      <div id="main">
+      <section class="output">
         <h2 class="error">Database Error</h2>
         <br />
         <h3>There was an error connecting to the database.</h3>
         <p>[ 1 ] <span class="verify">The database must be installed.</span></p>
         <p>[ 2 ] <span class="verify">MySQL must be running.</span></p>
         <br />
-        <p><span class="error bold">[Error]</span><?php /** @var $err_msg */ echo $err_msg; ?></p>
+        <p><span class="error bold">[Error]</span> <?php /** @var $err_msg */ echo $err_msg; ?></p>
         <br />
-      </div>
+      </section>
 
-      <div id="footer">
+      <footer>
         <p class="copyright">
           &copy; <?php echo date("Y"); ?> Aims Community College
         </p>
-      </div>
-    </div>
+      </footer>
+    </main>
   </body>
 </html>

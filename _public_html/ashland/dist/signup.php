@@ -27,13 +27,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" defer></script>
     <script src="./js/signup.js" defer></script>
 
-    <style>
-      #required, .required { opacity: 0; }
-    </style>
-
     <title>Player Signup -> signup.php</title>
   </head>
   <body>
+    <?php include './navbar.php'; ?>
     <main class="container">
       <section class="signup">
         <form action="" method="post" id="form_signup">

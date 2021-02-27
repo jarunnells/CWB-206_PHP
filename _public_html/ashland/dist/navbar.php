@@ -12,7 +12,7 @@
   define('NAV_TEAMS', array('inner'=>'Teams', 'path'=>'./teams.php'));
   define('NAV_ACTION', array('inner'=>'Action', 'path'=>'./action.php'));
   define('NAV_MAP', array('inner'=>'Map', 'path'=>'./map.php'));
-  define('NAV_SIGNUP', array('inner'=>'Signup', 'path'=>SOON));
+  define('NAV_SIGNUP', array('inner'=>'Signup', 'path'=>'./signup.php'));
   define('NAV_SCHEDULE', array('inner'=>'Schedule', 'path'=>SOON));
 
   echo '

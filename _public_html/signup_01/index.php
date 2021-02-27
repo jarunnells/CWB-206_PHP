@@ -27,7 +27,7 @@
         <p>Connection <span class="success">SUCCESSFUL</span>!</p>
         <div class="describe">
           <div class="query">
-            <code><span class="keyword">DESCRIBE</span> new_player_tmp;</code>
+            <code><span class="keyword">DESCRIBE</span> ashland.new_player_tmp;</code>
           </div>
           <div class="desc_tbl">
             <table>
@@ -47,7 +47,7 @@
                   <td><?php echo $col['Type'] ?></td>
                   <td><?php echo $col['Null'] ?></td>
                   <td><?php echo $col['Key'] ?></td>
-                  <td><?php echo $col['Default'] ?></td>
+                  <td><?php echo $col['Default'] ?? 'NULL' ?></td>
                 </tr>
               <?php endforeach; ?>
               </tbody>

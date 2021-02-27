@@ -1,21 +1,31 @@
 @charset "UTF-8";
 
-body {
-    background: #111;
-    color: whitesmoke;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.85rem;
+body { overflow: hidden; }
+
+body.error-output {
+    --color-bg-main: #111;
+    --color-main: whitesmoke;
+    --color-verify: goldenrod;
+    --color-error: red;
+    --font-fam-main: 'JetBrains Mono', monospace;
+    --font-weight-bold: 700;
+    --font-size-main: 0.85rem;
+
+    background: var(--color-bg-main);
+    color: var(--color-main);
+    font-family: var(--font-fam-main);
+    font-size: var(--font-size-main);
     margin: 25px;
     padding: 10px;
 }
 .error {
-    color: red;
+    color: var(--color-error);
 }
 .bold {
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
 }
 .verify {
-    color: goldenrod;
+    color: var(--color-verify);
     font-style: italic;
 }
 .error.bold,
