@@ -31,7 +31,8 @@ body {
     --color-btn-red: rgb(244, 67, 54);
     --color-btn-gray: rgb(85, 85, 85);
     --color-btn-blue: rgb(0, 140, 186);
-    --color-btn-green: rgb(76, 175, 80);
+    /*--color-btn-green: rgb(76, 175, 80);*/
+    --color-btn-green: rgb(46, 182, 51);
     --color-bg-green: rgba(46, 139, 87,0.95);
 
     /* NAV BAR PROPS ******************************** */
@@ -251,7 +252,8 @@ td:first-of-type { text-align: right; }
     justify-content: center;
 }
 
-.btn {
+.btn,
+.btn-db-err {
     border: none;
     border-radius: 15px;
     color: var(--color-white);
@@ -267,7 +269,8 @@ td:first-of-type { text-align: right; }
     transition-duration: 0.4s;
 }
 
-.btn:hover {
+.btn:hover,
+.btn-db-err:hover {
     -webkit-box-shadow: var(--box-shadow-form);
     box-shadow: var(--box-shadow-form);
     letter-spacing: 2px;
@@ -297,13 +300,27 @@ td:first-of-type { text-align: right; }
     border: 2px solid var(--color-btn-gray);
 }
 
-.btn-db-conn {
-    background-color: var(--color-btn-red);
+.btn-db-conn{
+    margin-right: 5px;
+    background-color: var(--color-btn-green);
     color: var(--color-white);
     border: 2px solid var(--color-white);
 }
 
 .btn-db-conn:hover {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border: 2px solid var(--color-btn-green);
+}
+
+.btn-db-err {
+    margin-left: 5px;
+    background-color: var(--color-btn-red);
+    color: var(--color-white);
+    border: 2px solid var(--color-white);
+}
+
+.btn-db-err:hover {
     background-color: var(--color-white);
     color: var(--color-black);
     border: 2px solid var(--color-btn-red);

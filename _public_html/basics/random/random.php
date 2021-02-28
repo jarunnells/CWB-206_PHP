@@ -70,8 +70,11 @@
   -->
   <main>
   <section id="holder">
-  <?php $random_numbers = new RandomNumbers(
-    $algorithm=RandomNumbers::ALGORITHMS[1][random_int(1,count(RandomNumbers::ALGORITHMS[1])-1)]);
+  <?php try {
+    $random_numbers = new RandomNumbers(
+      $algorithm = RandomNumbers::ALGORITHMS[1][random_int(1, count(RandomNumbers::ALGORITHMS[1]) - 1)]);
+  } catch (Exception $e) {
+  }
     echo '<h3 id="random_title">' . $random_numbers->header . '</h3>';
     echo '<hr class="title" />';
     foreach ($random_numbers->generate_numbers() as $number) {

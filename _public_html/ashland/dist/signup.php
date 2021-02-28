@@ -11,11 +11,13 @@
   $cal_max = strtotime('+1 year', $today);
   define('FORM_CAPTION', 'Player Signup');
   define('PLACEHOLDERS', [
+    'bday'=>'YYYY-MM-DD',
     'phone'=>'303-555-1234',
     'state'=>'CO',
     'zip'=>'12345[-6789]'
   ]);
   define('TITLES', [
+    'bday'=>'Four Digit Year, Two Digit Month, Two Digit Day',
     'phone'=>'303-555-1234 or (303) 555-1234',
     'state'=>'Two Letter Abbreviation...',
     'zip'=>'Zip[+4]...'
@@ -78,7 +80,7 @@
               </tr>
               <tr>
                 <td><label for="player_bday">Player Birth Date</label></td>
-                <td><input type="date" id="player_bday" name="pla_bdate" min="<?php echo $cal_min; ?>" max="<?php echo $cal_max; ?>" placeholder="YYYY-MM-DD" title="Four Digit Year, Two Digit Month, Two Digit Day" required><span class="required">*</span></td>
+                <td><input type="date" id="player_bday" name="pla_bdate" min="<?php echo $cal_min; ?>" max="<?php echo $cal_max; ?>" placeholder="<?php echo PLACEHOLDERS['bday'] ?>" title="<?php echo TITLES['bday'] ?>" required><span class="required">*</span></td>
               </tr>
               <tr>
                 <td><label for="player_street">Street Address</label></td>
@@ -90,15 +92,15 @@
               </tr>
               <tr>
                 <td><label for="player_state">State</label></td>
-                <td><input type="text" id="player_state" name="pla_state" placeholder="CO" title="Two Letter Abbreviation..." maxlength="2" required><span class="required">*</span></td>
+                <td><input type="text" id="player_state" name="pla_state" placeholder="<?php echo PLACEHOLDERS['state'] ?>" title="<?php echo TITLES['state'] ?>" maxlength="2" required><span class="required">*</span></td>
               </tr>
               <tr>
                 <td><label for="player_zip">Zipcode</label></td>
-                <td><input type="text" id="player_zip" name="pla_zip" placeholder="12345[-6789]" title="Zip[+4]..." minlength="5" maxlength="10" required><span class="required">*</span></td>
+                <td><input type="text" id="player_zip" name="pla_zip" placeholder="<?php echo PLACEHOLDERS['zip'] ?>" title="<?php echo TITLES['zip'] ?>" minlength="5" maxlength="10" required><span class="required">*</span></td>
               </tr>
               <tr>
                 <td><label for="player_phone">Primary Phone</label></td>
-                <td><input type="text" id="player_phone" name="pla_phone" placeholder="303-555-1234" title="303-555-1234 or (303) 555-1234" maxlength="14" required><span class="required">*</span></td>
+                <td><input type="text" id="player_phone" name="pla_phone" placeholder="<?php echo PLACEHOLDERS['phone'] ?>" title="<?php echo TITLES['phone'] ?>" maxlength="14" required><span class="required">*</span></td>
               </tr>
               <tr>
                 <td><label for="parent_fname">Parent First Name</label></td>
@@ -119,9 +121,17 @@
               </tr>
             </tbody>
             <tfoot>
-              <tr class="db_conn_test">
-                <td colspan="2">
-                  <a href="../../signup_01/index.php"><button type="button" class="btn btn-db-conn">TEST DB CONNECTION</button></a>
+<!--              <tr class="db_conn_test">-->
+<!--                <td colspan="2">-->
+<!--                  <a href="../../signup_01/index.php"><button type="button" class="btn btn-db-conn">TEST DB CONNECTION</button></a>-->
+<!--                </td>-->
+<!--              </tr>-->
+              <tr class="db_conn_err">
+                <td colspan="1">
+                  <a href="../../signup_01/index.php"><button type="button" class="btn btn-db-conn">DB SUCCESS</button></a>
+                </td>
+                <td colspan="1">
+                  <a href="../../signup_01/error_sim/conn_error.php"><button type="button" class="btn-db-err">DB ERROR</button></a>
                 </td>
               </tr>
             </tfoot>
