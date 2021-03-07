@@ -59,7 +59,7 @@
             <li><a href=<?php echo NAV_BASICS_LANDING; ?> target="_self" title='Go To -> basics.php...'>Basics Landing Page</a></li>
             <li><a href=<?php echo NAV_SQL; ?> target="_self" title='Go To -> sql.php...'>SQL Queries</a></li>
             <li><a href=<?php echo NAV_SIGNUP; ?> target="_self" title='Go To -> signup.php...'>Sign-up Phase 1</a></li>
-            <li><a href=<?php echo NAV_COMING_SOON; ?> target="_self" title='Go To -> signup.php...'>Sign-up Phase 2</a></li>
+            <li><a href=<?php echo NAV_SIGNUP; ?> target="_self" title='Go To -> signup.php...'>Sign-up Phase 2</a></li>
             <li><a href=<?php echo NAV_COMING_SOON; ?> target="_self" title='Go To -> signup.php...'>Sign-up Phase 3</a></li>
             <li><a href=<?php echo NAV_PLAYER_MANAGER; ?> target="_self" title='Go To -> player_manager.php...'>Player Manager</a></li>
             <li><a href=<?php echo NAV_FINAL; ?> target="_self" title='Go To -> final.php...'>Final</a></li>

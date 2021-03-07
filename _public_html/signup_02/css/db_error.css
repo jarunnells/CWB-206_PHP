@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+body { overflow: hidden; }
+
+body.error-output {
+    --color-bg-main: #111;
+    --color-main: whitesmoke;
+    --color-verify: goldenrod;
+    --color-error: red;
+    --font-fam-main: 'JetBrains Mono', monospace;
+    --font-weight-bold: 700;
+    --font-size-main: 0.85rem;
+
+    background: var(--color-bg-main);
+    color: var(--color-main);
+    font-family: var(--font-fam-main);
+    font-size: var(--font-size-main);
+    margin: 25px;
+    padding: 10px;
+}
+.error {
+    color: var(--color-error);
+}
+.bold {
+    font-weight: var(--font-weight-bold);
+}
+.verify {
+    color: var(--color-verify);
+    font-style: italic;
+}
+.error.bold,
+h2.error {
+    text-transform: uppercase;
+}

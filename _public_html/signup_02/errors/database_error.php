@@ -8,7 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- STYLESHEET(S) -->
-    <link rel="stylesheet" href="./css/db_error.css">
+    <link rel="stylesheet" href="../css/db_error.css">
+    <link rel="stylesheet" href="../../css/db_error.css">
 
     <title>Database Error</title>
   </head>

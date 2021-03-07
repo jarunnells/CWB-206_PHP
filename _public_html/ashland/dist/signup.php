@@ -6,6 +6,7 @@
 -->
 <?php date_default_timezone_set('America/Denver');
   include_once('./helpers/sanitation.php');
+//  include_once('./helpers/player/MinorPlayer.php');
   $today = strtotime('Today');
   $cal_min = strtotime('-21 years', $today);
   $cal_max = strtotime('+1 year', $today);
@@ -52,7 +53,7 @@
     <!-- STYLESHEET(S) -->
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 <!--    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
-    <link rel="stylesheet" href="../../signup_01/css/signup.css">
+    <link rel="stylesheet" href="../../signup_02/css/signup.css">
 
     <!-- SCRIPT(S) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
@@ -65,7 +66,8 @@
     <?php include './navbar.php'; ?>
     <main class="container">
       <section class="signup">
-        <form action="" method="post" id="form_signup">
+        <form action="../../signup_02/index.php" method="POST" id="form_signup">
+          <input type="hidden" name="action" id="action" value="new_player">
           <table>
             <thead></thead>
             <caption><?php echo FORM_CAPTION; ?></caption>
@@ -123,15 +125,15 @@
             <tfoot>
 <!--              <tr class="db_conn_test">-->
 <!--                <td colspan="2">-->
-<!--                  <a href="../../signup_01/index.php"><button type="button" class="btn btn-db-conn">TEST DB CONNECTION</button></a>-->
+<!--                  <a href="../../signup_02/index.php"><button type="button" class="btn btn-db-conn">TEST DB CONNECTION</button></a>-->
 <!--                </td>-->
 <!--              </tr>-->
               <tr class="db_conn_err">
-                <td colspan="1">
-                  <a href="../../signup_01/index.php"><button type="button" class="btn btn-db-conn">DB SUCCESS</button></a>
-                </td>
-                <td colspan="1">
-                  <a href="../../signup_01/error_sim/conn_error.php"><button type="button" class="btn-db-err">DB ERROR</button></a>
+<!--                <td colspan="1">-->
+<!--                  <a href="../../signup_02/index.php"><button type="button" class="btn btn-db-conn">DB SUCCESS</button></a>-->
+<!--                </td>-->
+                <td colspan="2">
+                  <a href="../../signup_02/errors/error_sim/conn_error.php"><button type="button" class="btn-db-err">DB ERROR</button></a>
                 </td>
               </tr>
             </tfoot>

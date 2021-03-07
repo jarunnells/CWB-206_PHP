@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+body { overflow: hidden; }
+
+main.container {
+    --box-shadow-form: 0 0 10px 5px rgba(64, 64, 64, 0.9), 0 0 10px 5px rgba(15, 139, 21, 0.89);
+    --color-white: whitesmoke;
+    --color-success: limegreen;
+    --color-keyword: blue;
+
+    width: 100vw;
+    height: 100vh;
+}
+.main__section--query-confirm {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.main__section--query-confirm pre { color: var(--color-white); }
+section.output_table_desc {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.output_table_desc p {
+    color: var(--color-white);
+    font: 1.15rem monospace;
+    letter-spacing: 0.1rem;
+}
+.describe {
+    margin: 20px;
+    padding: 20px;
+    background: darkgray;
+    width: fit-content;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow-form);
+}
+.describe .desc_tbl table,
+.describe .desc_tbl td,
+.describe .desc_tbl th {
+    border: 1px solid black;
+}
+.describe .desc_tbl table {
+    border-collapse: collapse;
+    font: 0.85rem 'JetBrains Mono', monospace;
+}
+.describe .desc_tbl td,
+.describe .desc_tbl th {
+    padding: 5px;
+}
+.describe .query {
+    margin: 5px;
+    padding: 0 5px 15px 5px;
+}
+.describe .query .keyword {
+    color: var(--color-keyword);
+    font-weight: 700;
+}
+.describe .desc_tbl thead {
+    background: slategray;
+    color: var(--color-white);
+}
+.describe .desc_tbl tbody {
+    background: var(--color-white);
+}
+.success {
+    font-weight: 700;
+    color: var(--color-success);
+}
