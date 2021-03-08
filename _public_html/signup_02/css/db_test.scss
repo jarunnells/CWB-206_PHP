@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+body {
+  background: rgba(17, 17, 17,0.9);
+  overflow: hidden;
+}
 main.container {
   width: 100vw;
   height: 100vh;
@@ -7,6 +11,7 @@ main.container {
 .main__section--query-confirm {
   height: 20%;
   width: 100%;
+  color: steelblue;
   display: flex;
   flex-direction: column;
   align-items: center;

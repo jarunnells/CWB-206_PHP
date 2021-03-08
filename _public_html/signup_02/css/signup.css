@@ -20,7 +20,7 @@ img,video { height: auto; max-width: 100%; }
 /* END GENERIC RESETS */
 
 body {
-    --box-shadow-form: 0 0 10px 5px rgba(0,0,0,0.2), 0 0 10px 5px rgba(0,0,0,0.19);
+    /* COLORS */
     --bg-color-input-focus: rgb(210, 226, 249);
     --bg-color-body: rgb(112, 128, 144);
     --color-input-focus: rgb(25, 25, 112);
@@ -34,6 +34,15 @@ body {
     /*--color-btn-green: rgb(76, 175, 80);*/
     --color-btn-green: rgb(46, 182, 51);
     --color-bg-green: rgba(46, 139, 87,0.95);
+    --color-bg-error: rgba(255, 48, 48, 0.35);
+    --color-error: rgba(153, 0, 0, 0.98);
+
+    /* SHADOWS */
+    --box-shadow-form: 0 0 10px 5px rgba(0,0,0,0.2), 0 0 10px 5px rgba(0,0,0,0.19);
+    --box-shadow-buy-tix: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    /* TRANSITIONS */
+    --trans-error: all 1s ease;
 
     /* NAV BAR PROPS ******************************** */
     --background:  rgba(66, 90, 136, 1);
@@ -336,6 +345,20 @@ td:first-of-type { text-align: right; }
 .ui-datepicker-trigger:hover { cursor: pointer; }
 
 #required, .required { opacity: 0; }
+
+.error {
+    width: 270px;
+    margin: 0 auto;
+    background-color: var(--color-bg-error);
+    color: var(--color-error);
+    border-radius: 10px;
+    padding: 10px 5px;
+    -webkit-box-shadow: var(--box-shadow-buy-tix);
+    box-shadow: var(--box-shadow-buy-tix);
+    -webkit-transition: var(--trans-error);
+    -o-transition: var(--trans-error);
+    transition: var(--trans-error);
+}
 
 /* MEDIA QUERIE(S) ********************************************************** */
 @media screen and (min-width: 800px) {

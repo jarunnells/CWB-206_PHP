@@ -26,7 +26,7 @@
 //    $err_msg = $err->getMessage();
 //    include('../database_error.php');
 //    exit();
-  } catch (PDOException | Exception $err) {
+  } catch (PDOException | Exception | \Exception $err) {
   $err_msg = $err->getMessage();
   include('../database_error.php');
   exit();

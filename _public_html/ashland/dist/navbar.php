@@ -7,12 +7,12 @@
 ///
 
   define('SOON', '../dist/helpers/coming_soon.php');
-  define('LANDING', array('inner'=>'Landing', 'path'=>'./index.php'));
-  define('NAV_HOME', array('inner'=>'Home', 'path'=>'./home.php'));
-  define('NAV_TEAMS', array('inner'=>'Teams', 'path'=>'./teams.php'));
-  define('NAV_ACTION', array('inner'=>'Action', 'path'=>'./action.php'));
-  define('NAV_MAP', array('inner'=>'Map', 'path'=>'./map.php'));
-  define('NAV_SIGNUP', array('inner'=>'Signup', 'path'=>'./signup.php'));
+  define('LANDING', array('inner'=>'Landing', 'path'=>'index.php'));
+  define('NAV_HOME', array('inner'=>'Home', 'path'=>'home.php'));
+  define('NAV_TEAMS', array('inner'=>'Teams', 'path'=>'teams.php'));
+  define('NAV_ACTION', array('inner'=>'Action', 'path'=>'action.php'));
+  define('NAV_MAP', array('inner'=>'Map', 'path'=>'map.php'));
+  define('NAV_SIGNUP', array('inner'=>'Signup', 'path'=>'signup.php'));
   define('NAV_SCHEDULE', array('inner'=>'Schedule', 'path'=>SOON));
 
   echo '
