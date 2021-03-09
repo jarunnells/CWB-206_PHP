@@ -92,9 +92,9 @@
 
     /**
      * Get Player's Birthdate
-     * @return string Returns player's birthday as a string
+     * @return string|null Returns player's birthday as a string
      */
-    public function get_birth_date(): string { return $this->birth_date; }
+    public function get_birth_date(): ?string { return $this->birth_date; }
 
     /**
      * Get Player's Assigned Team

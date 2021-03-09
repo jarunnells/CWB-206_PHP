@@ -19,7 +19,8 @@ main.container {
 }
 .main__section--query-confirm pre { color: var(--color-white); }
 section.output_table_desc {
-  height: 80%;
+  margin: 2.5rem auto;
+  //height: 80%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -68,4 +69,29 @@ section.output_table_desc {
 .success {
   font-weight: 700;
   color: limegreen;
+}
+.error-signup {
+  display: flex;
+  justify-content: center;
+  height: 10%;
+  align-items: center;
+  align-content: center;
+  font: 2.5rem monospace;
+  color: whitesmoke;
+  border-radius: 1rem;
+  background: darkred;
+  width: max-content;
+  margin: 10px auto;
+  padding: 1rem 3rem;
+  box-shadow: 0 0 10px 5px rgba(60, 53, 53, 0.9), 0 0 10px 5px rgba(159, 31, 31, 0.94)
+}
+.btn.form-reset {
+  padding: 0.5rem;
+  background: lightgray;
+  border: none;
+  border-radius: 10px;
+}
+.btn.form-reset:hover {
+  color: rgb(220, 20, 60);
+  letter-spacing: 0.05rem;
 }

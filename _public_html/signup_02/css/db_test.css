@@ -1,6 +1,8 @@
 @charset "UTF-8";
 
 body {
+    --color-query: steelblue;
+
     background: rgba(17, 17, 17,0.9);
     overflow: hidden;
 }
@@ -16,7 +18,7 @@ main.container {
 .main__section--query-confirm {
     height: 20%;
     width: 100%;
-    color: steelblue;
+    color: var(--color-query);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,7 +26,8 @@ main.container {
 }
 .main__section--query-confirm pre { color: var(--color-white); }
 section.output_table_desc {
-    height: 80%;
+    margin: 2rem auto;
+    /*height: 80%;*/
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -75,4 +78,54 @@ section.output_table_desc {
 .success {
     font-weight: 700;
     color: var(--color-success);
+}
+.error-signup {
+    display: flex;
+    justify-content: center;
+    height: 10%;
+    align-items: center;
+    align-content: center;
+    font: 2.5rem monospace;
+    color: var(--color-white);
+    border-radius: 1rem;
+    background: rgba(139, 0, 0, 0.67);
+    width: max-content;
+    margin: 10px auto;
+    padding: 1rem 3rem;
+    box-shadow: 0 0 10px 5px rgba(60, 53, 53, 0.9), 0 0 10px 5px rgba(159, 31, 31, 0.94);
+}
+.btn.form-reset {
+    padding: 0.5rem;
+    background: rgb(211, 211, 211);
+    border: none;
+    border-radius: 10px;
+}
+.btn.form-reset:hover {
+    color: rgb(220, 20, 60);
+    letter-spacing: 0.05rem;
+}
+.record-added-signup {
+    display: flex;
+    flex-direction: row;
+    font: 1.5rem monospace;
+    color: var(--color-white);
+    justify-content: center;
+    margin: 0.25rem auto;
+    width: max-content;
+    height: max-content;
+    background: var(--color-query);
+    padding: 0.5rem 1.75rem;
+    border-radius: 2.5rem;
+    box-shadow: 0 0 10px 5px rgba(60, 53, 53, 0.9), 0 0 10px 5px var(--color-query);
+}
+.record-added-signup p {
+    margin: 12px auto;
+    font: 1.5rem monospace;
+    color: var(--color-white);
+}
+.record-added-signup p:first-child {
+    padding: 1rem 0.5rem 1rem 1rem;;
+}
+.record-added-signup p:last-child {
+    padding: 1rem 1rem 1rem 0.5rem;
 }

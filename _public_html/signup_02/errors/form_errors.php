@@ -23,7 +23,7 @@
   elseif (!$pla_state_re) { $error = 'Two-Letter State Only!'; }
   elseif (empty($pla_zip)) { $error = 'Zip Required!'; }
   elseif (!$pla_zip_re) { $error = 'Five Digit or zip+4 Only!'; }
-  elseif (empty($phone)) { $error = 'Phone Number Required!'; }
+  elseif (empty($pla_phone)) { $error = 'Phone Number Required!'; }
   elseif (!$pla_phone_re) { $error = 'Invalid Phone Number. Try Again!'; }
   elseif (empty($pla_par_fname)) { $error = 'Parent First Name Required!'; }
   elseif (!$pla_par_fname_re) { $error = 'Invalid Parent First Name. Letters Only!'; }

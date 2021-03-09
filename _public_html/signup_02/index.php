@@ -42,7 +42,8 @@
 
     include_once ('errors/form_errors.php');
 
-//    /* @var $error */
+    // FIXME: broken path -> fix upon merge
+    /* @var $error */
 //    if ($error != '') {
 ////    include ('./index.php');
 //      include ('../ashland/dist/signup.php');
@@ -50,15 +51,20 @@
 //    } else {
 //      $record_added = add_temp_player($print_it=true);
 //    }
-
-    $record_added = add_temp_player($print_it=true);
+    if (empty($error)) { $record_added = add_temp_player($print_it=true); }
   }
 ?>
     <main class="container">
+      <?php if (!empty($error)): ?>
+        <div class="error-signup"><?php echo "$error"; ?></div>
+      <?php endif; ?>
+      <?php if (!empty($record_added)): ?>
+        <div class="record-added-signup">
+          <p>New Record:</p>
+          <p><?php echo $record_added->get_player_name()['first'].' '.$record_added->get_player_name()['last']; ?></p>
+        </div>
+      <?php endif; ?>
       <?php include_once 'view/desc_tmp_tbl.php'; ?>
-
+      <div><a href="../ashland/dist/signup.php"><button type="button" class="btn form-reset">⬅️ RESET FORM</button></a></div>
     </main>
-    <div>
-      <a href="../ashland/dist/signup.php"><button type="button" class="btn">⬅️ FORM</button></a>
-    </div>
 <?php require_once('view/footer.php'); ?>
